@@ -1,3 +1,5 @@
+# Desafio 2
+
 Você já conhece a aplicação GMEX e Gerency Web. Para reforçar o aprendizado de React e SOLID e aprender MySQL e tributação, crie um CRUD de ITENS que contenha esses campos:
  - Valor unitário (obrigatório)
  - Valor unitário (obrigatório)
@@ -14,7 +16,7 @@ Regras da aplicação
 
 - Na listagem de itens deve aparecer todos os campos acima + o valor total de Custos (somatório de taxas e comissões) em R$ para cada item.
 - Na edição de item, NÃO deve permitir editar: NCM, CST, CFOP.
-Na edição de item, NÃO deve permitir editar após 36h da criação dele.
+- Na edição de item, NÃO deve permitir editar após 36h da criação dele.
 - Na exclusão do item, não é para deletar do banco de dados, apenas alterar a flag de excluído (0 ou 1) que define se o usuário vai ou não poder acessar/editar esse item.
 - No cadastro de item, dois itens não podem ter o mesmo EAN.
 
