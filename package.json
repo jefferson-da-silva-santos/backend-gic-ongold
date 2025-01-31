@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/jefferson-da-silva-santos/backend-gic-ongold/issues"
   },
-  "homepage": "https://github.com/jefferson-da-silva-santos/backend-gic-ongold#readme"
+  "homepage": "https://github.com/jefferson-da-silva-santos/backend-gic-ongold#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }
