@@ -196,3 +196,84 @@ Agora você tem um CRUD completo para a tabela `tb_itens`! 🚀
 ✅ Testamos tudo via Postman ou Insomnia  
 
 Se precisar adicionar o CRUD para outras tabelas (`tb_cfop`, `tb_csticms`, `tb_ncm`), me avise! 🔥🔥🔥
+
+Entendi! Se o usuário sempre informará **apenas um campo e seu respectivo valor**, podemos criar uma função que recebe esses parâmetros e faz a busca no banco de dados de forma dinâmica. Isso evita a necessidade de percorrer todos os parâmetros.
+
+---
+
+### 🛠 **Criando a Função para Filtrar por um Único Campo**
+Adicione esta função ao seu `itemController.js`:
+
+```javascript
+const { Op } = require("sequelize");
+const { Item } = require("../models");
+
+// 🔍 Buscar itens filtrando por um único campo específico
+const getItemByField = async (req, res) => {
+  try {
+    const { field, value } = req.query;
+
+    // Verifica se o usuário passou ambos os parâmetros corretamente
+    if (!field || !value) {
+      return res.status(400).json({ message: "Informe o campo e o valor para a busca. Exemplo: ?field=descricao&value=Teste" });
+    }
+
+    // Monta o filtro dinâmico baseado no campo informado
+    const filters = { [field]: { [Op.eq]: value } };
+
+    const itens = await Item.findAll({ where: filters });
+
+    if (itens.length === 0) {
+      return res.status(404).json({ message: `Nenhum item encontrado para ${field} = ${value}` });
+    }
+
+    res.status(200).json(itens);
+  } catch (error) {
+    res.status(500).json({ message: "Erro ao buscar item", error });
+  }
+};
+
+module.exports = { getItemByField };
+```
+
+---
+
+### 🔗 **Adicionando a Rota**
+Agora, edite `itemRoutes.js` e adicione a seguinte rota:
+
+```javascript
+const { getItemByField } = require("../controllers/itemController");
+
+router.get("/search", getItemByField); // Rota para busca dinâmica por um campo específico
+```
+
+---
+
+### 🎯 **Exemplos de Uso**
+Agora, para buscar por um **único campo e valor**, envie uma requisição **GET** passando os parâmetros via **query params**:
+
+#### 🔹 **Buscar pelo `id`**:
+```
+GET http://localhost:3000/item/search?field=id&value=1
+```
+
+#### 🔹 **Buscar pelo `descricao`**:
+```
+GET http://localhost:3000/item/search?field=descricao&value=Produto%20de%20Teste
+```
+
+#### 🔹 **Buscar pelo `ncm`**:
+```
+GET http://localhost:3000/item/search?field=ncm&value=12345678
+```
+
+---
+
+### 🚀 **Explicação**
+1. O usuário sempre **informa o nome do campo** e o **valor a ser pesquisado** nos query params.
+2. A função cria um filtro dinâmico com `Op.eq` (**busca exata**).
+3. Se nenhum resultado for encontrado, retorna um erro `404`.
+4. Se não for passado **field** ou **value**, retorna um erro `400` explicando como usar corretamente.
+5. Funciona para qualquer campo da tabela sem precisar criar várias rotas ou métodos.
+
+Agora sua API pode buscar itens de forma **flexível** e **otimizada**! 🚀🔥

@@ -1,3 +1,4 @@
+import { Op } from "sequelize";
 import ItemModel from "../models/item.js";
 
 export default class Item {
@@ -84,11 +85,38 @@ export default class Item {
     }
   }
 
-  static async getIten() {
+  // função responsável por buscar os dados dos itens com uma filtragem
+  static async getItenFillter(field, value) {
     try {
-      
+      if (!field || !value) {
+        throw new Error('Parâmetros de filtragem vazios');
+      }
+      const filters = {[field]: {[Op.eq]: value}};
+      const itens = await ItemModel.findAll({where: filters});
+      if (itens.length === 0) {
+        throw new Error('Erro ao buscar dados');
+      }
+      return itens.map(({ dataValues: item }) => ({
+        id: item.id,
+        valor_unitario: item.valor_unitario,
+        descricao: item.descricao,
+        taxa_icms_entrada: item.taxa_icms_entrada,
+        taxa_icms_saida: item.taxa_icms_saida,
+        comissao: item.comissao,
+        ncm: item.ncm,
+        cst: item.cst,
+        cfop: item.cfop,
+        ean: item.ean,
+        totalCusto: Item.calculateTotalCost(
+          item.valor_unitario,
+          item.taxa_icms_entrada,
+          item.taxa_icms_saida,
+          item.comissao
+        ),
+      }));
     } catch (error) {
-      
+      console.error("Erro ao buscar itens com filtragem:", error);
+      throw new Error("Erro ao buscar itens filtragem");
     }
   }
   

@@ -4,6 +4,6 @@ import { getAll, getId } from "../controllers/itemsController.js";
 const router = express.Router();
 
 router.get('/items', getAll);
-router.get('/items/:id', getId)
+router.get('/items/:field/:value', getId);
 
 export default router;
