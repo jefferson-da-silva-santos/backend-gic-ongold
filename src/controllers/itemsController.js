@@ -18,7 +18,7 @@ export const getAll = async (req, res, next) => {
 };
 
 // Controlador que retorna um item pelo id
-export const getId = async (req, res, next) => {
+export const getFillter = async (req, res, next) => {
   try {
     const {error, value} = shemaFillter.validate(req.params);
 
