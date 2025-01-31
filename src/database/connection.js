@@ -1,7 +1,6 @@
 import dotenv from 'dotenv';
-dotenv.config();
-
 import { Sequelize } from 'sequelize';
+dotenv.config();
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,
