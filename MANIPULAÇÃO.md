@@ -277,3 +277,105 @@ GET http://localhost:3000/item/search?field=ncm&value=12345678
 5. Funciona para qualquer campo da tabela sem precisar criar várias rotas ou métodos.
 
 Agora sua API pode buscar itens de forma **flexível** e **otimizada**! 🚀🔥
+
+Ótimo! Agora vamos criar o **método de inserção de dados** para o seu CRUD com Sequelize! 🏗️🚀
+
+---
+
+## 📌 **Criando o Método de Inserção de Dados**
+Para inserir um novo item no banco, usamos o método `create()` do Sequelize. Esse método recebe um objeto com os dados e os insere na tabela correspondente.
+
+### ✍ **1. Criando a Função `createItem` no Controller**
+Edite o arquivo **`/src/controllers/itemController.js`** e adicione ou verifique se já tem esta função:
+
+```javascript
+const { Item } = require("../models");
+
+// 🟢 Criar um novo item
+const createItem = async (req, res) => {
+  try {
+    // Captura os dados do corpo da requisição
+    const novoItem = await Item.create(req.body);
+
+    // Retorna o item criado com status 201 (Criado)
+    res.status(201).json(novoItem);
+  } catch (error) {
+    res.status(400).json({ message: "Erro ao criar item", error });
+  }
+};
+
+module.exports = { createItem };
+```
+
+---
+
+### 🔗 **2. Criando a Rota de Inserção**
+Agora, edite o arquivo **`/src/routes/itemRoutes.js`** e adicione esta rota:
+
+```javascript
+const express = require("express");
+const { createItem } = require("../controllers/itemController");
+
+const router = express.Router();
+
+router.post("/", createItem);  // Rota para inserir um novo item
+
+module.exports = router;
+```
+
+---
+
+### 🛠 **3. Testando a Inserção com Postman ou Insomnia**
+Agora que a rota está configurada, podemos testar a inserção de um novo item.
+
+#### **📌 Requisição para Criar um Item**
+- **Método:** `POST`
+- **URL:** `http://localhost:3000/item`
+- **Body (JSON):**
+  ```json
+  {
+    "valor_unitario": 99.90,
+    "descricao": "Produto de Teste",
+    "taxa_icms_entrada": 18.5,
+    "ncm": "12345678",
+    "cst": "10",
+    "cfop": 1001,
+    "ean": "1234567890123"
+  }
+  ```
+
+#### **📌 Resposta Esperada (`201 Created`)**
+```json
+{
+  "id": 1,
+  "valor_unitario": 99.90,
+  "descricao": "Produto de Teste",
+  "taxa_icms_entrada": 18.5,
+  "ncm": "12345678",
+  "cst": "10",
+  "cfop": 1001,
+  "ean": "1234567890123",
+  "createdAt": "2025-01-31T12:00:00.000Z",
+  "updatedAt": "2025-01-31T12:00:00.000Z"
+}
+```
+
+---
+
+## ✅ **Explicação**
+1. **O Cliente faz um `POST` para `/item`** enviando um objeto JSON no **body**.
+2. **O método `createItem()` captura os dados do `req.body`** e insere na tabela `tb_itens`.
+3. **Se a inserção for bem-sucedida**, retorna o objeto recém-criado com `201 Created`.
+4. **Se houver erro**, retorna um `400 Bad Request` com uma mensagem de erro.
+
+---
+
+### 🚀 **Conclusão**
+Agora seu CRUD pode **inserir** novos registros na tabela `tb_itens`! 🎯🔥
+
+📌 **O que foi feito?**
+✅ Criamos a função `createItem()` no **controller**  
+✅ Criamos a rota `POST /item` para **inserir dados**  
+✅ Testamos a API no **Postman ou Insomnia**  
+
+Agora seu CRUD está **100% funcional**! Se precisar adicionar mais funcionalidades, como **validações de entrada ou relacionamentos entre tabelas**, me avise! 🚀🚀

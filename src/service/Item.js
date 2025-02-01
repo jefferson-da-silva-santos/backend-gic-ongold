@@ -1,4 +1,4 @@
-import { Op } from "sequelize";
+import { Op, ValidationError, ForeignKeyConstraintError, DatabaseError } from "sequelize";
 import ItemModel from "../models/item.js";
 
 export default class Item {
@@ -57,28 +57,10 @@ export default class Item {
   }
 
   // função responsável por buscar os dados dos itens
-  static async getAllItens() {
+  static async getAllItems() {
     try {
       const items = await ItemModel.findAll();
-  
-      return items.map(({ dataValues: item }) => ({
-        id: item.id,
-        valor_unitario: item.valor_unitario,
-        descricao: item.descricao,
-        taxa_icms_entrada: item.taxa_icms_entrada,
-        taxa_icms_saida: item.taxa_icms_saida,
-        comissao: item.comissao,
-        ncm: item.ncm,
-        cst: item.cst,
-        cfop: item.cfop,
-        ean: item.ean,
-        totalCusto: Item.calculateTotalCost(
-          item.valor_unitario,
-          item.taxa_icms_entrada,
-          item.taxa_icms_saida,
-          item.comissao
-        ),
-      }));
+      return this.parseObject(items);
     } catch (error) {
       console.error("Erro ao buscar itens:", error);
       throw new Error("Erro ao buscar itens");
@@ -86,49 +68,98 @@ export default class Item {
   }
 
   // função responsável por buscar os dados dos itens com uma filtragem
-  static async getItenFillter(field, value) {
+  static async getItemFillter(field, value) {
     try {
       if (!field || !value) {
         throw new Error('Parâmetros de filtragem vazios');
       }
-      const filters = {[field]: {[Op.eq]: value}};
-      const itens = await ItemModel.findAll({where: filters});
-      if (itens.length === 0) {
+      const filters = { [field]: { [Op.eq]: value } };
+      const items = await ItemModel.findAll({ where: filters });
+      if (items.length === 0) {
         throw new Error('Erro ao buscar dados');
       }
-      return itens.map(({ dataValues: item }) => ({
-        id: item.id,
-        valor_unitario: item.valor_unitario,
-        descricao: item.descricao,
-        taxa_icms_entrada: item.taxa_icms_entrada,
-        taxa_icms_saida: item.taxa_icms_saida,
-        comissao: item.comissao,
-        ncm: item.ncm,
-        cst: item.cst,
-        cfop: item.cfop,
-        ean: item.ean,
-        totalCusto: Item.calculateTotalCost(
-          item.valor_unitario,
-          item.taxa_icms_entrada,
-          item.taxa_icms_saida,
-          item.comissao
-        ),
-      }));
+      return this.parseObject(items);
     } catch (error) {
       console.error("Erro ao buscar itens com filtragem:", error);
       throw new Error("Erro ao buscar itens filtragem");
     }
   }
-  
+
+  // Função de inserir um dado na tabela tb_itens
+
+  async insertItem() {
+    try {
+      // Monta o objeto com os dados do item
+      const newItem = {
+        valor_unitario: this.value_unit,
+        descricao: this.description,
+        taxa_icms_entrada: this.entry_icms_fee || null,
+        taxa_icms_saida: this.exit_icms_rate || null,
+        comissao: this.commission || null,
+        ncm: this.codNcm,
+        cst: this.codCst,
+        cfop: this.codCfop,
+        ean: this.codEan,
+        excluido: this.deleted
+      };
+
+      // Tenta inserir no banco de dados
+      const result = await ItemModel.create(newItem);
+      console.log("✅ Item inserido com sucesso:", result.dataValues);
+      return result;
+    } catch (error) {
+      if (error instanceof ValidationError) {
+        console.error("❌ Erro de validação:", error.errors.map(err => err.message));
+        throw new Error(`Erro de validação: ${error.errors.map(err => err.message).join(", ")}`);
+      }
+
+      if (error instanceof ForeignKeyConstraintError) {
+        console.error("❌ Erro de chave estrangeira:", error.fields);
+        throw new Error(`Erro de chave estrangeira: A referência no campo '${error.fields}' não existe.`);
+      }
+
+      if (error instanceof DatabaseError) {
+        console.error("❌ Erro de banco de dados:", error.message);
+        throw new Error("Erro ao acessar o banco de dados. Verifique a conexão e os dados.");
+      }
+
+      console.error("❌ Erro inesperado ao inserir item:", error);
+      throw new Error("Erro inesperado ao inserir item. Consulte os logs para mais detalhes.");
+    }
+  }
+
+  static parseObject(arr) {
+    return arr.map(({ dataValues: item }) => ({
+      id: item.id,
+      valor_unitario: item.valor_unitario,
+      descricao: item.descricao,
+      taxa_icms_entrada: item.taxa_icms_entrada,
+      taxa_icms_saida: item.taxa_icms_saida,
+      comissao: item.comissao,
+      ncm: item.ncm,
+      cst: item.cst,
+      cfop: item.cfop,
+      ean: item.ean,
+      totalCusto: Item.calculateTotalCost(
+        item.valor_unitario,
+        item.taxa_icms_entrada,
+        item.taxa_icms_saida,
+        item.comissao
+      ),
+    }));
+  }
+
   // Função responsável por calcular o total de custo dos itens
-  static calculateTotalCost(unitValue, entryIcmsRate, exitIcmsRate, commission) {
+  static calculateTotalCost(unitValue, entryIcmsRate = 0, exitIcmsRate = 0, commission = 0) {
     const value = parseFloat(unitValue) || 0;
     const entryIcms = parseFloat(entryIcmsRate) || 0;
     const exitIcms = parseFloat(exitIcmsRate) || 0;
     const commissionRate = parseFloat(commission) || 0;
+
     const totalCost = ((entryIcms / 100) + (exitIcms / 100) + (commissionRate / 100)) * value;
-    return totalCost.toFixed(2);
+    return parseFloat(totalCost.toFixed(2)); // Retorna como número e não string
   }
+
 
   // Função responsável por validar os dados de entrada da classe aplicando o "Retorne Cedo"
   validateInputs(value_unit, description, entry_icms_fee, exit_icms_rate, commission, codNcm, codCst, codCfop, codEan, deleted) {
@@ -167,8 +198,8 @@ export default class Item {
       throw new Error(`O código EAN "${codEan}" deve conter exatamente 13 dígitos numéricos.`);
     }
 
-    if (typeof deleted !== "number" || deleted < 0 || deleted > 1) {
-      throw new Error("O campo 'excluido' deve ser um número (1 ou 0).");
+    if (typeof deleted !== "boolean" && (deleted !== 0 && deleted !== 1)) {
+      throw new Error("O campo 'excluido' deve ser um número (1 ou 0) ou um booleano.");
     }
   }
 }
