@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import { Sequelize } from 'sequelize';
+import logger from '../utils/logger.js';
 dotenv.config();
 
 const sequelize = new Sequelize(
@@ -10,13 +11,19 @@ const sequelize = new Sequelize(
     host: process.env.DB_HOST,
     dialect: process.env.DB_DIALECT,
     port: process.env.DB_PORT,
-    logging: false, // Para não poluir o console com logs SQL
+    logging: false, 
   }
 );
 
 sequelize
   .authenticate()
-  .then(() => console.log("Conectado ao banco de dados com sucesso!"))
-  .catch((error) => console.error("Erro ao conectar ao banco:", error));
+  .then(() => {
+    logger.info('Conectado ao banco de dados com sucesso!');
+    console.log("Conectado ao banco de dados com sucesso!")
+  })
+  .catch((error) => {
+    logger.error("Erro ao conectar ao banco:", error);
+    console.error("Erro ao conectar ao banco:", error)
+  });
 
 export default sequelize;

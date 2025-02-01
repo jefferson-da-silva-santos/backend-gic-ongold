@@ -18,6 +18,13 @@ export const shemaFillter = Joi.object({
   value: Joi.required()
 });
 
+export const shemaFillterCst = Joi.object({
+  field: Joi.string().required().valid(
+    'codcst'
+  ),
+  value: Joi.required()
+});
+
 export const itemSchema = Joi.object({
   valor_unitario: Joi.number().positive().precision(2).required()
     .messages({
@@ -103,3 +110,7 @@ export const itemSchema = Joi.object({
       "alternatives.types": "O campo 'excluido' deve ser um número (0 ou 1) ou um booleano (true/false)."
     })
 });
+
+export const idShema = Joi.object({
+  id: Joi.number().required().positive().messages()
+})

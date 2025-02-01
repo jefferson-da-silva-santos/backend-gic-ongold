@@ -1,0 +1,53 @@
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:34:15.315Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:34:24.899Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:35:19.110Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:36:02.658Z"}
+{"level":"info","message":"","timestamp":"2025-02-01T20:36:12.710Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:36:12.801Z"}
+{"level":"info","message":"A API subi","timestamp":"2025-02-01T20:36:17.822Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:36:17.927Z"}
+{"level":"info","message":"A API subiu na porta 3000","timestamp":"2025-02-01T20:36:28.039Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:36:28.168Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:36:35.975Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:36:36.078Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:36:56.981Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:36:57.090Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:37:31.669Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:37:31.740Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:37:35.249Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:37:35.358Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:37:39.088Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:37:39.146Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:37:41.781Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:37:41.944Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:37:50.206Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:37:50.272Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:37:58.057Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:37:58.190Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:38:08.845Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:38:08.908Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:38:18.379Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:38:18.517Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:38:26.076Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:38:26.164Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:38:40.612Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:38:40.752Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:40:07.316Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:40:07.775Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:40:15.986Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:40:16.257Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:41:29.822Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:41:30.005Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:42:00.665Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:42:00.867Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:43:28.101Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:43:28.259Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:44:44.542Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:44:44.795Z"}
+{"level":"info","message":"Início da requisição para atualizar item","method":"PUT","timestamp":"2025-02-01T20:51:57.424Z","url":"/api/gic/items/12"}
+{"level":"info","message":"Atualizando item ID: 12 com dados","timestamp":"2025-02-01T20:51:57.439Z","updateData":{"cfop":1100,"comissao":10,"cst":"010","descricao":"Maquina de Lavar","ean":"1234562122013","excluido":0,"ncm":"01011010","taxa_icms_entrada":18.5,"taxa_icms_saida":14.9,"valor_unitario":99.9}}
+{"level":"warn","message":"Item ID 12 não encontrado para atualização","timestamp":"2025-02-01T20:51:57.588Z"}
+{"itemId":12,"level":"error","message":"Erro: Item não encontrado para atualização","timestamp":"2025-02-01T20:51:57.589Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [01/Feb/2025:20:51:57 +0000] \"PUT /api/gic/items/12 HTTP/1.1\" 404 33 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","timestamp":"2025-02-01T20:51:57.597Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:52:01.894Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:52:01.955Z"}
