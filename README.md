@@ -1,4 +1,161 @@
-# BackEnd do GIC (Desafio Técnico Ongold Tech)
-BackEnd do GIC (Gestor de Itens Comerciais): Uma aplicação desenvolvida para gerenciar o cadastro, edição e exclusão de itens com informações tributárias e comerciais, seguindo boas práticas de desenvolvimento e organizando as operações de maneira eficiente.
+# BackEnd do GIC (Gestor de Itens Comerciais) 🚀
 
-Aqui está a estrutura do seu backend usando **Node.js**, **Express**, **Sequelize** e **MySQL**. O projeto seguirá princípios do **SOLID** e terá **separação de camadas** para facilitar a manutenção.
+Bem-vindo ao **BackEnd do GIC**! Essa API foi desenvolvida para gerenciar o cadastro, edição e exclusão de itens comerciais com informações tributárias, seguindo boas práticas de desenvolvimento e organização eficiente.
+
+---
+## 📌 Tecnologias Utilizadas
+
+- **Node.js** + **Express**
+- **Sequelize** + **MySQL**
+- **Autenticação JWT**
+- **Validação com Joi**
+- **Log com Winston e Morgan**
+- **Cache com node-cache**
+- **Rate Limiting com express-rate-limit**
+- **Arquitetura baseada nos princípios SOLID**
+
+---
+## 📁 Estrutura do Projeto
+
+```
+backend-gic/
+│-- src/
+│   │-- config/
+│   │   ├── config.js
+│   │-- controllers/
+│   │   ├── cfopController.js
+│   │   ├── cstController.js
+│   │   ├── itemsController.js
+│   │   ├── ncmController.js
+│   │-- database/
+│   │   ├── connection.js
+│   │   ├── shema.sql
+│   │-- log/
+│   │   ├── combined.log
+│   │-- middleware/
+│   │   ├── errorHandler.js
+│   │-- models/
+│   │   ├── cfop.js
+│   │   ├── csticms.js
+│   │   ├── index.js
+│   │   ├── item.js
+│   │   ├── logs.js
+│   │   ├── ncm.js
+│   │-- router/
+│   │   ├── cfopRouter.js
+│   │   ├── cstRouter.js
+│   │   ├── itemRouter.js
+│   │   ├── ncmRouter.js
+│   │-- service/
+│   │   ├── Cfop.js
+│   │   ├── Cst.js
+│   │   ├── Item.js
+│   │   ├── Ncm.js
+│   │-- utils/
+│   │   ├── logger.js
+│   │   ├── shemasValidate.js
+│-- node_modules/
+│-- .gitignore
+│-- app.js
+│-- gestor_comercial.sql
+│-- LICENSE
+│-- package.json
+│-- README.md
+```
+
+---
+## ⚙️ Configuração do Ambiente
+
+Antes de iniciar a API, configure suas variáveis de ambiente criando um arquivo `.env` na raiz do projeto com os seguintes valores:
+
+```
+DB_HOST=localhost
+DB_USER=seu_usuario
+DB_PASSWORD=sua_senha
+DB_NAME=nome_do_banco
+DB_DIALECT=mysql
+DB_PORT=3306
+```
+
+Instale as dependências:
+```sh
+npm install
+```
+
+Para rodar o servidor:
+```sh
+npm start
+```
+
+---
+## 🌐 Rotas da API
+
+### 📌 **GET** - Buscar todos os registros
+- `GET /api/gic/items` → Retorna todos os itens cadastrados + custo total.
+- `GET /api/gic/csts` → Retorna todas as CSTs cadastradas.
+- `GET /api/gic/ncms` → Retorna todos os NCMs cadastrados.
+- `GET /api/gic/cfops` → Retorna todos os CFOPs cadastrados.
+
+### 🔎 **GET** - Buscar itens filtrados
+Busca itens por um campo específico:
+```
+GET /api/gic/items/{field}/{value}
+```
+
+### ➕ **POST** - Inserir novo item
+```
+POST /api/gic/items
+```
+**Body:**
+```json
+{
+    "valor_unitario": 99.90,
+    "descricao": "Produto de Teste",
+    "taxa_icms_entrada": 18.5,
+    "taxa_icms_saida": 14.9,
+    "comissao": 10,
+    "ncm": "01011010",
+    "cst": "010",
+    "cfop": 1100,
+    "ean": "1234562890123",
+    "excluido": 0
+}
+```
+
+### ✏️ **PUT** - Atualizar item
+```
+PUT /api/gic/items/{id}
+```
+**Body:**
+```json
+{
+    "valor_unitario": 99.90,
+    "descricao": "Maquina",
+    "taxa_icms_entrada": 18.5,
+    "taxa_icms_saida": 14.9,
+    "comissao": 10,
+    "ncm": "01011010",
+    "cst": "010",
+    "cfop": 1100,
+    "ean": "1234562122013",
+    "excluido": false
+}
+```
+
+### 🗑️ **DELETE** - Remover item
+```
+DELETE /api/gic/items/{id}
+```
+
+---
+## 📜 Licença
+
+Este projeto está sob a licença **ISC**.
+
+---
+## 📝 Autor
+
+Projeto desenvolvido por **Jefferson Santos Dev** ✨
+
+[🔗 Repositório no GitHub](https://github.com/jefferson-da-silva-santos/backend-gic)
+
