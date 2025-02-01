@@ -10,8 +10,6 @@ Bem-vindo ao **BackEnd do GIC**! Essa API foi desenvolvida para gerenciar o cada
 - **Autenticação JWT**
 - **Validação com Joi**
 - **Log com Winston e Morgan**
-- **Cache com node-cache**
-- **Rate Limiting com express-rate-limit**
 - **Arquitetura baseada nos princípios SOLID**
 
 ---
