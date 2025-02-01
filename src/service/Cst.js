@@ -1,6 +1,7 @@
 import CstIcmsModel from "../models/csticms.js";
 import logger from '../utils/logger.js';
 
+// Entidade para tratar o CST
 export default class Cst {
   static async getAllCsts() {
     try {

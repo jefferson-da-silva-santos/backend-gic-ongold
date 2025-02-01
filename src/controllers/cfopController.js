@@ -1,7 +1,7 @@
 import CfopService from "../service/Cfop.js";
 import logger from "../utils/logger.js";
 
-// Controlador que retorna todos os itens do banco
+// Controlador que retorna todos os cfops do banco
 export const getAll = async (req, res, next) => {
   logger.info('Início da requisição para obter todos os CFOPs', { method: req.method, url: req.originalUrl });
 

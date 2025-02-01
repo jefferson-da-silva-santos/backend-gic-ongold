@@ -18,11 +18,11 @@ const Log = sequelize.define('Log', {
   timestamp: {
     type: DataTypes.DATE,
     allowNull: false,
-    defaultValue: DataTypes.NOW, // Define automaticamente a data/hora atual
+    defaultValue: DataTypes.NOW,
   }
 }, {
   tableName: 'tb_logs',
-  timestamps: false, // Não cria os campos createdAt e updatedAt
+  timestamps: false,
 });
 
 export default Log;

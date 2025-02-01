@@ -1,6 +1,7 @@
 import CfopModel from "../models/cfop.js";
 import logger from "../utils/logger.js";
 
+// Entidade para tratar o CFOP
 export default class Cfop {
   static async getAllCfops() {
     try {

@@ -1,6 +1,7 @@
 import NcmModel from "../models/ncm.js";
 import logger from '../utils/logger.js';
 
+// Entidade para tratar o NCM
 export default class Ncm {
   static async getAllNcms() {
     try {

@@ -2,6 +2,7 @@ import { Op } from "sequelize";
 import ItemModel from "../models/item.js";
 import logger from '../utils/logger.js';
 
+// Entidade para tratar o Item
 export default class Item {
   constructor(value_unit, description, entry_icms_fee, exit_icms_rate, commission, codNcm, codCst, codCfop, codEan, deleted) {
     this.validateInputs(value_unit, description, entry_icms_fee, exit_icms_rate, commission, codNcm, codCst, codCfop, codEan, deleted);

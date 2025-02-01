@@ -1,6 +1,7 @@
 import CstService from "../service/Cst.js";
 import logger from "../utils/logger.js";
 
+// Controlador que retorna todos os CSTs do banco
 export const getAll = async (req, res, next) => {
   logger.info('Início da requisição para obter todos os CSTs', { method: req.method, url: req.originalUrl });
 

@@ -1,6 +1,7 @@
 import NcmService from "../service/Ncm.js";
 import logger from "../utils/logger.js";
 
+// Controlador que retorna todos os NCMs do banco
 export const getAll = async (req, res, next) => {
   logger.info('Início da requisição para obter todos os NCMs', { method: req.method, url: req.originalUrl });
 
