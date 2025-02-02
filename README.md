@@ -7,7 +7,6 @@ Bem-vindo ao **BackEnd do GIC**! Essa API foi desenvolvida para gerenciar o cada
 
 - **Node.js** + **Express**
 - **Sequelize** + **MySQL**
-- **Autenticação JWT**
 - **Validação com Joi**
 - **Log com Winston e Morgan**
 - **Arquitetura baseada nos princípios SOLID**

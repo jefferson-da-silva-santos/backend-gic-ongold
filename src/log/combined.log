@@ -51,3 +51,7 @@
 {"level":"info","message":"::ffff:127.0.0.1 - - [01/Feb/2025:20:51:57 +0000] \"PUT /api/gic/items/12 HTTP/1.1\" 404 33 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","timestamp":"2025-02-01T20:51:57.597Z"}
 {"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-01T20:52:01.894Z"}
 {"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-01T20:52:01.955Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-02T03:42:56.621Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-02T03:42:56.767Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-02T03:43:49.645Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-02T03:43:49.782Z"}
