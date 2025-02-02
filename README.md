@@ -15,49 +15,60 @@ Bem-vindo ao **BackEnd do GIC**! Essa API foi desenvolvida para gerenciar o cada
 ## 📁 Estrutura do Projeto
 
 ```
-backend-gic/
-│-- src/
-│   │-- config/
-│   │   ├── config.js
-│   │-- controllers/
-│   │   ├── cfopController.js
-│   │   ├── cstController.js
-│   │   ├── itemsController.js
-│   │   ├── ncmController.js
-│   │-- database/
-│   │   ├── connection.js
-│   │   ├── shema.sql
-│   │-- log/
-│   │   ├── combined.log
-│   │-- middleware/
-│   │   ├── errorHandler.js
-│   │-- models/
-│   │   ├── cfop.js
-│   │   ├── csticms.js
-│   │   ├── index.js
-│   │   ├── item.js
-│   │   ├── logs.js
-│   │   ├── ncm.js
-│   │-- router/
-│   │   ├── cfopRouter.js
-│   │   ├── cstRouter.js
-│   │   ├── itemRouter.js
-│   │   ├── ncmRouter.js
-│   │-- service/
-│   │   ├── Cfop.js
-│   │   ├── Cst.js
-│   │   ├── Item.js
-│   │   ├── Ncm.js
-│   │-- utils/
-│   │   ├── logger.js
-│   │   ├── shemasValidate.js
-│-- node_modules/
-│-- .gitignore
-│-- app.js
-│-- gestor_comercial.sql
-│-- LICENSE
-│-- package.json
-│-- README.md
+📂 backend-gic/
+│
+├── 📦 node_modules/
+├── 📜 .gitignore
+├── 🚀 app.js
+├── 📜 LICENSE
+├── 📦 package.json
+├── 📖 README.md
+│
+└── 📁 src/  
+    │
+    ├── ⚙️ config/  
+    │   ├── 🛠️ config.js
+    │
+    ├── 🗄️ database/  
+    │   ├── 🔌 connection.js
+    │   ├── 🗃️ shema.sql
+    │
+    ├── 🛡️ middleware/  
+    │   ├── 🚨 errorHandler.js
+    │
+    ├── 🎮 controllers/  
+    │   ├── 📜 cfopController.js
+    │   ├── 📜 cstController.js
+    │   ├── 📜 itemsController.js
+    │   ├── 📜 ncmController.js
+    │
+    ├── 🏛️ models/  
+    │   ├── 🏷️ cfop.js
+    │   ├── 🏷️ csticms.js
+    │   ├── 🏷️ index.js
+    │   ├── 🏷️ item.js
+    │   ├── 🏷️ logs.js
+    │   ├── 🏷️ ncm.js
+    │
+    ├── 🛤️ router/  
+    │   ├── 🚏 cfopRouter.js
+    │   ├── 🚏 cstRouter.js
+    │   ├── 🚏 itemRouter.js
+    │   ├── 🚏 ncmRouter.js
+    │
+    ├── ⚡ service/  
+    │   ├── 🔧 Cfop.js
+    │   ├── 🔧 Cst.js
+    │   ├── 🔧 Item.js
+    │   ├── 🔧 Ncm.js
+    │
+    ├── 🛠️ utils/  
+    │   ├── 📢 logger.js
+    │   ├── 📑 shemasValidate.js
+    │
+    ├── 📜 log/  # Logs de aplicação
+    │   ├── 📄 combined.log
+
 ```
 
 ---
@@ -65,7 +76,7 @@ backend-gic/
 
 Antes de iniciar a API, configure suas variáveis de ambiente criando um arquivo `.env` na raiz do projeto com os seguintes valores:
 
-```
+```js
 DB_HOST=localhost
 DB_USER=seu_usuario
 DB_PASSWORD=sua_senha
@@ -75,13 +86,22 @@ DB_PORT=3306
 ```
 
 Instale as dependências:
+
 ```sh
 npm install
+```
+ou se preferir:
+```sh
+yarn
 ```
 
 Para rodar o servidor:
 ```sh
-npm start
+npm run app
+```
+ou se preferir:
+```sh
+yarn app
 ```
 
 ---
