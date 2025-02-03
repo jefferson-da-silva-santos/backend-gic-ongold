@@ -59,3 +59,255 @@
 {"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-02T03:48:38.218Z"}
 {"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-02T03:49:25.379Z"}
 {"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-02T03:49:25.446Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-03T10:50:10.195Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-03T10:50:11.644Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-03T10:50:13.312Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-03T10:50:14.785Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-03T10:50:16.292Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-03T10:50:17.664Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-03T10:50:19.173Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-03T10:50:20.628Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-03T10:50:21.912Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-03T10:50:23.208Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-03T10:50:24.499Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-03T10:50:24.580Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:30.671Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:30.698Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:30.699Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:30 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:30.712Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:36.887Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:36.900Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:36.901Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:36 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:36.906Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:37.562Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:37.571Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:37.572Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:37 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:37.574Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:38.157Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:38.161Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:38.168Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:38.168Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:38 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:38.169Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:38.171Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:38.176Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:38 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:38.183Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:38.780Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:38.784Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:38.787Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:38.788Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:38 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:38.791Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:38.798Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:38.813Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:38 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:38.827Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:39.334Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:39.339Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:39.340Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:39 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:39.341Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:39.916Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:39.921Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:39.922Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:39 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:39.926Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:40.487Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:40.492Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:40.496Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:40.496Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:40 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:40.498Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:40.508Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:40.509Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:40 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:40.511Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:41.074Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:41.078Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:41.082Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:41.083Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:41 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:41.084Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:41.092Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:41.093Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:41 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:41.096Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:41.295Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:41.300Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:41.301Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:41 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:41.303Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:41.887Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:41.895Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:41.899Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:41.899Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:41 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:41.902Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:41.904Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:41.913Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:41.915Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:41 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:41.917Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:41.922Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:41.924Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:41 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:41.926Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:42.040Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:42.047Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:42.048Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:42 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:42.050Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:42.179Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:42.183Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:42.183Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:42 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:42.185Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:42.784Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:42.788Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:42.791Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:42.794Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:42.795Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:42 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:42.796Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:42.803Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:42.805Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:42 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:42.810Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:42.816Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:42.817Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:42 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:42.819Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:43.570Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:43.574Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:43.577Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:43.578Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:43 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:43.579Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:43.587Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:43.592Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:43 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:43.594Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:43.712Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:43.719Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:43.720Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:43 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:43.723Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:43.859Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:43.863Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:43.864Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:43 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:43.865Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:44.454Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:44.460Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:44.462Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:44.466Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:44.466Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:44 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:44.468Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:44.477Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:44.478Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:44 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:44.482Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:44.491Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:44.492Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:44 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:44.494Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:44.578Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:44.589Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:44.596Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:44 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:44.599Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:44.729Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:44.733Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:44.734Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:44 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:44.735Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:44.881Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:44.885Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:44.886Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:44 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:44.887Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:45.465Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:45.468Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:45.470Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:45.471Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:45 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:45.473Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:45.478Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:45.482Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:45.484Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:45 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:45.486Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:45.520Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:45.524Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:45 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:45.526Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:45.568Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:45.578Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:45.578Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:45 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:45.580Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:45.738Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:45.744Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:45.744Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:45 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:45.745Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:45.882Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:45.885Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:45.886Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:45 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:45.887Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:46.032Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:46.037Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:46.038Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:46 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:46.040Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:46.201Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:46.229Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:46.230Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:46 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:46.231Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:46.372Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:46.376Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:46.377Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:46 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:46.378Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:46.521Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:46.533Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:46.535Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:46 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:46.536Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:46.744Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:46.748Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:46.749Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:46 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:46.750Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:46.877Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:46.881Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:46.882Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:46 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:46.884Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:47.407Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:47.409Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:47.413Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:47.414Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:47 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:47.416Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:47.419Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:47.419Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:47 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:47.422Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:47.501Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:47.512Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:47.512Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:47 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:47.513Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:47.642Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:47.646Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:47.646Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:47 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:47.647Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:48.215Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:48.219Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:48.220Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:48.223Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:48.224Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:48 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:48.225Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:48.234Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:48.234Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:48 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:48.236Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:48.244Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:48.245Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:48 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:48.247Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:48.346Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:48.519Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:48.519Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:48 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:48.520Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:49.048Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:49.051Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:49.053Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:49.053Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:49 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:49.056Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:49.064Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:49.065Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:49 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:49.066Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:51.699Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:51.703Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:51.704Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:51 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:51.705Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:52.240Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:52.243Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:52.247Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:52.247Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:52 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:52.248Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:52.250Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:52.251Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:52 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:52.252Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:52.750Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:52.755Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:52.755Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:52 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:52.757Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:53.257Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:53.261Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:53.262Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:53 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:53.263Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-03T10:51:53.745Z","url":"/api/gic/items/taxa_icms_saida/12"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-03T10:51:53.748Z"}
+{"filter":{"field":"taxa_icms_saida","value":"12"},"itemCount":20,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-03T10:51:53.749Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [03/Feb/2025:10:51:53 +0000] \"GET /api/gic/items/taxa_icms_saida/12 HTTP/1.1\" 200 4565 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-03T10:51:53.750Z"}
