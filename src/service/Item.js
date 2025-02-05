@@ -175,6 +175,7 @@ export default class Item {
         item.taxa_icms_saida,
         item.comissao
       ),
+      criado_em: item.criado_em
     }));
   }
 
