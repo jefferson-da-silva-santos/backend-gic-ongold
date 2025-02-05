@@ -91,20 +91,20 @@ export default class Item {
   async insertItem() {
     try {
       const newItem = {
-        valor_unitario: this.value_unit,
-        descricao: this.description,
-        taxa_icms_entrada: this.entry_icms_fee || null,
-        taxa_icms_saida: this.exit_icms_rate || null,
-        comissao: this.commission || null,
-        ncm: this.codNcm,
-        cst: this.codCst,
-        cfop: this.codCfop,
-        ean: this.codEan,
-        excluido: this.deleted
+        valor_unitario: this._value_unit,
+        descricao: this._description,
+        taxa_icms_entrada: this._entry_icms_fee || null,
+        taxa_icms_saida: this._exit_icms_rate || null,
+        comissao: this._commission || null,
+        ncm: this._codNcm,
+        cst: this._codCst,
+        cfop: this._codCfop,
+        ean: this._codEan,
+        excluido: this._deleted ?? 0
       };
-
+      
       const result = await ItemModel.create(newItem);
-      logger.info('Item inserido com sucesso', { itemId: result.dataValues.id });
+      logger.info('Item inserido com sucesso', { itemId: result.id });
       return result;
     } catch (error) {
       logger.error('Erro ao tentar inserir um item', { error: error.message, stack: error.stack });
