@@ -18,7 +18,11 @@ const Item = sequelize.define(
     cfop: { type: DataTypes.INTEGER, references: { model: Cfop, key: "codcfop" } },
     ean: { type: DataTypes.STRING(13), unique: true, allowNull: false },
     excluido: { type: DataTypes.BOOLEAN, defaultValue: false },
+<<<<<<< HEAD
     data_criacao: { type: DataTypes.DATE, defaultValue: DataTypes.NOW }
+=======
+    criado_em: { type: DataTypes.DATE, defaultValue: DataTypes.NOW }
+>>>>>>> 5395d8b9ab63874e4696c9952b7d69118ba97417
   },
   { tableName: "tb_itens", timestamps: false }
 );

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {"itemCount":37,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-04T18:39:07.724Z"}
 {"itemCount":37,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-04T18:39:07.767Z"}
 {"level":"info","message":"::1 - - [04/Feb/2025:18:39:07 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-04T18:39:07.776Z"}
@@ -1361,3 +1362,451 @@
 {"itemCount":37,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-04T19:00:24.168Z"}
 {"itemCount":37,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-04T19:00:24.169Z"}
 {"level":"info","message":"::1 - - [04/Feb/2025:19:00:24 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-04T19:00:24.170Z"}
+=======
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-05T09:31:50.688Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-05T09:31:51.044Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:34:07.419Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:34:07.543Z"}
+{"itemCount":20,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:34:08.245Z"}
+{"itemCount":20,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:34:08.255Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:08 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:08.291Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:34:08.344Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:34:08.345Z"}
+{"itemCount":20,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:34:08.394Z"}
+{"itemCount":20,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:34:08.398Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:08 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:08.403Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:34:34.423Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:34:34.449Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:34:34.500Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:34:34.501Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:34:34.506Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:34:34.507Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:34.609Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:34.611Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:34 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:34.620Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:34.731Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:34.734Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:34 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:34.745Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:34.748Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:34.749Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:34 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:34.752Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:34:34.765Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:34:34.768Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:34:34.784Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:34:34.785Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:34:34.789Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:34:34.792Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:34.827Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:34.829Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:34 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:34.834Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:34.842Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:34.843Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:34 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:34.844Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:34.913Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:34.917Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:34 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:34.926Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:34:36.362Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:34:36.362Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:34:36.370Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:34:36.370Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:34:36.372Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:34:36.373Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:36.374Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:36.375Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:36 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:36.376Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:34:36.383Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:34:36.383Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:36.389Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:36.390Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:36 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:36.394Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:36.443Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:36.445Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:36 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:36.453Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:34:36.457Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:34:36.457Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:34:36.469Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:34:36.470Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:36.474Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:36.474Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:36 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:36.476Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:36.486Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:36.487Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:36 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:36.492Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:36.553Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:36.554Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:36 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:36.561Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:34:42.712Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:34:42.713Z"}
+{"itemCount":20,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:34:42.743Z"}
+{"itemCount":20,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:34:42.744Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:42 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:42.746Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:34:49.091Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:34:49.093Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:34:49.095Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:34:49.096Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:34:49.097Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:34:49.098Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:49.113Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:49.114Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:49 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:49.118Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:49.166Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:49.167Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:49 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:49.175Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:49.183Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:49.184Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:49 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:49.187Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:34:49.194Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:34:49.194Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:34:49.195Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:34:49.196Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:34:49.198Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:34:49.199Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:49.250Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:49.251Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:49 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:49.253Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:49.256Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:49.257Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:49 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:49.258Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:49.301Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:49.303Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:49 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:49.316Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:34:50.268Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:34:50.269Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:34:50.274Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:34:50.275Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:34:50.277Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:34:50.278Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:50.288Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:50.290Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:50 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:50.293Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:50.296Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:50.296Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:50 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:50.299Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:50.332Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:50.333Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:50 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:50.341Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:34:50.349Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:34:50.350Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:34:50.353Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:34:50.353Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:34:50.356Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:34:50.357Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:50.378Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:34:50.378Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:50 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:50.379Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:50.410Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:34:50.411Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:50 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:50.420Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:50.427Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:34:50.428Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:50 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:50.430Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-05T09:34:53.624Z","url":"/api/gic/items/id/243"}
+{"filter":{"field":"id","value":"243"},"itemCount":1,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-05T09:34:53.652Z"}
+{"filter":{"field":"id","value":"243"},"itemCount":1,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-05T09:34:53.653Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:53 +0000] \"GET /api/gic/items/id/243 HTTP/1.1\" 200 266 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:53.660Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:55 +0000] \"OPTIONS /api/gic/items/243 HTTP/1.1\" 204 0 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:55.259Z"}
+{"level":"info","message":"Início da requisição para deletar item","method":"DELETE","timestamp":"2025-02-05T09:34:55.263Z","url":"/api/gic/items/243"}
+{"itemId":243,"level":"info","message":"Item marcado como excluído com sucesso","timestamp":"2025-02-05T09:34:55.396Z","updatedRows":1}
+{"deletedRows":1,"itemId":243,"level":"info","message":"Item deletado com sucesso","timestamp":"2025-02-05T09:34:55.397Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:55 +0000] \"DELETE /api/gic/items/243 HTTP/1.1\" 200 56 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:55.399Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:34:55.514Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:34:55.515Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:34:55.521Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:34:55.522Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:34:55 +0000] \"GET /api/gic/items HTTP/1.1\" 200 5053 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:34:55.523Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:22.445Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:22.446Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:22.454Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:22.455Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:22.458Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:22.459Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:22.490Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:22.492Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:22 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:22.493Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:22.502Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:22.503Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:22 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:22.507Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:22.512Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:22.513Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:22.519Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:22.520Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:22.578Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:22.579Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:22 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:22.588Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:22.590Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:22.591Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:22 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:22.592Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:22.597Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:22.598Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:22.614Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:22.615Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:22 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:22.620Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:22.728Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:22.738Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:22 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:22.751Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:28.104Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:28.104Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:28.106Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:28.106Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:28.108Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:28.108Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:28.115Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:28.115Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:28 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:28.116Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:28.122Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:28.123Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:28 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:28.126Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:28.168Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:28.169Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:28 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:28.177Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:28.184Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:28.185Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:28.187Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:28.188Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:28.195Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:28.196Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:28.226Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:28.227Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:28 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:28.229Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:28.261Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:28.262Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:28 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:28.270Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:28.276Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:28.277Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:28 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:28.278Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:29.018Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:29.019Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:29.024Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:29.025Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:29.028Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:29.029Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:29.036Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:29.038Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:29 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:29.040Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:29.054Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:29.055Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:29 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:29.058Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:29.094Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:29.095Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:29 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:29.104Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:29.109Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:29.109Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:29.112Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:29.113Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:29.119Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:29.120Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:29.132Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:29.133Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:29 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:29.134Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:29.141Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:29.142Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:29 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:29.146Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:29.190Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:29.191Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:29 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:29.199Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:35:30.010Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:35:30.010Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:35:30.015Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:35:30.016Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:30 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:30.017Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:31.327Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:31.328Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:31.339Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:31.341Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:31 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:31.345Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:31.349Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:31.350Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:31.354Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:31.355Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:31.365Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:31.367Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:31.376Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:31.377Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:31 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:31.379Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:31.434Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:31.436Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:31 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:31.444Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:31.451Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:31.452Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:31.456Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:31.457Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:31.459Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:31.459Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:31 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:31.460Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:31.522Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:31.523Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:31 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:31.539Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:31.546Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:31.547Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:31 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:31.551Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:32.793Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:32.794Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:32.800Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:32.801Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:32.804Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:32.805Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:32.806Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:32.806Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:32 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:32.807Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:32.847Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:32.848Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:32 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:32.857Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:32.858Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:32.858Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:32.864Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:32.865Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:32 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:32.868Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:32.872Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:32.873Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:32.875Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:32.876Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:32.878Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:32.878Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:32 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:32.879Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:32.917Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:32.919Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:32 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:32.927Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:32.939Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:32.940Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:32 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:32.945Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:35:34.774Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:35:34.775Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:35:34.777Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:35:34.777Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:34 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:34.778Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:36.523Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:36.525Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:36.528Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:36.529Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:36.541Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:36.542Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:36.547Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:36.548Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:36 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:36.552Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:35:36.580Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:35:36.581Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:36.610Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:36.611Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:36 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:36.620Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:36.628Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:36.629Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:36 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:36.633Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:35:36.635Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:35:36.636Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:36.638Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:35:36.639Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:36 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:36.640Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:35:36.643Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:35:36.644Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:36.689Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:35:36.691Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:36 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:36.698Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:36.713Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:35:36.713Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:35:36 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:35:36.716Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:36:45.900Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:36:45.912Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:36:45.951Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:36:45.952Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:36:45.954Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:36:45.955Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:36:46.125Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:36:46.126Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:36:46 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:36:46.134Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:36:46.170Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:36:46.171Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:36:46 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:36:46.175Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:36:46.251Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:36:46.253Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:36:46 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:36:46.277Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:38:22.016Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:38:22.036Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:22.364Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:22.366Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:22 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:22.373Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:38:22.386Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:38:22.386Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:22.413Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:22.414Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:22 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:22.416Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:38:24.481Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:38:24.482Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:38:24.486Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:38:24.487Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:38:24.492Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:38:24.493Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:38:24.499Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:38:24.499Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:24 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:24.500Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:38:24.515Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:38:24.516Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:38:24.532Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:38:24.533Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:24 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:24.536Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:38:24.603Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:38:24.605Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:24 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:24.630Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:38:24.632Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:38:24.633Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:38:24.639Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:38:24.639Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:38:24.641Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:38:24.641Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:24 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:24.642Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:38:24.662Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:38:24.663Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:24 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:24.666Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:38:24.748Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:38:24.749Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:24 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:24.765Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:38:51.486Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:38:51.515Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:52.067Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:52.068Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:52 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:52.080Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:38:52.109Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:38:52.111Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:52.132Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:52.137Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:52 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:52.144Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:38:52.868Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:38:52.869Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:52.876Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:52.876Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:52 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:52.879Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-05T09:38:52.906Z","url":"/api/gic/items"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-05T09:38:52.906Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:52.924Z"}
+{"itemCount":19,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-05T09:38:52.927Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:52 +0000] \"GET /api/gic/items HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:52.932Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:38:56.479Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:38:56.480Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:38:56.483Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:38:56.484Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:38:56.486Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:38:56.486Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:38:56.499Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:38:56.500Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:56 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:56.503Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:38:56.538Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:38:56.539Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:56 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:56.549Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-05T09:38:56.580Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-05T09:38:56.581Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:38:56.713Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:38:56.714Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:56 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:56.724Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-05T09:38:56.726Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-05T09:38:56.727Z"}
+{"level":"info","message":"Início da requisição para obter todos os NCMs","method":"GET","timestamp":"2025-02-05T09:38:56.747Z","url":"/api/gic/ncms"}
+{"level":"info","message":"Iniciando a busca de NCMs no banco de dados","timestamp":"2025-02-05T09:38:56.749Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:38:56.757Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-05T09:38:56.757Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:56 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:56.759Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:38:56.776Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-05T09:38:56.777Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:56 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:56.781Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:38:56.843Z"}
+{"level":"info","message":"NCMs encontrados com sucesso","ncmCount":11399,"timestamp":"2025-02-05T09:38:56.845Z"}
+{"level":"info","message":"::1 - - [05/Feb/2025:09:38:56 +0000] \"GET /api/gic/ncms HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\"","timestamp":"2025-02-05T09:38:56.853Z"}
+>>>>>>> 5395d8b9ab63874e4696c9952b7d69118ba97417
