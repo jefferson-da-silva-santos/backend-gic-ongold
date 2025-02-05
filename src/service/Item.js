@@ -61,7 +61,7 @@ export default class Item {
   static async getAllItems() {
     try {
       logger.info('Iniciando a busca de itens no banco de dados');
-      const items = await ItemModel.findAll();
+      const items = await ItemModel.findAll({ where: { excluido: 0 } });
       logger.info('Itens encontrados com sucesso', { itemCount: items.length });
       return this.parseObject(items);
     } catch (error) {
@@ -75,7 +75,7 @@ export default class Item {
       if (!field || !value) {
         throw new Error('Parâmetros de filtragem vazios');
       }
-      const filters = { [field]: { [Op.eq]: value } };
+      const filters = { [field]: { [Op.eq]: value }, excluido: 0 };
       const items = await ItemModel.findAll({ where: filters });
       if (items.length === 0) {
         throw new Error('Erro ao buscar dados');
@@ -143,17 +143,18 @@ export default class Item {
         logger.warn(`Item ID ${id} não encontrado para deleção`);
         return 0;
       }
-      const deletedRows = await ItemModel.destroy({ where: { id } });
 
-      if (deletedRows === 0) {
-        logger.warn(`Nenhum item deletado. Item ID ${id} pode não existir.`);
+      const [updatedRows] = await ItemModel.update({ excluido: 1 }, { where: { id } });
+
+      if (updatedRows === 0) {
+        logger.warn(`Nenhum item atualizado. Item ID ${id} pode não existir.`);
       }
 
-      logger.info('Item deletado com sucesso', { itemId: id, deletedRows });
-      return deletedRows;
+      logger.info('Item marcado como excluído com sucesso', { itemId: id, updatedRows });
+      return updatedRows;
     } catch (error) {
-      logger.error('Erro ao deletar item', { error: error.message, stack: error.stack });
-      throw new Error(`Erro ao deletar item: ${error.message}`);
+      logger.error('Erro ao marcar item como excluído', { error: error.message, stack: error.stack });
+      throw new Error(`Erro ao marcar item como excluído: ${error.message}`);
     }
   }
 
