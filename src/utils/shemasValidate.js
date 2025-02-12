@@ -114,3 +114,7 @@ export const itemSchema = Joi.object({
 export const idShema = Joi.object({
   id: Joi.number().required().positive().messages()
 })
+
+export const codNcmShema = Joi.object({
+  cod: Joi.number().required().min(0)
+})
