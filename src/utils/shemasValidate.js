@@ -116,5 +116,5 @@ export const idShema = Joi.object({
 })
 
 export const codNcmShema = Joi.object({
-  cod: Joi.number().required().min(0)
+  cod: Joi.required()
 })

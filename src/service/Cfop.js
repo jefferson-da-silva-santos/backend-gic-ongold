@@ -6,7 +6,9 @@ export default class Cfop {
   static async getAllCfops() {
     try {
       logger.info('Iniciando a busca de CFOPs no banco de dados');
-      const cfops = await CfopModel.findAll();
+      const cfops = await CfopModel.findAll({
+        order: [['descricaocfop', 'ASC']]
+      });
       
       if (!cfops || cfops.length === 0) {
         logger.warn('Nenhum CFOP encontrado no banco de dados'); 
