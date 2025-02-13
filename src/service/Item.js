@@ -4,60 +4,6 @@ import logger from '../utils/logger.js';
 
 // Entidade para tratar o Item
 export default class Item {
-  constructor(value_unit, description, entry_icms_fee, exit_icms_rate, commission, codNcm, codCst, codCfop, codEan, deleted) {
-    this.validateInputs(value_unit, description, entry_icms_fee, exit_icms_rate, commission, codNcm, codCst, codCfop, codEan, deleted);
-    this._value_unit = value_unit;
-    this._description = description;
-    this._entry_icms_fee = entry_icms_fee;
-    this._exit_icms_rate = exit_icms_rate;
-    this._commission = commission;
-    this._codNcm = codNcm;
-    this._codCst = codCst;
-    this._codCfop = codCfop;
-    this._codEan = codEan;
-    this._deleted = deleted;
-  }
-
-  get value_unit() {
-    return this._value_unit;
-  }
-
-  get description() {
-    return this._description;
-  }
-
-  get entry_icms_fee() {
-    return this._entry_icms_fee;
-  }
-
-  get exit_icms_rate() {
-    return this._exit_icms_rate;
-  }
-
-  get commission() {
-    return this._commission;
-  }
-
-  get codNcm() {
-    return this._codNcm;
-  }
-
-  get codCst() {
-    return this._codCst;
-  }
-
-  get codCfop() {
-    return this._codCfop;
-  }
-
-  get codEan() {
-    return this._codEan;
-  }
-
-  get deleted() {
-    return this._deleted;
-  }
-
   static async getAllItems() {
     try {
       logger.info('Iniciando a busca de itens no banco de dados');
@@ -88,22 +34,9 @@ export default class Item {
     }
   }
 
-  async insertItem() {
+  static async insertItem(data) {
     try {
-      const newItem = {
-        valor_unitario: this._value_unit,
-        descricao: this._description,
-        taxa_icms_entrada: this._entry_icms_fee || null,
-        taxa_icms_saida: this._exit_icms_rate || null,
-        comissao: this._commission || null,
-        ncm: this._codNcm,
-        cst: this._codCst,
-        cfop: this._codCfop,
-        ean: this._codEan,
-        excluido: this._deleted ?? 0
-      };
-      
-      const result = await ItemModel.create(newItem);
+      const result = await ItemModel.create(data);
       logger.info('Item inserido com sucesso', { itemId: result.id });
       return result;
     } catch (error) {
@@ -189,57 +122,4 @@ export default class Item {
     const totalCost = ((entryIcms / 100) + (exitIcms / 100) + (commissionRate / 100)) * value;
     return parseFloat(totalCost.toFixed(2));
   }
-
-  validateInputs(value_unit, description, entry_icms_fee, exit_icms_rate, commission, codNcm, codCst, codCfop, codEan, deleted) {
-    if (typeof value_unit !== "number" || value_unit <= 0) {
-      logger.error("Validação falhou", { field: "value_unit", error: "O valor unitário deve ser um número positivo.", value: value_unit });
-      throw new Error("O valor unitário deve ser um número positivo.");
-    }
-
-    if (typeof description !== "string" || description.trim().length === 0 || description.length > 255) {
-      logger.error("Validação falhou", { field: "description", error: "A descrição deve ser uma string não vazia com até 255 caracteres.", value: description });
-      throw new Error("A descrição deve ser uma string não vazia com até 255 caracteres.");
-    }
-
-    if (entry_icms_fee !== null && (typeof entry_icms_fee !== "number" || entry_icms_fee < 0 || entry_icms_fee > 100)) {
-      logger.error("Validação falhou", { field: "entry_icms_fee", error: "A taxa ICMS de entrada deve ser um número entre 0 e 100 ou nula.", value: entry_icms_fee });
-      throw new Error("A taxa ICMS de entrada deve ser um número entre 0 e 100 ou nula.");
-    }
-
-    if (exit_icms_rate !== null && (typeof exit_icms_rate !== "number" || exit_icms_rate < 0 || exit_icms_rate > 100)) {
-      logger.error("Validação falhou", { field: "exit_icms_rate", error: "A taxa ICMS de saída deve ser um número entre 0 e 100 ou nula.", value: exit_icms_rate });
-      throw new Error("A taxa ICMS de saída deve ser um número entre 0 e 100 ou nula.");
-    }
-
-    if (commission !== null && (typeof commission !== "number" || commission < 0 || commission > 100)) {
-      logger.error("Validação falhou", { field: "commission", error: "A comissão deve ser um número entre 0 e 100 ou nula.", value: commission });
-      throw new Error("A comissão deve ser um número entre 0 e 100 ou nula.");
-    }
-
-    if (!/^\d{8}$/.test(codNcm)) {
-      logger.error("Validação falhou", { field: "codNcm", error: `O código NCM "${codNcm}" deve conter exatamente 8 dígitos numéricos.`, value: codNcm });
-      throw new Error(`O código NCM "${codNcm}" deve conter exatamente 8 dígitos numéricos.`);
-    }
-
-    if (!/^\d{3}$/.test(codCst)) {
-      logger.error("Validação falhou", { field: "codCst", error: `O código CST "${codCst}" deve conter exatamente 3 dígitos numéricos.`, value: codCst });
-      throw new Error(`O código CST "${codCst}" deve conter exatamente 3 dígitos numéricos.`);
-    }
-
-    if (!/^\d{4}$/.test(codCfop)) {
-      logger.error("Validação falhou", { field: "codCfop", error: `O código CFOP "${codCfop}" deve conter exatamente 4 dígitos numéricos.`, value: codCfop });
-      throw new Error(`O código CFOP "${codCfop}" deve conter exatamente 4 dígitos numéricos.`);
-    }
-
-    if (!/^\d{13}$/.test(codEan)) {
-      logger.error("Validação falhou", { field: "codEan", error: `O código EAN "${codEan}" deve conter exatamente 13 dígitos numéricos.`, value: codEan });
-      throw new Error(`O código EAN "${codEan}" deve conter exatamente 13 dígitos numéricos.`);
-    }
-
-    if (typeof deleted !== "boolean" && (deleted !== 0 && deleted !== 1)) {
-      logger.error("Validação falhou", { field: "deleted", error: "O campo 'excluido' deve ser um número (1 ou 0) ou um booleano.", value: deleted });
-      throw new Error("O campo 'excluido' deve ser um número (1 ou 0) ou um booleano.");
-    }
-  }
-
 }

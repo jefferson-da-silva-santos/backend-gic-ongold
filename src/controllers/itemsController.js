@@ -62,8 +62,7 @@ export const insert = async (req, res, next) => {
       return res.status(400).json({ error: error.details[0].message });
     }
 
-    const item = getObjectItemService(value);
-    const result = await item.insertItem();
+    const result = await ItemService.insertItem(value);
     logger.info('Item inserido com sucesso', { itemId: result.id });
     res.status(200).json(result);
   } catch (error) {
