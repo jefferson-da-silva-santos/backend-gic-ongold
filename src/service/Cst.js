@@ -7,7 +7,9 @@ export default class Cst {
     try {
       logger.info('Iniciando a busca de CSTs no banco de dados');
       
-      const csts = await CstIcmsModel.findAll();
+      const csts = await CstIcmsModel.findAll({
+        order: [['descricao', 'ASC']]
+      });
       
       if (!csts || csts.length === 0) {
         logger.warn('Nenhum CST encontrado no banco de dados');

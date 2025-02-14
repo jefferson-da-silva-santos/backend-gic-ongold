@@ -32,9 +32,18 @@ export default class Ncm {
       logger.info('Iniciando a busca de NCMs com filtro no banco de dados');
       const ncms = await NcmModel.findAll({
         where: {
+          [Op.or]: [
+        {
           codncm: {
-            [Op.like]: `%${cod}%`,
+            [Op.like]: `${cod}%`,
           },
+        },
+        {
+          nomencm: {
+            [Op.like]: `${cod}%`,
+          },
+        },
+          ],
         },
       });
 
