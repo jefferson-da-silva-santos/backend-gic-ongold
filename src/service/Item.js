@@ -67,7 +67,7 @@ export default class Item {
       logger.error('Erro ao atualizar item', { error: error.message, stack: error.stack });
       throw new Error(`Erro ao atualizar item: ${error.message}`);
     }
-  }
+  }                                   
 
   static async deleteItem(id) {
     try {
