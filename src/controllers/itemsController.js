@@ -134,18 +134,3 @@ export const deleted = async (req, res, next) => {
     next(error);
   }
 };
-
-function getObjectItemService(value) {
-  return new ItemService(
-    value.valor_unitario,
-    value.descricao,
-    value.taxa_icms_entrada,
-    value.taxa_icms_saida,
-    value.comissao,
-    value.ncm,
-    value.cst,
-    value.cfop,
-    value.ean,
-    value.excluido
-  );
-}
