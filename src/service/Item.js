@@ -34,6 +34,18 @@ export default class Item {
     }
   }
 
+  static async getDeletedItems() {
+    try {
+      logger.info('Iniciando a busca de itens excluídos no banco de dados');
+      const items = await ItemModel.findAll({ where: { excluido: 1 } });
+      logger.info('Itens excluídos encontrados com sucesso', { itemCount: items.length });
+      return this.parseObject(items);
+    } catch (error) {
+      logger.error('Erro ao buscar itens excluídos', { error: error.message, stack: error.stack });
+      throw new Error("Erro ao buscar itens excluídos");
+    }
+  }
+
   static async insertItem(data) {
     try {
       const result = await ItemModel.create(data);
@@ -67,7 +79,7 @@ export default class Item {
       logger.error('Erro ao atualizar item', { error: error.message, stack: error.stack });
       throw new Error(`Erro ao atualizar item: ${error.message}`);
     }
-  }                                   
+  }
 
   static async deleteItem(id) {
     try {

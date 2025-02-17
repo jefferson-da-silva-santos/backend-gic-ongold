@@ -50,6 +50,24 @@ export const getFillter = async (req, res, next) => {
   }
 };
 
+// Controlador de busca de itens excluídos
+export const getDeleted = async (req, res, next) => {
+  try {
+    const result = await ItemService.getDeletedItems();
+
+    if (!result || result.length === 0) {
+      logger.error('Erro: Nenhum item excluído encontrado no banco de dados.');
+      return res.status(404).json({ error: "Nenhum item excluído encontrado no banco de dados." });
+    }
+
+    logger.info('Itens excluídos encontrados com sucesso', { itemCount: result.length });
+    res.status(200).json(result);
+  } catch (error) {
+    logger.error('Erro ao buscar itens excluídos', { error: error.message, stack: error.stack });
+    next(error);
+  }
+}
+
 // Controlador de inserir itens
 export const insert = async (req, res, next) => {
   logger.info('Início da requisição para inserir item', { method: req.method, url: req.originalUrl });

@@ -8,13 +8,15 @@ import {
   getAll, 
   getFillter, 
   insert, 
-  update 
+  update, 
+  getDeleted
 } from "../controllers/itemsController.js";
 
 const router = express.Router();
 
 router.get('/items', getAll);
 router.get('/items/:field/:value', getFillter);
+router.get('/items/deleted', getDeleted);
 router.post('/items', insert);
 router.put('/items/restore', restoreAllItems); 
 router.put('/items/restore/:id', restoreItem);
