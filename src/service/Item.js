@@ -1,4 +1,4 @@
-import { Op } from "sequelize";
+import { Op, where } from "sequelize";
 import ItemModel from "../models/item.js";
 import logger from '../utils/logger.js';
 
@@ -31,6 +31,26 @@ export default class Item {
     } catch (error) {
       logger.error('Erro ao buscar itens com filtragem', { error: error.message, stack: error.stack });
       throw new Error("Erro ao buscar itens filtragem");
+    }
+  }
+
+  static async getItemSearchDescription(description) {
+    try {
+      const results = await ItemModel.findAll({
+        where: {
+          descricao: {
+        [Op.like]: `%${description}%`
+          },
+          excluido: 0
+        }
+      });
+      if (results.length === 0) {
+        throw new Error('Nenhum item encontrado com a descrição fornecida');
+      }
+      logger.info('Itens encontrados com descrição', { description, itemCount: results.length });
+      return this.parseObject(results);
+    } catch (error) {
+      next();
     }
   }
 

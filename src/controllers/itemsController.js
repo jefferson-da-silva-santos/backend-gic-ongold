@@ -1,5 +1,5 @@
 import ItemService from "../service/Item.js";
-import { shemaFillter, itemSchema, idShema } from "../utils/shemasValidate.js";
+import { shemaFillter, itemSchema, idShema, searchSchema } from "../utils/shemasValidate.js";
 import logger from "../utils/logger.js";
 
 
@@ -49,6 +49,32 @@ export const getFillter = async (req, res, next) => {
     next(error);
   }
 };
+
+export const getSearchDescription = async (req, res, next) => {
+  logger.info('Início da requisição para buscar item por descrição', { method: req.method, url: req.originalUrl });
+
+  try {
+    const { error, value } = searchSchema.validate(req.params);
+
+    if (error) {
+      logger.error('Erro de validação de parâmetros', { error: error.details[0].message });
+      return res.status(400).json({ error: error.details[0].message });
+    }
+
+    const result = await ItemService.getItemSearchDescription(value.description);
+
+    if (!result || result.length === 0) {
+      logger.error('Erro: Nenhum item encontrado com a descrição', { description: value.description });
+      return res.status(404).json({ error: "Nenhum item encontrado no banco de dados." });
+    }
+
+    logger.info('Item(s) encontrados com sucesso', { itemCount: result.length, description: value.description });
+    res.status(200).json(result);
+  } catch (error) {
+    logger.error('Erro ao buscar item por descrição', { error: error.message, stack: error.stack });
+    next(error);
+  }
+}
 
 // Controlador de busca de itens excluídos
 export const getDeleted = async (req, res, next) => {
