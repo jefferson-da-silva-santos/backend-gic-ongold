@@ -134,3 +134,82 @@ export const deleted = async (req, res, next) => {
     next(error);
   }
 };
+
+export const deletedPermanentAll = async (req, res, next) => {
+  try {
+    const result = await ItemService.deletePermanentAllItems();
+
+    if (result === 0) {
+      logger.error('Erro: Nenhum item encontrado para deleção permanente');
+      return res.status(404).json({ error: "Nenhum item encontrado para deleção permanente." });
+    }
+
+    logger.info('Itens deletados permanentemente com sucesso', { deletedRows: result });
+    res.status(200).json({ message: "Itens deletados permanentemente com sucesso!", deletedRows: result });
+  } catch (error) {
+    logger.error('Erro ao deletar itens permanentemente', { error: error.message, stack: error.stack });
+    next(error);
+  }
+}
+
+export const deletedPermanentItem = async (req, res, next) => {
+  try {
+    const { error, value } = idShema.validate(req.params);
+    if (error) {
+      logger.error('Erro de validação de ID para deleção permanente', { error: error.details[0].message });
+      return res.status(400).json({ error: `ID inválido! ${error.details[0].message}` });
+    }
+
+    const { id } = value;
+    const result = await ItemService.deletePermanentItem(id);
+    if (result === 0) {
+      logger.error('Erro: Item não encontrado para deleção permanente', { itemId: id });
+      return res.status(404).json({ error: "Item não encontrado." });
+    }
+
+    logger.info('Item deletado permanentemente com sucesso', { itemId: id, deletedRows: result });
+    res.status(200).json({ message: "Item deletado permanentemente com sucesso!", deletedRows: result });
+  } catch (error) {
+    logger.error('Erro ao deletar item permanentemente', { error: error.message, stack: error.stack });
+    next(error);
+  }
+}
+
+export const restoreAllItems = async (req, res, next) => {
+  try {
+    const result = await ItemService.restoreAllItems();
+    if (result === 0) {
+      logger.error('Erro: Nenhum item encontrado para restauração');
+      return res.status(404).json({ error: "Nenhum item encontrado para restauração." });
+    }
+
+    logger.info('Itens restaurados com sucesso', { restoredRows: result });
+    res.status(200).json({ message: "Itens restaurados com sucesso!", restoredRows: result });
+  } catch (error) {
+    logger.error('Erro ao restaurar itens', { error: error.message, stack: error.stack });
+    next(error);
+  }
+}
+
+export const restoreItem = async (req, res, next) => {
+  try {
+    const { error, value } = idShema.validate(req.params);
+    if (error) {
+      logger.error('Erro de validação de ID para restauração', { error: error.details[0].message });
+      return res.status(400).json({ error: `ID inválido! ${error.details[0].message}` });
+    }
+
+    const { id } = value;
+    const result = await ItemService.restoreItem(id);
+    if (result === 0) {
+      logger.error('Erro: Item não encontrado para restauração', { itemId: id });
+      return res.status(404).json({ error: "Item não encontrado." });
+    }
+
+    logger.info('Item restaurado com sucesso', { itemId: id, restoredRows: result });
+    res.status(200).json({ message: "Item restaurado com sucesso!", restoredRows: result });
+  } catch (error) {
+    logger.error('Erro ao restaurar item', { error: error.message, stack: error.stack });
+    next(error);
+  }
+}

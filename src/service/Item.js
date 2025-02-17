@@ -91,6 +91,50 @@ export default class Item {
     }
   }
 
+  static async deletePermanentAllItems() {
+    try {
+      const deletedItems = await ItemModel.destroy({ where: { excluido: 1 } });
+      logger.info('Itens excluídos permanentemente', { deletedItems });
+      return deletedItems;
+    } catch (error) {
+      logger.error('Erro ao excluir itens permanentemente', { error: error.message, stack: error.stack });
+      throw new Error(`Erro ao excluir itens permanentemente: ${error.message}`);
+    }
+  }
+
+  static async deletePermanentItem(id) {
+    try {
+      const deletedItems = await ItemModel.destroy({ where: { id } });
+      logger.info('Item excluído permanentemente', { deletedItems });
+      return deletedItems;
+    } catch (error) {
+      logger.error('Erro ao excluir item permanentemente', { error: error.message, stack: error.stack });
+      throw new Error(`Erro ao excluir item permanentemente: ${error.message}`);
+    }
+  }
+
+  static async restoreAllItems() {
+    try {
+      const restoredItems = await ItemModel.update({ excluido: 0 }, { where: { excluido: 1 } });
+      logger.info('Itens restaurados', { restoredItems });
+      return restoredItems;
+    } catch (error) {
+      logger.error('Erro ao restaurar itens', { error: error.message, stack: error.stack });
+      throw new Error(`Erro ao restaurar itens: ${error.message}`);
+    }
+  }
+
+  static async restoreItem(id) {
+    try {
+      const restoredItems = await ItemModel.update({ excluido: 0 }, { where: { id } });
+      logger.info('Item restaurado', { restoredItems });
+      return restoredItems;
+    } catch (error) {
+      logger.error('Erro ao restaurar item', { error: error.message, stack: error.stack });
+      throw new Error(`Erro ao restaurar item: ${error.message}`);
+    }
+  }
+
   static parseObject(arr) {
     return arr.map(({ dataValues: item }) => ({
       id: item.id,
