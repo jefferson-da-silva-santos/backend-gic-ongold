@@ -158,10 +158,26 @@ PUT /api/gic/items/{id}
     "excluido": false
 }
 ```
+### ✏️ **PUT** - Restaurar todos os Itens da Lixeira
+```
+PUT /api/gic/items/restore
+```
+### ✏️ **PUT** - Restaurar um item específico da Lixeira
+```
+PUT /api/gic/items/restore/{id}
+```
 
-### 🗑️ **DELETE** - Remover item
+### 🗑️ **DELETE** - Remover um item para Lixeira
 ```
 DELETE /api/gic/items/{id}
+```
+### 🗑️ **DELETE** - Excluir permanentemente os itens da Lixeira
+```
+DELETE /api/gic/items/permanent
+```
+### 🗑️ **DELETE** - Excluir permanentemente um item da Lixeira
+```
+DELETE /api/gic/items/permanent/{id}
 ```
 
 ---
