@@ -1,6 +1,7 @@
 import { Op, where } from "sequelize";
 import ItemModel from "../models/item.js";
 import logger from '../utils/logger.js';
+import moment from 'moment-timezone';
 
 // Entidade para tratar o Item
 export default class Item {
@@ -108,8 +109,8 @@ export default class Item {
         logger.warn(`Item ID ${id} não encontrado para deleção`);
         return 0;
       }
-
-      const [updatedRows] = await ItemModel.update({ excluido: 1, excluido_em: new Date().toISOString().slice(0, 19).replace('T', ' ') }, { where: { id } });
+      
+      const [updatedRows] = await ItemModel.update({ excluido: 1, excluido_em: moment().tz('America/Sao_Paulo').format('YYYY-MM-DD HH:mm:ss') }, { where: { id } });
 
       if (updatedRows === 0) {
         logger.warn(`Nenhum item atualizado. Item ID ${id} pode não existir.`);
