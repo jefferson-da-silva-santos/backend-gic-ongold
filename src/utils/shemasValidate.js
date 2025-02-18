@@ -118,3 +118,13 @@ export const idShema = Joi.object({
 export const codNcmShema = Joi.object({
   cod: Joi.required()
 })
+
+// Validação para a busca de itens
+export const searchSchema = Joi.object({
+  description: Joi.string()
+    .trim() 
+    .min(0) 
+    .max(100) 
+    .regex(/^[a-zA-Z0-9\sáéíóúàèìòùãõâêîôûáéíóúãõç]*$/) 
+    .required() 
+});

@@ -4,9 +4,10 @@ import {
   deletedPermanentAll, 
   deletedPermanentItem, 
   restoreAllItems, 
-  restoreItem, 
-  getAll, 
-  getFillter, 
+  restoreItem,
+  getAll,
+  getFillter,
+  getSearchDescription,
   insert, 
   update, 
   getDeleted
@@ -15,6 +16,7 @@ import {
 const router = express.Router();
 
 router.get('/items', getAll);
+router.get('/items/search/:description', getSearchDescription);
 router.get('/items/:field/:value', getFillter);
 router.get('/items/deleted', getDeleted);
 router.post('/items', insert);
