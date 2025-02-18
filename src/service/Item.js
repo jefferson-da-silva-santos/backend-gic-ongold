@@ -1,6 +1,7 @@
 import { Op, where } from "sequelize";
 import ItemModel from "../models/item.js";
 import logger from '../utils/logger.js';
+import moment from 'moment-timezone';
 
 // Entidade para tratar o Item
 export default class Item {
@@ -108,8 +109,8 @@ export default class Item {
         logger.warn(`Item ID ${id} não encontrado para deleção`);
         return 0;
       }
-
-      const [updatedRows] = await ItemModel.update({ excluido: 1 }, { where: { id } });
+      
+      const [updatedRows] = await ItemModel.update({ excluido: 1, excluido_em: moment().tz('America/Sao_Paulo').format('YYYY-MM-DD HH:mm:ss') }, { where: { id } });
 
       if (updatedRows === 0) {
         logger.warn(`Nenhum item atualizado. Item ID ${id} pode não existir.`);
@@ -147,7 +148,7 @@ export default class Item {
 
   static async restoreAllItems() {
     try {
-      const restoredItems = await ItemModel.update({ excluido: 0 }, { where: { excluido: 1 } });
+      const restoredItems = await ItemModel.update({ excluido: 0, excluido_em: null }, { where: { excluido: 1 } });
       logger.info('Itens restaurados', { restoredItems });
       return restoredItems;
     } catch (error) {
@@ -158,7 +159,7 @@ export default class Item {
 
   static async restoreItem(id) {
     try {
-      const restoredItems = await ItemModel.update({ excluido: 0 }, { where: { id } });
+      const restoredItems = await ItemModel.update({ excluido: 0, excluido_em: null }, { where: { id } });
       logger.info('Item restaurado', { restoredItems });
       return restoredItems;
     } catch (error) {
@@ -185,7 +186,8 @@ export default class Item {
         item.taxa_icms_saida,
         item.comissao
       ),
-      criado_em: item.criado_em
+      criado_em: item.criado_em,
+      excluido_em: item.excluido_em
     }));
   }
 
