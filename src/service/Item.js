@@ -109,7 +109,7 @@ export default class Item {
         return 0;
       }
 
-      const [updatedRows] = await ItemModel.update({ excluido: 1 }, { where: { id } });
+      const [updatedRows] = await ItemModel.update({ excluido: 1, excluido_em: new Date().toISOString().slice(0, 19).replace('T', ' ') }, { where: { id } });
 
       if (updatedRows === 0) {
         logger.warn(`Nenhum item atualizado. Item ID ${id} pode não existir.`);
@@ -147,7 +147,7 @@ export default class Item {
 
   static async restoreAllItems() {
     try {
-      const restoredItems = await ItemModel.update({ excluido: 0 }, { where: { excluido: 1 } });
+      const restoredItems = await ItemModel.update({ excluido: 0, excluido_em: null }, { where: { excluido: 1 } });
       logger.info('Itens restaurados', { restoredItems });
       return restoredItems;
     } catch (error) {
@@ -158,7 +158,7 @@ export default class Item {
 
   static async restoreItem(id) {
     try {
-      const restoredItems = await ItemModel.update({ excluido: 0 }, { where: { id } });
+      const restoredItems = await ItemModel.update({ excluido: 0, excluido_em: null }, { where: { id } });
       logger.info('Item restaurado', { restoredItems });
       return restoredItems;
     } catch (error) {
@@ -185,7 +185,8 @@ export default class Item {
         item.taxa_icms_saida,
         item.comissao
       ),
-      criado_em: item.criado_em
+      criado_em: item.criado_em,
+      excluido_em: item.excluido_em
     }));
   }
 
