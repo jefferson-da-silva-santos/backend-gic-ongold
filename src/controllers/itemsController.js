@@ -7,7 +7,7 @@ import logger from "../utils/logger.js";
 export const getAll = async (req, res, next) => {
   logger.info('Início da requisição para obter todos os itens', { method: req.method, url: req.originalUrl });
 
-  try {
+  try  {
     const result = await ItemService.getAllItems();
 
     if (!result || result.length === 0) {
