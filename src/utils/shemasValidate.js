@@ -121,6 +121,8 @@ export const codNcmShema = Joi.object({
 
 // Validação para a busca de itens
 export const searchSchema = Joi.object({
+  page: Joi.number().positive(),
+  limit: Joi.number().positive(),
   description: Joi.string()
     .trim() 
     .min(0) 
