@@ -5,17 +5,34 @@ import moment from 'moment-timezone';
 
 // Entidade para tratar o Item
 export default class Item {
-  static async getAllItems() {
+  static async getAllItems(page = 1, limit = 4) {
     try {
       logger.info('Iniciando a busca de itens no banco de dados');
-      const items = await ItemModel.findAll({ where: { excluido: 0 } });
+      const offset = (page - 1) * limit;
+      const items = await ItemModel.findAll({
+        where: {excluido: 0},
+        limit: limit,
+        offset: offset
+      })
+      const quantityItems = await ItemModel.count({
+        where: {excluido: 0}
+      })
+      // Calcular o número total de páginas
+      const totalPages = Math.ceil(quantityItems / limit);
+      
       logger.info('Itens encontrados com sucesso', { itemCount: items.length });
-      return this.parseObject(items);
+      return {
+        items: this.parseObject(items),  // Itens a serem retornados
+        quantityItems,                      // Total de itens no banco
+        totalPages,                      // Total de páginas
+        currentPage: page,               // Página atual
+      };
     } catch (error) {
       logger.error('Erro ao buscar itens', { error: error.message, stack: error.stack });
       throw new Error("Erro ao buscar itens");
     }
   }
+  
 
   static async getItemFillter(field, value) {
     try {
@@ -35,23 +52,40 @@ export default class Item {
     }
   }
 
-  static async getItemSearchDescription(description) {
+  static async getItemSearchDescription(page = 1, limit = 10, description) {
     try {
-      const results = await ItemModel.findAll({
+      const offset = (page - 1) * limit;
+
+      const items = await ItemModel.findAll({
         where: {
           descricao: {
-        [Op.like]: `%${description}%`
+            [Op.like]: `%${description}%`
           },
           excluido: 0
-        }
+        },
+        offset: offset,
+        limit: limit
       });
-      if (results.length === 0) {
+
+      const quantityItems = await ItemModel.count({
+        where: {excluido: 0}
+      })
+      // Calcular o número total de páginas
+      const totalPages = Math.ceil(quantityItems / limit);
+
+      if (items.length === 0) {
         throw new Error('Nenhum item encontrado com a descrição fornecida');
       }
-      logger.info('Itens encontrados com descrição', { description, itemCount: results.length });
-      return this.parseObject(results);
+      logger.info('Itens encontrados com descrição', { description, itemCount: items.length });
+      return {
+        items: this.parseObject(items),  // Itens a serem retornados
+        quantityItems,                      // Total de itens no banco
+        totalPages,                      // Total de páginas
+        currentPage: page,               // Página atual
+      };
     } catch (error) {
-      next();
+      logger.error('Erro ao buscar itens pela descrição: ', { error: error.message, stack: error.stack });
+      throw new Error("Erro ao buscar itens pela descrição.");
     }
   }
 
@@ -109,7 +143,7 @@ export default class Item {
         logger.warn(`Item ID ${id} não encontrado para deleção`);
         return 0;
       }
-      
+
       const [updatedRows] = await ItemModel.update({ excluido: 1, excluido_em: moment().tz('America/Sao_Paulo').format('YYYY-MM-DD HH:mm:ss') }, { where: { id } });
 
       if (updatedRows === 0) {

@@ -15,9 +15,9 @@ import {
 
 const router = express.Router();
 
-router.get('/items', getAll);
-router.get('/items/search/:description', getSearchDescription);
-router.get('/items/:field/:value', getFillter);
+router.get('/items/:page/:limit', getAll); 
+router.get('/items/filter/:field/:value', getFillter);
+router.get('/items/search/:page/:limit/:description', getSearchDescription);
 router.get('/items/deleted', getDeleted);
 router.post('/items', insert);
 router.put('/items/restore', restoreAllItems); 

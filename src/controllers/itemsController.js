@@ -4,11 +4,15 @@ import logger from "../utils/logger.js";
 
 
 // Controlador de busca de todos os itens
+
 export const getAll = async (req, res, next) => {
+  const page = parseInt(req.params.page) || 1; // Obtém a página da query string (padrão para página 1)
+  const limit = parseInt(req.params.limit) || 10; // Obtém o limite da query string (padrão para 10 itens por página)
+
   logger.info('Início da requisição para obter todos os itens', { method: req.method, url: req.originalUrl });
 
   try  {
-    const result = await ItemService.getAllItems();
+    const result = await ItemService.getAllItems(page, limit);
 
     if (!result || result.length === 0) {
       logger.error('Erro: Nenhum item encontrado no banco de dados.');
@@ -16,7 +20,12 @@ export const getAll = async (req, res, next) => {
     }
 
     logger.info('Itens encontrados com sucesso', { itemCount: result.length });
-    res.status(200).json(result);
+    res.status(200).json({
+      items: result.items,
+      totalItems: result.totalItems,
+      totalPages: result.totalPages,
+      currentPage: result.currentPage,
+    });
   } catch (error) {
     logger.error('Erro ao buscar itens', { error: error.message, stack: error.stack });
     next(error);
@@ -55,13 +64,15 @@ export const getSearchDescription = async (req, res, next) => {
 
   try {
     const { error, value } = searchSchema.validate(req.params);
+    const page = value.page; // Obtém a página da query string (padrão para página 1)
+    const limit = value.limit; // Obtém o limite da query string (padrão para 10 itens por página)
 
     if (error) {
       logger.error('Erro de validação de parâmetros', { error: error.details[0].message });
       return res.status(400).json({ error: error.details[0].message });
     }
 
-    const result = await ItemService.getItemSearchDescription(value.description);
+    const result = await ItemService.getItemSearchDescription(page, limit, value.description);
 
     if (!result || result.length === 0) {
       logger.error('Erro: Nenhum item encontrado com a descrição', { description: value.description });
