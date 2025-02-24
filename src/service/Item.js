@@ -32,7 +32,6 @@ export default class Item {
       throw new Error("Erro ao buscar itens");
     }
   }
-  
 
   static async getItemFillter(field, value) {
     try {
@@ -68,7 +67,12 @@ export default class Item {
       });
 
       const quantityItems = await ItemModel.count({
-        where: {excluido: 0}
+        where: {
+          descricao: {
+            [Op.like]: `%${description}%`
+          },
+          excluido: 0
+        }
       })
       // Calcular o número total de páginas
       const totalPages = Math.ceil(quantityItems / limit);
