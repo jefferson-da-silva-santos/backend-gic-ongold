@@ -5198,3 +5198,328 @@
 {"filter":{"field":"ean","value":"7891000240012"},"itemCount":1,"level":"info","message":"Itens encontrados com filtragem","timestamp":"2025-02-23T17:49:40.590Z"}
 {"filter":{"field":"ean","value":"7891000240012"},"itemCount":1,"level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-23T17:49:40.592Z"}
 {"level":"info","message":"::ffff:127.0.0.1 - - [23/Feb/2025:17:49:40 +0000] \"GET /api/gic/items/filter/ean/7891000240012 HTTP/1.1\" 200 276 \"-\" \"insomnia/10.1.1\"","timestamp":"2025-02-23T17:49:40.598Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:40:28.819Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:40:28.852Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:40:28.936Z","url":"/api/gic/items/filter/ean/"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:40:28.936Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-23T18:40:28.940Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-23T18:40:28.941Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-23T18:40:28.951Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-23T18:40:28.953Z"}
+{"level":"info","message":"Iniciando a busca de itens excluídos no banco de dados","timestamp":"2025-02-23T18:40:28.955Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:40:29.090Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:40:29.092Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:40:29 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:40:29.100Z"}
+{"itemCount":0,"level":"info","message":"Itens excluídos encontrados com sucesso","timestamp":"2025-02-23T18:40:29.104Z"}
+{"level":"error","message":"Erro: Nenhum item excluído encontrado no banco de dados.","timestamp":"2025-02-23T18:40:29.105Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:40:29 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 404 63 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:40:29.107Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-23T18:40:29.113Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-23T18:40:29.113Z"}
+{"level":"info","message":"Iniciando a busca de itens excluídos no banco de dados","timestamp":"2025-02-23T18:40:29.150Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:40:29.166Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:40:29.167Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:40:29 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:40:29.170Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-23T18:40:29.175Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-23T18:40:29.175Z"}
+{"itemCount":10,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:40:29.226Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:40:29.243Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:40:29 +0000] \"GET /api/gic/items/filter/ean/ HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:40:29.247Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:40:29.304Z","url":"/api/gic/items/filter/ean/"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:40:29.305Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:40:29.308Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:40:29.308Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:40:29 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:40:29.309Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:40:29.318Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:40:29.318Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:40:29 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:40:29.320Z"}
+{"itemCount":0,"level":"info","message":"Itens excluídos encontrados com sucesso","timestamp":"2025-02-23T18:40:29.331Z"}
+{"level":"error","message":"Erro: Nenhum item excluído encontrado no banco de dados.","timestamp":"2025-02-23T18:40:29.332Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:40:29 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 404 63 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:40:29.334Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:40:29.337Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:40:29.339Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:40:29.389Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:40:29.389Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:40:29 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:40:29.393Z"}
+{"itemCount":10,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:40:29.448Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:40:29.448Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:40:29 +0000] \"GET /api/gic/items/filter/ean/ HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:40:29.449Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:40:29.452Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:40:29.453Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:40:29 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:40:29.455Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-23T18:42:43.884Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-23T18:42:43.909Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-23T18:42:43.960Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-23T18:42:43.961Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:42:44.118Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:42:44.119Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:44 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:44.136Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:42:44.175Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:42:44.179Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:44 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:44.184Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:42:47.908Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:42:47.910Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-23T18:42:47.936Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-23T18:42:47.936Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-23T18:42:47.946Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-23T18:42:47.947Z"}
+{"level":"info","message":"Iniciando a busca de itens excluídos no banco de dados","timestamp":"2025-02-23T18:42:47.970Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:42:47.975Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:42:47.981Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:47 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:47.982Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:42:47.989Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:42:47.992Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:47 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:47.994Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:42:48.016Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:42:48.017Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:48 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:48.020Z"}
+{"itemCount":0,"level":"info","message":"Itens excluídos encontrados com sucesso","timestamp":"2025-02-23T18:42:48.034Z"}
+{"level":"error","message":"Erro: Nenhum item excluído encontrado no banco de dados.","timestamp":"2025-02-23T18:42:48.035Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:48 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 404 63 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:48.037Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-23T18:42:48.044Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-23T18:42:48.044Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:42:48.047Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:42:48.047Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-23T18:42:48.062Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-23T18:42:48.063Z"}
+{"level":"info","message":"Iniciando a busca de itens excluídos no banco de dados","timestamp":"2025-02-23T18:42:48.082Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:42:48.095Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:42:48.096Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:48 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:48.097Z"}
+{"itemCount":0,"level":"info","message":"Itens excluídos encontrados com sucesso","timestamp":"2025-02-23T18:42:48.133Z"}
+{"level":"error","message":"Erro: Nenhum item excluído encontrado no banco de dados.","timestamp":"2025-02-23T18:42:48.133Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:48 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 404 63 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:48.136Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:42:48.162Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:42:48.163Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:48 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:48.166Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:42:48.184Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:42:48.189Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:48 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:48.192Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:42:57.589Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:42:57.592Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:42:57.603Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:42:57.604Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:57 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:57.605Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:42:57.613Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:42:57.614Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:42:57.625Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:42:57.625Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:57 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:57.626Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:42:59.885Z","url":"/api/gic/items/2/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:42:59.886Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:42:59.907Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:42:59.908Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:42:59 +0000] \"GET /api/gic/items/2/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:42:59.909Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:43:01.750Z","url":"/api/gic/items/3/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:43:01.752Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:43:01.767Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:43:01.767Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:43:01 +0000] \"GET /api/gic/items/3/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:43:01.769Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:54:27.966Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:54:28.030Z"}
+{"level":"info","message":"Iniciando a busca de itens excluídos no banco de dados","timestamp":"2025-02-23T18:54:28.255Z"}
+{"itemCount":0,"level":"info","message":"Itens excluídos encontrados com sucesso","timestamp":"2025-02-23T18:54:28.737Z"}
+{"level":"error","message":"Erro: Nenhum item excluído encontrado no banco de dados.","timestamp":"2025-02-23T18:54:28.745Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:54:28 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 404 63 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:54:28.779Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:54:28.815Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:54:28.826Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:54:28 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:54:28.838Z"}
+{"level":"info","message":"Iniciando a busca de itens excluídos no banco de dados","timestamp":"2025-02-23T18:54:28.858Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:54:28.882Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:54:28.884Z"}
+{"itemCount":0,"level":"info","message":"Itens excluídos encontrados com sucesso","timestamp":"2025-02-23T18:54:29.015Z"}
+{"level":"error","message":"Erro: Nenhum item excluído encontrado no banco de dados.","timestamp":"2025-02-23T18:54:29.033Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:54:29 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 404 63 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:54:29.045Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:54:29.185Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:54:29.186Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:54:29 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:54:29.188Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:54:29.292Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:54:29.293Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:54:29.359Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:54:29.363Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:54:29 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:54:29.366Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:54:29.429Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:54:29.431Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:54:29.449Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:54:29.450Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:54:29 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:54:29.453Z"}
+{"level":"info","message":"Início da requisição para buscar item por descrição","method":"GET","timestamp":"2025-02-23T18:58:12.091Z","url":"/api/gic/items/search/1/4/f"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:58:12.232Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:58:12.233Z"}
+{"description":"f","itemCount":4,"level":"info","message":"Itens encontrados com descrição","timestamp":"2025-02-23T18:58:12.371Z"}
+{"description":"f","level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-23T18:58:12.372Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:12 +0000] \"GET /api/gic/items/search/1/4/f HTTP/1.1\" 200 1173 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:12.387Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:12.388Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:12.388Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:12 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:12.389Z"}
+{"level":"info","message":"Início da requisição para buscar item por descrição","method":"GET","timestamp":"2025-02-23T18:58:14.482Z","url":"/api/gic/items/search/1/4/fe"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:58:14.495Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:58:14.496Z"}
+{"description":"fe","itemCount":4,"level":"info","message":"Itens encontrados com descrição","timestamp":"2025-02-23T18:58:14.505Z"}
+{"description":"fe","level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-23T18:58:14.505Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:14 +0000] \"GET /api/gic/items/search/1/4/fe HTTP/1.1\" 200 1199 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:14.506Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:14.516Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:14.516Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:14 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:14.517Z"}
+{"level":"info","message":"Início da requisição para buscar item por descrição","method":"GET","timestamp":"2025-02-23T18:58:14.994Z","url":"/api/gic/items/search/1/4/fei"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:58:14.998Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:58:14.999Z"}
+{"description":"fei","itemCount":2,"level":"info","message":"Itens encontrados com descrição","timestamp":"2025-02-23T18:58:15.010Z"}
+{"description":"fei","level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-23T18:58:15.010Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:15 +0000] \"GET /api/gic/items/search/1/4/fei HTTP/1.1\" 200 621 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:15.011Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:15.020Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:15.020Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:15 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:15.021Z"}
+{"level":"info","message":"Início da requisição para buscar item por descrição","method":"GET","timestamp":"2025-02-23T18:58:20.222Z","url":"/api/gic/items/search/1/4/fe"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:58:20.228Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:58:20.228Z"}
+{"description":"fe","itemCount":4,"level":"info","message":"Itens encontrados com descrição","timestamp":"2025-02-23T18:58:20.237Z"}
+{"description":"fe","level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-23T18:58:20.238Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:20 +0000] \"GET /api/gic/items/search/1/4/fe HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:20.239Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:20.247Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:20.247Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:20 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:20.248Z"}
+{"level":"info","message":"Início da requisição para buscar item por descrição","method":"GET","timestamp":"2025-02-23T18:58:20.913Z","url":"/api/gic/items/search/1/4/f"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:58:20.918Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:58:20.918Z"}
+{"description":"f","itemCount":4,"level":"info","message":"Itens encontrados com descrição","timestamp":"2025-02-23T18:58:20.923Z"}
+{"description":"f","level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-23T18:58:20.923Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:20 +0000] \"GET /api/gic/items/search/1/4/f HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:20.924Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:20.933Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:20.935Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:20 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:20.936Z"}
+{"level":"info","message":"Início da requisição para buscar item por descrição","method":"GET","timestamp":"2025-02-23T18:58:22.806Z","url":"/api/gic/items/search/1/4/fe"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:58:22.809Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:58:22.809Z"}
+{"description":"fe","itemCount":4,"level":"info","message":"Itens encontrados com descrição","timestamp":"2025-02-23T18:58:22.814Z"}
+{"description":"fe","level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-23T18:58:22.814Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:22 +0000] \"GET /api/gic/items/search/1/4/fe HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:22.818Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:22.830Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:22.830Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:22 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:22.833Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:58:25.720Z","url":"/api/gic/items/2/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:58:25.726Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:25.735Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:25.735Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:25 +0000] \"GET /api/gic/items/2/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:25.737Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:58:30.896Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:58:30.898Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:30.904Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:30.905Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:30 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:30.905Z"}
+{"level":"info","message":"Início da requisição para buscar item por descrição","method":"GET","timestamp":"2025-02-23T18:58:33.823Z","url":"/api/gic/items/search/1/4/f"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-23T18:58:33.825Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-23T18:58:33.825Z"}
+{"description":"f","itemCount":4,"level":"info","message":"Itens encontrados com descrição","timestamp":"2025-02-23T18:58:33.833Z"}
+{"description":"f","level":"info","message":"Item(s) encontrados com sucesso","timestamp":"2025-02-23T18:58:33.833Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:33 +0000] \"GET /api/gic/items/search/1/4/f HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:33.834Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:33.837Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-23T18:58:33.837Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:33 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:33.837Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-23T18:58:36.487Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-23T18:58:36.488Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-23T18:58:36.499Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-23T18:58:36.501Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:58:36.523Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:58:36.524Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:36 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:36.524Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-23T18:58:36.533Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-23T18:58:36.534Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:58:36.553Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:58:36.553Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:36 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:36.560Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:58:36.562Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-23T18:58:36.562Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:36 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:36.563Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-23T18:58:36.566Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-23T18:58:36.566Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:58:36.599Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-23T18:58:36.599Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:36 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:36.601Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-23T18:58:37.817Z","url":"/api/gic/items/filter/id/undefined"}
+{"error":"Erro ao buscar dados","level":"error","message":"Erro ao buscar itens com filtragem","stack":"Error: Erro ao buscar dados\n    at Item.getItemFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/service/Item.js:45:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async getFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/controllers/itemsController.js:47:20)","timestamp":"2025-02-23T18:58:37.855Z"}
+{"error":"Erro ao buscar itens filtragem","level":"error","message":"Erro ao buscar item com filtro","stack":"Error: Erro ao buscar itens filtragem\n    at Item.getItemFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/service/Item.js:51:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async getFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/controllers/itemsController.js:47:20)","timestamp":"2025-02-23T18:58:37.855Z"}
+{"level":"error","message":"Internal Server Error: Erro ao buscar itens filtragem","timestamp":"2025-02-23T18:58:37.856Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:37 +0000] \"GET /api/gic/items/filter/id/undefined HTTP/1.1\" 500 65 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:37.857Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-23T18:58:37.870Z","url":"/api/gic/items/filter/id/undefined"}
+{"error":"Erro ao buscar dados","level":"error","message":"Erro ao buscar itens com filtragem","stack":"Error: Erro ao buscar dados\n    at Item.getItemFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/service/Item.js:45:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async getFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/controllers/itemsController.js:47:20)","timestamp":"2025-02-23T18:58:37.874Z"}
+{"error":"Erro ao buscar itens filtragem","level":"error","message":"Erro ao buscar item com filtro","stack":"Error: Erro ao buscar itens filtragem\n    at Item.getItemFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/service/Item.js:51:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async getFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/controllers/itemsController.js:47:20)","timestamp":"2025-02-23T18:58:37.876Z"}
+{"level":"error","message":"Internal Server Error: Erro ao buscar itens filtragem","timestamp":"2025-02-23T18:58:37.876Z"}
+{"level":"info","message":"::1 - - [23/Feb/2025:18:58:37 +0000] \"GET /api/gic/items/filter/id/undefined HTTP/1.1\" 500 65 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-23T18:58:37.876Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-24T18:05:17.249Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-24T18:05:17.423Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-24T18:05:46.467Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-24T18:05:46.492Z"}
+{"level":"info","message":"Iniciando a busca de itens excluídos no banco de dados","timestamp":"2025-02-24T18:05:46.567Z"}
+{"itemCount":0,"level":"info","message":"Itens excluídos encontrados com sucesso","timestamp":"2025-02-24T18:05:46.776Z"}
+{"level":"error","message":"Erro: Nenhum item excluído encontrado no banco de dados.","timestamp":"2025-02-24T18:05:46.779Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:05:46 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 404 63 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:05:46.793Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:05:46.837Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:05:46.843Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:05:46 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:05:46.845Z"}
+{"level":"info","message":"Iniciando a busca de itens excluídos no banco de dados","timestamp":"2025-02-24T18:05:46.853Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-24T18:05:46.868Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-24T18:05:46.869Z"}
+{"itemCount":0,"level":"info","message":"Itens excluídos encontrados com sucesso","timestamp":"2025-02-24T18:05:46.888Z"}
+{"level":"error","message":"Erro: Nenhum item excluído encontrado no banco de dados.","timestamp":"2025-02-24T18:05:46.890Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:05:46 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 404 63 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:05:46.891Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:05:46.917Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:05:46.917Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:05:46 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:05:46.921Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-24T18:05:46.930Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-24T18:05:46.931Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:05:46.961Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:05:46.962Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:05:46 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:05:46.964Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-24T18:05:46.976Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-24T18:05:46.977Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:05:46.994Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:05:46.995Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:05:46 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:05:46.996Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-24T18:06:29.530Z","url":"/api/gic/items/2/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-24T18:06:29.551Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:06:29.725Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:06:29.728Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:06:29 +0000] \"GET /api/gic/items/2/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:06:29.733Z"}
+{"level":"info","message":"Início da requisição para obter todos os itens","method":"GET","timestamp":"2025-02-24T18:06:33.755Z","url":"/api/gic/items/1/4"}
+{"level":"info","message":"Iniciando a busca de itens no banco de dados","timestamp":"2025-02-24T18:06:33.757Z"}
+{"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:06:33.782Z"}
+{"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:06:33.783Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:06:33 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:06:33.814Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-24T18:37:19.624Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-24T18:37:19.666Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-24T18:37:19.774Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-24T18:37:19.776Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-24T18:37:19.951Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-24T18:37:19.954Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:37:19 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:37:19.964Z"}
+{"level":"info","message":"Início da requisição para obter todos os CSTs","method":"GET","timestamp":"2025-02-24T18:37:20.004Z","url":"/api/gic/csts"}
+{"level":"info","message":"Iniciando a busca de CSTs no banco de dados","timestamp":"2025-02-24T18:37:20.005Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-24T18:37:20.156Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-24T18:37:20.162Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:37:20 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:37:20.181Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-24T18:37:20.187Z"}
+{"cstCount":22,"level":"info","message":"CSTs encontrados com sucesso","timestamp":"2025-02-24T18:37:20.195Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:37:20 +0000] \"GET /api/gic/csts HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:37:20.198Z"}
+{"level":"info","message":"Início da requisição para obter todos os CFOPs","method":"GET","timestamp":"2025-02-24T18:37:20.214Z","url":"/api/gic/cfops"}
+{"level":"info","message":"Iniciando a busca de CFOPs no banco de dados","timestamp":"2025-02-24T18:37:20.214Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-24T18:37:20.275Z"}
+{"cfopCount":695,"level":"info","message":"CFOPs encontrados com sucesso","timestamp":"2025-02-24T18:37:20.276Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:37:20 +0000] \"GET /api/gic/cfops HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:37:20.282Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-24T18:37:22.881Z","url":"/api/gic/items/filter/id/undefined"}
+{"error":"Erro ao buscar dados","level":"error","message":"Erro ao buscar itens com filtragem","stack":"Error: Erro ao buscar dados\n    at Item.getItemFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/service/Item.js:45:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async getFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/controllers/itemsController.js:47:20)","timestamp":"2025-02-24T18:37:22.961Z"}
+{"error":"Erro ao buscar itens filtragem","level":"error","message":"Erro ao buscar item com filtro","stack":"Error: Erro ao buscar itens filtragem\n    at Item.getItemFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/service/Item.js:51:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async getFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/controllers/itemsController.js:47:20)","timestamp":"2025-02-24T18:37:22.967Z"}
+{"level":"error","message":"Internal Server Error: Erro ao buscar itens filtragem","timestamp":"2025-02-24T18:37:22.968Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:37:22 +0000] \"GET /api/gic/items/filter/id/undefined HTTP/1.1\" 500 65 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:37:22.972Z"}
+{"level":"info","message":"Início da requisição para buscar item com filtro","method":"GET","timestamp":"2025-02-24T18:37:23.000Z","url":"/api/gic/items/filter/id/undefined"}
+{"error":"Erro ao buscar dados","level":"error","message":"Erro ao buscar itens com filtragem","stack":"Error: Erro ao buscar dados\n    at Item.getItemFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/service/Item.js:45:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async getFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/controllers/itemsController.js:47:20)","timestamp":"2025-02-24T18:37:23.010Z"}
+{"error":"Erro ao buscar itens filtragem","level":"error","message":"Erro ao buscar item com filtro","stack":"Error: Erro ao buscar itens filtragem\n    at Item.getItemFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/service/Item.js:51:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async getFillter (file:///C:/Users/jeffr/OneDrive/Documentos/projetos%20ongold/backend-gic-ongold/src/controllers/itemsController.js:47:20)","timestamp":"2025-02-24T18:37:23.011Z"}
+{"level":"error","message":"Internal Server Error: Erro ao buscar itens filtragem","timestamp":"2025-02-24T18:37:23.012Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:37:23 +0000] \"GET /api/gic/items/filter/id/undefined HTTP/1.1\" 500 65 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:37:23.017Z"}
+{"level":"info","message":"Iniciando a busca de itens excluídos no banco de dados","timestamp":"2025-02-24T18:37:24.197Z"}
+{"itemCount":0,"level":"info","message":"Itens excluídos encontrados com sucesso","timestamp":"2025-02-24T18:37:24.214Z"}
+{"level":"error","message":"Erro: Nenhum item excluído encontrado no banco de dados.","timestamp":"2025-02-24T18:37:24.215Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:37:24 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 404 63 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:37:24.216Z"}
+{"level":"info","message":"Iniciando a busca de itens excluídos no banco de dados","timestamp":"2025-02-24T18:37:24.230Z"}
+{"itemCount":0,"level":"info","message":"Itens excluídos encontrados com sucesso","timestamp":"2025-02-24T18:37:24.249Z"}
+{"level":"error","message":"Erro: Nenhum item excluído encontrado no banco de dados.","timestamp":"2025-02-24T18:37:24.250Z"}
+{"level":"info","message":"::1 - - [24/Feb/2025:18:37:24 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 404 63 \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:37:24.254Z"}
