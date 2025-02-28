@@ -2031,3 +2031,236 @@
 {"itemCount":4,"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:34:21.450Z"}
 {"level":"info","message":"Itens encontrados com sucesso","timestamp":"2025-02-24T18:34:21.451Z"}
 {"level":"info","message":"::1 - - [24/Feb/2025:18:34:21 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 304 - \"http://localhost:5173/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36\"","timestamp":"2025-02-24T18:34:21.452Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:49:37.295Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:49:37.580Z"}
+{"error":"ItemModel is not defined","level":"error","message":"ItemModel is not defined","stack":"ReferenceError: ItemModel is not defined\n    at ItemRepository.findAll (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/repository/ItemRepository.js:4:5)\n    at getAllItems (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/service/ItemService.js:7:40)\n    at handleRequest (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:17:26)\n    at getAll (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:32:9)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:365:14)","timestamp":"2025-02-28T11:49:45.819Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:49:45 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 500 37 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:49:45.829Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:50:33.771Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:50:33.841Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:50:38.072Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:50:38.226Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:52:24.721Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:52:24.798Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:52:37 +0000] \"GET /api/gic/items/1/4 HTTP/1.1\" 200 1194 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:52:37.368Z"}
+{"error":"Op is not defined","level":"error","message":"Op is not defined","stack":"ReferenceError: Op is not defined\n    at ItemRepository.findByField (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/repository/ItemRepository.js:14:59)\n    at getItemByField (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/service/ItemService.js:22:40)\n    at handleRequest (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:17:26)\n    at getFillter (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:39:11)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:365:14)","timestamp":"2025-02-28T11:52:49.868Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:52:49 +0000] \"GET /api/gic/items/filter/id/5 HTTP/1.1\" 500 37 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:52:49.872Z"}
+{"error":"Op is not defined","level":"error","message":"Op is not defined","stack":"ReferenceError: Op is not defined\n    at ItemRepository.findByField (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/repository/ItemRepository.js:14:59)\n    at getItemByField (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/service/ItemService.js:22:40)\n    at handleRequest (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:17:26)\n    at getFillter (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:39:11)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:365:14)","timestamp":"2025-02-28T11:53:11.747Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:53:11 +0000] \"GET /api/gic/items/filter/id/5 HTTP/1.1\" 500 37 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:53:11.756Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:53:31.900Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:53:31.977Z"}
+{"error":"Op is not defined","level":"error","message":"Op is not defined","stack":"ReferenceError: Op is not defined\n    at ItemRepository.findByField (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/repository/ItemRepository.js:14:59)\n    at getItemByField (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/service/ItemService.js:22:40)\n    at handleRequest (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:17:26)\n    at getFillter (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:39:11)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:365:14)","timestamp":"2025-02-28T11:53:33.404Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:53:33 +0000] \"GET /api/gic/items/filter/id/5 HTTP/1.1\" 500 37 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:53:33.415Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:53:48.166Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:53:48.285Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:54:08 +0000] \"GET /api/gic/items/filter/id/5 HTTP/1.1\" 200 283 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:54:08.321Z"}
+{"error":"Nenhum item encontrado","level":"error","message":"Nenhum item encontrado","stack":"Error: Nenhum item encontrado\n    at getItemByField (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/service/ItemService.js:23:35)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async handleRequest (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:17:20)\n    at async getFillter (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:39:5)","timestamp":"2025-02-28T11:54:13.601Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:54:13 +0000] \"GET /api/gic/items/filter/id/6 HTTP/1.1\" 500 37 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:54:13.603Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:54:41 +0000] \"GET /api/gic/items/filter/id/7 HTTP/1.1\" 200 280 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:54:41.648Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:55:08.422Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:55:08.531Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:55:43 +0000] \"GET /api/gic/items/search/1/4/Bisc HTTP/1.1\" 200 1228 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:55:43.355Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:55:49 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 404 160 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:55:49.814Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:56:16.603Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:56:16.680Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:56:30.087Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:56:30.161Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:56:33.419Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:56:33.494Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:56:56.967Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:56:57.116Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:57:01.385Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:57:01.462Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:57:10.747Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:57:10.821Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:57:14.991Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:57:15.064Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:57:18.878Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:57:18.955Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:57:20.582Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:57:20.656Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:57:40.209Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:57:40.309Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:57:44.145Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:57:44.219Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:58:12 +0000] \"GET /api/gic/items/filter/excluido/1 HTTP/1.1\" 200 99686 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:58:12.482Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:58:29 +0000] \"GET /api/gic/items/filter/excluido/0 HTTP/1.1\" 200 99686 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:58:29.401Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:58:33 +0000] \"GET /api/gic/items/filter/excluido/1 HTTP/1.1\" 200 99686 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:58:33.906Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T11:59:14.411Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T11:59:14.488Z"}
+{"level":"info","message":"::1 - - [28/Feb/2025:11:59:14 +0000] \"GET /api/gic/items/filter/excluido/1 HTTP/1.1\" 400 146 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:59:14.530Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:11:59:27 +0000] \"GET /api/gic/items/filter/id/20 HTTP/1.1\" 200 282 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T11:59:27.718Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:00:59.035Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:00:59.180Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:01:01.426Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:01:01.502Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:01:06.872Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:01:06.952Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:01:31.508Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:01:31.656Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:01:35.686Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:01:35.824Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:01:55.629Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:01:55.992Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:02:00.865Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:02:00.985Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:02:07.525Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:02:07.595Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:02:09.287Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:02:09.373Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:02:11.738Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:02:11.843Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:02:43.407Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:02:43.484Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:02:46.292Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:02:46.374Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:02:51.061Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:02:51.131Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:03:03 +0000] \"GET /api/gic/items/deleted HTTP/1.1\" 200 297 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:03:03.392Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:05:04.188Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:05:04.290Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:05:14.441Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:05:14.632Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:05:16.834Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:05:16.944Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:06:02 +0000] \"GET /api/gic/items?page=1&limit=10 HTTP/1.1\" 200 2901 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:06:02.252Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:06:07 +0000] \"GET /api/gic/items?page=1&limit=4 HTTP/1.1\" 200 2901 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:06:07.258Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:06:15 +0000] \"GET /api/gic/items?page=1&limit=2 HTTP/1.1\" 200 2901 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:06:15.791Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:06:36.582Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:06:36.652Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:06:38 +0000] \"GET /api/gic/items?page=1&limit=2 HTTP/1.1\" 200 2901 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:06:38.226Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:06:56.901Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:06:56.980Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:07:06 +0000] \"GET /api/gic/1/2 HTTP/1.1\" 404 150 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:07:06.618Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:07:14 +0000] \"GET /api/gic/items/1/2 HTTP/1.1\" 200 630 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:07:14.027Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:08:57.887Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:08:57.960Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:09:11.043Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:09:11.110Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:09:44.258Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:09:44.360Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:09:46.845Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:09:46.919Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:10:37.621Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:10:37.712Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:10:42.430Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:10:42.531Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:10:49.622Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:10:49.705Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:10:51.436Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:10:51.517Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:11:08 +0000] \"GET /api/gic/items?page=1&limit=10 HTTP/1.1\" 200 2901 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:11:08.056Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:11:16 +0000] \"GET /api/gic/items?page=1&limit=2 HTTP/1.1\" 200 630 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:11:16.129Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:11:52.728Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:11:52.819Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:12:26 +0000] \"GET /api/gic/items/filter?field=id&value=20 HTTP/1.1\" 404 159 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:12:26.196Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:12:53 +0000] \"GET /api/gic/items/filter?field=id&value=20 HTTP/1.1\" 404 159 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:12:53.513Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:13:54.133Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:13:54.213Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:13:55 +0000] \"GET /api/gic/items/filter?field=id&value=20 HTTP/1.1\" 200 282 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:13:55.199Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:14:48.997Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:14:49.081Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:15:18 +0000] \"GET /api/gic/items/search?description=Bis&page=1&limit=5 HTTP/1.1\" 400 39 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:15:18.799Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:15:43.845Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:15:43.923Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:15:43 +0000] \"GET /api/gic/items/search?description=Bis&page=1&limit=5 HTTP/1.1\" 200 1514 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:15:43.978Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:17:01.356Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:17:01.423Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:17:13.259Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:17:13.352Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:22:39 +0000] \"POST /api/gic/items/ HTTP/1.1\" 200 245 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:22:39.766Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:24:40.206Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:24:40.287Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:24:45.468Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:24:45.544Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:24:51.478Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:24:51.561Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:25:53 +0000] \"PATCH /api/gic/items/1048/restore HTTP/1.1\" 200 3 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:25:53.924Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:28:03 +0000] \"DELETE /api/gic/items/1048 HTTP/1.1\" 200 3 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:28:03.559Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:28:11 +0000] \"DELETE /api/gic/items/20 HTTP/1.1\" 200 3 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:28:11.788Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:28:16 +0000] \"DELETE /api/gic/items/21 HTTP/1.1\" 200 3 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:28:16.225Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:28:38 +0000] \"PATCH /api/gic/items/1048/restore HTTP/1.1\" 200 3 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:28:38.218Z"}
+{"error":"serviceMethod is not a function","level":"error","message":"serviceMethod is not a function","stack":"TypeError: serviceMethod is not a function\n    at handleRequest (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:17:26)\n    at restoreAllItems (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:98:9)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:175:3)","timestamp":"2025-02-28T12:29:03.352Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:29:03 +0000] \"PATCH /api/gic/items/restore HTTP/1.1\" 500 37 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:29:03.356Z"}
+{"error":"serviceMethod is not a function","level":"error","message":"serviceMethod is not a function","stack":"TypeError: serviceMethod is not a function\n    at handleRequest (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:17:26)\n    at restoreAllItems (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:98:9)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:175:3)","timestamp":"2025-02-28T12:29:30.022Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:29:30 +0000] \"PATCH /api/gic/items/restore HTTP/1.1\" 500 37 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:29:30.026Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:29:50.474Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:29:50.564Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:29:54.330Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:29:54.543Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:30:38.319Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:30:38.396Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:30:40.329Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:30:40.399Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:30:53.715Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:30:53.881Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:30:55.949Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:30:56.017Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:31:18.957Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:31:19.031Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:31:23.915Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:31:23.995Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:31:48.414Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:31:48.509Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:31:50.659Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:31:50.740Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:32:19.210Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:32:19.317Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:32:26.102Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:32:26.178Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:32:34.908Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:32:34.976Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:32:46.003Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:32:46.085Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:33:06.858Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:33:06.957Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:33:23 +0000] \"PATCH /api/gic/items/restore HTTP/1.1\" 200 3 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:33:23.779Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:35:59.655Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:35:59.728Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:36:13 +0000] \"PUT /api/gic/items/1049 HTTP/1.1\" 200 3 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:36:13.785Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:38:19.330Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:38:19.400Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:38:23.757Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:38:23.834Z"}
+{"error":"serviceMethod is not a function","level":"error","message":"serviceMethod is not a function","stack":"TypeError: serviceMethod is not a function\n    at handleRequest (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:17:26)\n    at deletedPermanentItem (file:///C:/Users/DEV03/Documents/projects/backend-gic/src/controllers/itemsController.js:91:11)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\DEV03\\Documents\\projects\\backend-gic\\node_modules\\express\\lib\\router\\index.js:421:3)","timestamp":"2025-02-28T12:38:44.374Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:38:44 +0000] \"DELETE /api/gic/items/1049/permanent HTTP/1.1\" 500 37 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:38:44.385Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:39:37.600Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:39:37.671Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:39:40.845Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:39:40.910Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:39:44 +0000] \"DELETE /api/gic/items/1049/permanent HTTP/1.1\" 200 1 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:39:44.722Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:40:13 +0000] \"DELETE /api/gic/items/1048 HTTP/1.1\" 200 3 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:40:13.674Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:43:03.903Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:43:04.057Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:43:06.069Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:43:06.235Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:43:33.844Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:43:33.992Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:44:14.179Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:44:14.249Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:44:15.731Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:44:15.811Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:44:23.607Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:44:23.911Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:44:30.438Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:44:30.625Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:44:40.256Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:44:40.344Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:44:42.083Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:44:42.158Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:44:45.483Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:44:45.580Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:44:49.304Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:44:49.384Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:45:04.146Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:45:04.232Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:45:06.941Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:45:07.021Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:45:11.261Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:45:11.339Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:45:13.298Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:45:13.384Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:45:31.847Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:45:31.923Z"}
+{"level":"info","message":"API rodando com sucesso na porta 3000","timestamp":"2025-02-28T12:45:36.444Z"}
+{"level":"info","message":"Conectado ao banco de dados com sucesso!","timestamp":"2025-02-28T12:45:36.528Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [28/Feb/2025:12:46:59 +0000] \"DELETE /api/gic/items/permanent HTTP/1.1\" 200 1 \"-\" \"insomnia/8.6.1\"","timestamp":"2025-02-28T12:46:59.169Z"}
