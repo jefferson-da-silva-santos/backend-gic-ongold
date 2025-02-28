@@ -108,7 +108,7 @@ yarn app
 ## 🌐 Rotas da API
 
 ### 📌 **GET** - Buscar todos os registros
-- `GET /api/gic/items` → Retorna todos os itens cadastrados + custo total.
+- `GET /api/gic/items?page=1&limit=2` → Retorna todos os itens cadastrados páginados + custo total.
 - `GET /api/gic/csts` → Retorna todas as CSTs cadastradas.
 - `GET /api/gic/ncms` → Retorna todos os NCMs cadastrados.
 - `GET /api/gic/cfops` → Retorna todos os CFOPs cadastrados.
@@ -116,7 +116,18 @@ yarn app
 ### 🔎 **GET** - Buscar itens filtrados
 Busca itens por um campo específico:
 ```
-GET /api/gic/items/{field}/{value}
+GET /api/gic/items/filter?field={field_name}&value={field_value}
+```
+### 🔎 **GET** - Buscar itens por pesquisa de descrição
+Busca itens pela descrição (ou parte dela), e retorna com paginação
+```
+GET /api/gic/items/search?description={desciption_text}&page={value_page}&limit={value_limit}
+```
+
+### 🔎 **GET** - Buscar itens da lixeira
+Busca todos os itens que foram movidos para a lixeira
+```
+GET /api/gic/items/deleted
 ```
 
 ### ➕ **POST** - Inserir novo item
@@ -139,9 +150,22 @@ POST /api/gic/items
 }
 ```
 
+### 🔎 **PATCH** - Restaurar um Item da Lixeira
+Restaura um item especifico da lixeira
+```
+PATCH /api/gic/items/:id/restore
+```
+
+### 🔎 **PATCH** - Restaurar Todos os Itens da Lixeira
+Restaura todos os itens da lixeira
+```
+PATCH /api/gic//items/restore
+```
+
+
 ### ✏️ **PUT** - Atualizar item
 ```
-PUT /api/gic/items/{id}
+PUT /api/gic/items/:id
 ```
 **Body:**
 ```json
@@ -158,18 +182,10 @@ PUT /api/gic/items/{id}
     "excluido": false
 }
 ```
-### ✏️ **PUT** - Restaurar todos os Itens da Lixeira
-```
-PUT /api/gic/items/restore
-```
-### ✏️ **PUT** - Restaurar um item específico da Lixeira
-```
-PUT /api/gic/items/restore/{id}
-```
 
 ### 🗑️ **DELETE** - Remover um item para Lixeira
 ```
-DELETE /api/gic/items/{id}
+DELETE /api/gic/items/:id
 ```
 ### 🗑️ **DELETE** - Excluir permanentemente os itens da Lixeira
 ```
@@ -177,18 +193,15 @@ DELETE /api/gic/items/permanent
 ```
 ### 🗑️ **DELETE** - Excluir permanentemente um item da Lixeira
 ```
-DELETE /api/gic/items/permanent/{id}
+DELETE /api/gic/items/:id/permanent/
 ```
 
----
 ## 📜 Licença
 
 Este projeto está sob a licença **ISC**.
 
----
 ## 📝 Autor
 
 Projeto desenvolvido por **Jefferson Santos Dev** ✨
 
 [🔗 Repositório no GitHub](https://github.com/jefferson-da-silva-santos/backend-gic)
-

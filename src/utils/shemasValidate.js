@@ -12,7 +12,6 @@ export const shemaFillter = Joi.object({
     'cst',
     'cfop',
     'ean',
-    'excluido',
     'criado_em'
   ),
   value: Joi.required()
