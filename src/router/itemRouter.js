@@ -11,10 +11,11 @@ import {
   insert, 
   update, 
   getDeleted
-} from "../controllers/itemsController.js";
+} from "../controllers/itemController.js";
 
 const router = express.Router();
 
+// Principio da responsabilidade única
 router.get('/items', getAll); 
 router.get('/items/filter', getFillter);
 router.get('/items/search', getSearchDescription);
@@ -28,22 +29,3 @@ router.delete('/items/:id/permanent', deletedPermanentItem);
 router.delete('/items/:id', deleted);
 
 export default router;
-
-/*
-
-
-// 🔹 Atualizar um item pelo ID
-router.put('/items/:id', update);
-
-// 🔹 Deletar permanentemente TODOS os itens excluídos
-router.delete('/items/permanent', deletedPermanentAll);
-
-// 🔹 Deletar permanentemente um item específico pelo ID
-router.delete('/items/:id/permanent', deletedPermanentItem);
-
-// 🔹 Deletar um item (Soft Delete)
-router.delete('/items/:id', deleted);
-
-export default router;
-
- */

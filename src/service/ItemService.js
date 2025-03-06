@@ -1,16 +1,14 @@
 import ItemRepository from "../repository/ItemRepository.js";
-import ItemsDTO from "../dtos/itemsDTO.js";
-import moment from "moment-timezone";
+import ItemDTO from "../dtos/itemDTO.js";
 
 export default class ItemService {
   static async getAllItems(page = 1, limit = 4) {
-    const items = await ItemRepository.findAll({ page, limit });
-    const quantityItems = await ItemRepository.count();
-    const totalPages = Math.ceil(quantityItems / limit);
+    const { items, totalItems } = await ItemRepository.getItems(page, limit);
+    const totalPages = Math.ceil(totalItems / limit);
     
     return {
-      items: ItemsDTO.parseObject(items),
-      quantityItems,
+      items: ItemDTO.parseObject(items),
+      quantityItems: totalItems,
       totalPages,
       currentPage: page
     };
@@ -19,61 +17,58 @@ export default class ItemService {
   static async getItemByField(field, value) {
     if (!field || !value) throw new Error('Parâmetros de filtragem vazios');
     
-    const items = await ItemRepository.findByField(field, value);
+    const items = await ItemRepository.getItemsFiltering(field, value);
     if (items.length === 0) throw new Error('Nenhum item encontrado');
 
-    return ItemsDTO.parseObject(items);
+    return ItemDTO.parseObject(items);
   }
 
   static async searchItemsByDescription(page, limit, description) {
-    const items = await ItemRepository.findByDescription({ page, limit, description });
-    const quantityItems = await ItemRepository.count();
-    const totalPages = Math.ceil(quantityItems / limit);
+    const items = await ItemRepository.getItemsByDescription(page, limit, description);
+    const totalItems = await ItemRepository.getItems(page, limit);
+    const totalPages = Math.ceil(totalItems.totalItems / limit);
 
     return {
-      items: ItemsDTO.parseObject(items),
-      quantityItems,
+      items: ItemDTO.parseObject(items),
+      quantityItems: totalItems.totalItems,
       totalPages,
       currentPage: page
     };
   }
 
   static async getDeletedItems() {
-    const items = await ItemRepository.deleteds();
-    return ItemsDTO.parseObject(items);
+    const items = await ItemRepository.getDeletedItems();
+    return ItemDTO.parseObject(items);
   }
 
   static async insertItem(data) {
-    return await ItemRepository.create(data);
+    return await ItemRepository.insertItem(data);
   }
 
   static async updateItem(id, data) {
-    const updated = await ItemRepository.updateById(id, data);
+    const updated = await ItemRepository.updateItem(id, data);
     if (!updated) throw new Error("Item não encontrado para atualização");
 
     return updated;
   }
 
   static async softDeleteItem(id) {
-    return await ItemRepository.updateById(id, {
-      excluido: 1,
-      excluido_em: moment().tz("America/Sao_Paulo").format("YYYY-MM-DD HH:mm:ss")
-    });
+    return await ItemRepository.deleteItemMomentarily(id);
   }
 
-  static restoreAllItems() {
-    return ItemRepository.restoreAll();
+  static async restoreAllItems() {
+    return ItemRepository.restoreAllItems();
   }
 
   static async restoreItem(id) {
-    return await ItemRepository.updateById(id, { excluido: 0, excluido_em: null });
+    return await ItemRepository.restoreItem(id);
   }
 
   static async deleteItemPermanently(id) {
-    return await ItemRepository.deleteById(id);
+    return await ItemRepository.deletePermanentItem(id);
   }
 
-  static async deletedAllItemsPermanently() {
-    return await ItemRepository.deleteAll();
+  static async deleteAllItemsPermanently() {
+    return await ItemRepository.deletePermanentAllItems();
   }
 }

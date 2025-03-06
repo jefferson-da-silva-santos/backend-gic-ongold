@@ -159,7 +159,7 @@ PATCH /api/gic/items/:id/restore
 ### 🔎 **PATCH** - Restaurar Todos os Itens da Lixeira
 Restaura todos os itens da lixeira
 ```
-PATCH /api/gic//items/restore
+PATCH /api/gic/items/restore
 ```
 
 

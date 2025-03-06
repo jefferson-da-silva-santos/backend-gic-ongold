@@ -1,6 +1,6 @@
-class ItemDTO {
-  static parse(arr) {
-    return arr.map(item => ({
+export default class ItemsDTO {
+  static parseObject(arr) {
+    return arr.map(({ dataValues: item }) => ({
       id: item.id,
       valor_unitario: item.valor_unitario,
       descricao: item.descricao,
@@ -28,8 +28,7 @@ class ItemDTO {
     const exitIcms = parseFloat(exitIcmsRate) || 0;
     const commissionRate = parseFloat(commission) || 0;
 
-    return parseFloat(((entryIcms / 100) + (exitIcms / 100) + (commissionRate / 100)) * value).toFixed(2);
+    const totalCost = ((entryIcms / 100) + (exitIcms / 100) + (commissionRate / 100)) * value;
+    return parseFloat(totalCost.toFixed(2));
   }
 }
-
-export { ItemDTO };
