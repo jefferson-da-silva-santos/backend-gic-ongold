@@ -4,7 +4,8 @@ import sequelize from "../database/connection.js";
 const Cfop = sequelize.define(
   "Cfop",
   {
-    codcfop: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    idcfop: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    codcfop: { type: DataTypes.INTEGER, allowNull: false },
     descricaocfop: { type: DataTypes.STRING(400) },
     comentariocfop: { type: DataTypes.TEXT },
     codcop: { type: DataTypes.STRING(10), allowNull: false },

@@ -10,6 +10,7 @@ export default class NcmService {
       }
 
       return ncms.map(({ dataValues: ncm }) => ({
+        idncm: ncm.idncm,
         codncm: ncm.codncm,
         nomencm: ncm.nomencm,
         aliquota: ncm.aliquota,
@@ -28,6 +29,7 @@ export default class NcmService {
       }
 
       return ncms.map(({ dataValues: ncm }) => ({
+        idncm: ncm.idncm,
         codncm: ncm.codncm,
         nomencm: ncm.nomencm,
         aliquota: ncm.aliquota,

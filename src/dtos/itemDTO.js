@@ -7,9 +7,9 @@ export default class ItemsDTO {
       taxa_icms_entrada: item.taxa_icms_entrada,
       taxa_icms_saida: item.taxa_icms_saida,
       comissao: item.comissao,
-      ncm: item.ncm,
-      cst: item.cst,
-      cfop: item.cfop,
+      ncm: item.ncm?.codncm || null, 
+      cst: item.csticms?.codcst || null, 
+      cfop: item.cfopinfo?.codcfop || null, 
       ean: item.ean,
       totalCusto: this.calculateTotalCost(
         item.valor_unitario,
@@ -20,7 +20,7 @@ export default class ItemsDTO {
       criado_em: item.criado_em,
       excluido_em: item.excluido_em
     }));
-  }
+  }  
 
   static calculateTotalCost(unitValue, entryIcmsRate = 0, exitIcmsRate = 0, commission = 0) {
     const value = parseFloat(unitValue) || 0;

@@ -10,6 +10,7 @@ export default class Cst {
       return null;
     }
     return result.map(({ dataValues: cst }) => ({
+      idcst: cst.idcst,
       codcst: cst.codcst,
       descricao: cst.descricao,
       regime: cst.regime,

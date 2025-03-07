@@ -1,5 +1,8 @@
 import { Op } from "sequelize";
 import ItemModel from "../models/item.js";
+import NcmModel from "../models/ncm.js";
+import CstIcmsModel from "../models/csticms.js";
+import CfopModel from "../models/cfop.js";
 import moment from 'moment';
 
 class ItemRepository {
@@ -12,19 +15,53 @@ class ItemRepository {
    */
   static async getItems(page, limit) {
     const offset = (page - 1) * limit;
+
     const items = await ItemModel.findAll({
       where: { excluido: 0 },
       limit,
-      offset
+      offset,
+      attributes: [
+        "id",
+        "valor_unitario",
+        "descricao",
+        "taxa_icms_entrada",
+        "taxa_icms_saida",
+        "comissao",
+        "ean",
+        "excluido",
+        "criado_em",
+        "excluido_em",
+      ],
+      include: [
+        {
+          model: NcmModel,
+          as: "ncm",
+          attributes: ["codncm"],
+        },
+        {
+          model: CstIcmsModel,
+          as: "csticms",
+          attributes: ["codcst"],
+        },
+        {
+          model: CfopModel,
+          as: "cfopinfo",
+          attributes: ["codcfop"],
+        },
+      ],
     });
+
     const totalItems = await ItemModel.count({
-      where: { excluido: 0 }
+      where: { excluido: 0 },
     });
+
     return {
       items,
-      totalItems
+      totalItems,
     };
   }
+
+
 
   /**
    * @description Recupera itens filtrados com base em um campo específico e seu valor.
@@ -34,7 +71,39 @@ class ItemRepository {
    */
   static async getItemsFiltering(field, value) {
     const filters = { [field]: { [Op.eq]: value }, excluido: 0 };
-    return await ItemModel.findAll({ where: filters });
+
+    return await ItemModel.findAll({
+      where: filters,
+      attributes: [
+        "id",
+        "valor_unitario",
+        "descricao",
+        "taxa_icms_entrada",
+        "taxa_icms_saida",
+        "comissao",
+        "ean",
+        "excluido",
+        "criado_em",
+        "excluido_em",
+      ],
+      include: [
+        {
+          model: NcmModel,
+          as: "ncm",
+          attributes: ["codncm"],
+        },
+        {
+          model: CstIcmsModel,
+          as: "csticms",
+          attributes: ["codcst"],
+        },
+        {
+          model: CfopModel,
+          as: "cfopinfo",
+          attributes: ["codcfop"],
+        },
+      ],
+    });
   }
 
   /**
@@ -46,6 +115,7 @@ class ItemRepository {
    */
   static async getItemsByDescription(page, limit, description) {
     const offset = (page - 1) * limit;
+
     return await ItemModel.findAll({
       where: {
         descricao: {
@@ -54,7 +124,36 @@ class ItemRepository {
         excluido: 0
       },
       limit,
-      offset
+      offset,
+      attributes: [
+        "id",
+        "valor_unitario",
+        "descricao",
+        "taxa_icms_entrada",
+        "taxa_icms_saida",
+        "comissao",
+        "ean",
+        "excluido",
+        "criado_em",
+        "excluido_em",
+      ],
+      include: [
+        {
+          model: NcmModel,
+          as: "ncm",
+          attributes: ["codncm"],
+        },
+        {
+          model: CstIcmsModel,
+          as: "csticms",
+          attributes: ["codcst"],
+        },
+        {
+          model: CfopModel,
+          as: "cfopinfo",
+          attributes: ["codcfop"],
+        },
+      ],
     });
   }
 
@@ -64,7 +163,36 @@ class ItemRepository {
    */
   static async getDeletedItems() {
     return await ItemModel.findAll({
-      where: { excluido: 1 }
+      where: { excluido: 1 },
+      attributes: [
+        "id",
+        "valor_unitario",
+        "descricao",
+        "taxa_icms_entrada",
+        "taxa_icms_saida",
+        "comissao",
+        "ean",
+        "excluido",
+        "criado_em",
+        "excluido_em",
+      ],
+      include: [
+        {
+          model: NcmModel,
+          as: "ncm",
+          attributes: ["codncm"],
+        },
+        {
+          model: CstIcmsModel,
+          as: "csticms",
+          attributes: ["codcst"],
+        },
+        {
+          model: CfopModel,
+          as: "cfopinfo",
+          attributes: ["codcfop"],
+        },
+      ],
     })
   }
 
@@ -133,6 +261,8 @@ class ItemRepository {
   static async restoreAllItems() {
     return await ItemModel.update({ excluido: 0, excluido_em: null }, { where: { excluido: 1 } });
   }
+
 }
+
 
 export default ItemRepository;

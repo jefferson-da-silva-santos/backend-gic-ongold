@@ -4,7 +4,8 @@ import sequelize from "../database/connection.js";
 const CstIcms = sequelize.define(
   "CstIcms",
   {
-    codcst: { type: DataTypes.STRING(10), primaryKey: true },
+    idcst: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    codcst: { type: DataTypes.STRING(10), allowNull: false },
     descricao: { type: DataTypes.STRING(255) },
     regime: { type: DataTypes.STRING(1) },
   },

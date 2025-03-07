@@ -68,28 +68,27 @@ export const itemSchema = Joi.object({
       "any.required": "O campo 'comissao' é obrigatório."
     }),
 
-  ncm: Joi.string().length(8).pattern(/^\d+$/).required()
+  ncm_id: Joi.number().integer().min(0).required()
     .messages({
-      "string.base": "O campo 'ncm' deve ser uma string numérica.",
-      "string.length": "O 'ncm' deve ter exatamente 8 dígitos.",
-      "string.pattern.base": "O 'ncm' deve conter apenas números.",
+      "number.base": "O campo 'ncm' deve ser um número.",
+      "number.integer": "O campo 'ncm' deve ser um número inteiro.",
+      "number.min": "O campo 'ncm' deve ser no mínimo 0.",
       "any.required": "O campo 'ncm' é obrigatório."
     }),
 
-  cst: Joi.string().length(3).pattern(/^\d+$/).required()
+  cst_id: Joi.number().integer().min(0).required()
     .messages({
-      "string.base": "O campo 'cst' deve ser uma string numérica.",
-      "string.length": "O 'cst' deve ter exatamente 3 dígitos.",
-      "string.pattern.base": "O 'cst' deve conter apenas números.",
+      "number.base": "O campo 'cst' deve ser um número.",
+      "number.integer": "O campo 'cst' deve ser um número inteiro.",
+      "number.min": "O campo 'cst' deve ser no mínimo 0.",
       "any.required": "O campo 'cst' é obrigatório."
     }),
 
-  cfop: Joi.number().integer().min(1000).max(9999).required()
+  cfop_id: Joi.number().integer().min(0).required()
     .messages({
-      "number.base": "O campo 'cfop' deve ser um número inteiro.",
-      "number.integer": "O 'cfop' deve ser um número inteiro.",
-      "number.min": "O 'cfop' deve estar entre 1000 e 9999.",
-      "number.max": "O 'cfop' deve estar entre 1000 e 9999.",
+      "number.base": "O campo 'cfop' deve ser um número.",
+      "number.integer": "O campo 'cfop' deve ser um número inteiro.",
+      "number.min": "O campo 'cfop' deve ser no mínimo 0.",
       "any.required": "O campo 'cfop' é obrigatório."
     }),
 

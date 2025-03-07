@@ -4,7 +4,8 @@ import sequelize from "../database/connection.js";
 const Ncm = sequelize.define(
   "Ncm",
   {
-    codncm: { type: DataTypes.STRING(8), primaryKey: true },
+    idncm: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+    codncm: { type: DataTypes.STRING(8), allowNull: false },
     nomencm: { type: DataTypes.TEXT, allowNull: false },
     aliquota: { type: DataTypes.STRING(3) },
   },
