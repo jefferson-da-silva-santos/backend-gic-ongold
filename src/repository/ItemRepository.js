@@ -5,6 +5,9 @@ import CstIcmsModel from "../models/csticms.js";
 import CfopModel from "../models/cfop.js";
 import moment from 'moment';
 
+const itemNotDeleted = { excluido: 0 };
+const itemDeleted = { excluido: 1 };
+
 class ItemRepository {
 
   /**
@@ -17,7 +20,7 @@ class ItemRepository {
     const offset = (page - 1) * limit;
 
     const items = await ItemModel.findAll({
-      where: { excluido: 0 },
+      where: itemNotDeleted,
       limit,
       offset,
       attributes: [
@@ -52,7 +55,7 @@ class ItemRepository {
     });
 
     const totalItems = await ItemModel.count({
-      where: { excluido: 0 },
+      where: itemNotDeleted,
     });
 
     return {
@@ -60,8 +63,6 @@ class ItemRepository {
       totalItems,
     };
   }
-
-
 
   /**
    * @description Recupera itens filtrados com base em um campo específico e seu valor.
@@ -173,7 +174,7 @@ class ItemRepository {
    */
   static async getDeletedItems() {
     return await ItemModel.findAll({
-      where: { excluido: 1 },
+      where: itemDeleted,
       attributes: [
         "id",
         "valor_unitario",
@@ -204,6 +205,32 @@ class ItemRepository {
         },
       ],
     })
+  }
+
+  static async getReportData() {
+    console.log('🚀 Entrou na função getReportData');
+
+    const tenMostExpensiveItems = await ItemModel.findAll({
+      attributes: ["id", "valor_unitario", "descricao"],
+      where: itemNotDeleted,
+      order: [['valor_unitario', 'DESC']],
+      limit: 10
+    });
+    const totalItems = await ItemModel.count();
+    const totalItemsAvailable = await ItemModel.count({ where: itemNotDeleted });
+    const totalItemsDeleteds = await ItemModel.count({ where: itemDeleted });
+    const valueStock = await ItemModel.sum('valor_unitario', {
+      where: {
+        excluido: false // ou excluido: 0
+      }
+    });
+    return {
+      tenMostExpensiveItems,
+      totalItems,
+      valueStock,
+      totalItemsAvailable,
+      totalItemsDeleteds
+    };
   }
 
   /**
@@ -252,7 +279,7 @@ class ItemRepository {
    * @returns {Promise<Array>}
    */
   static async deletePermanentAllItems() {
-    return await ItemModel.destroy({ where: { excluido: 1 } });
+    return await ItemModel.destroy({ where: itemDeleted });
   }
 
   /**
@@ -269,9 +296,24 @@ class ItemRepository {
    * @returns {Promise<Array>}
    */
   static async restoreAllItems() {
-    return await ItemModel.update({ excluido: 0, excluido_em: null }, { where: { excluido: 1 } });
+    return await ItemModel.update({ excluido: 0, excluido_em: null }, { where: itemDeleted });
   }
 
+  /**
+   * @description Remove itens que já estão a mais de 30 dias excluídos
+   * @param {Date} dataLimit - Data limite (30 dias)
+   * @returns {number} - Retorna a quantidade de linhas excluídas
+   */
+  static async deleteItemAfter30Days(dataLimit) {
+    return await ItemModel.destroy({
+      where: {
+        excluido: 1,
+        excluido_em: {
+          [Op.lte]: dataLimit,
+        }
+      }
+    })
+  }
 }
 
 
