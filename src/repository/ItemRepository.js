@@ -116,7 +116,7 @@ class ItemRepository {
   static async getItemsByDescription(page, limit, description) {
     const offset = (page - 1) * limit;
 
-    return await ItemModel.findAll({
+    const items = await ItemModel.findAll({
       where: {
         descricao: {
           [Op.like]: `%${description}%`
@@ -155,6 +155,16 @@ class ItemRepository {
         },
       ],
     });
+    const totalItems = await ItemModel.count({
+      where: {
+        descricao: {
+          [Op.like]: `%${description}%`
+        },
+        excluido: 0
+      }
+    });
+
+    return { items, totalItems }
   }
 
   /**

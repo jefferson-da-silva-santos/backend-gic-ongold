@@ -24,17 +24,16 @@ export default class ItemService {
   }
 
   static async searchItemsByDescription(page, limit, description) {
-    const items = await ItemRepository.getItemsByDescription(page, limit, description);
-    const totalItems = await ItemRepository.getItems(page, limit);
-    const totalPages = Math.ceil(totalItems.totalItems / limit);
+    const { items, totalItems } = await ItemRepository.getItemsByDescription(page, limit, description);
+    const totalPages = Math.ceil(totalItems / limit);
 
     return {
       items: ItemDTO.parseObject(items),
-      quantityItems: totalItems.totalItems,
+      quantityItems: totalItems,
       totalPages,
       currentPage: page
     };
-  }
+}
 
   static async getDeletedItems() {
     const items = await ItemRepository.getDeletedItems();
