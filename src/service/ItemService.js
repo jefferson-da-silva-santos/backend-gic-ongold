@@ -1,10 +1,12 @@
 import ItemRepository from "../repository/ItemRepository.js";
 import ItemDTO from "../dtos/itemDTO.js";
 import logger from "../utils/logger.js";
+import moment from "moment";
 
 export default class ItemService {
-  static async getAllItems(page = 1, limit = 4) {
-    const { items, totalItems } = await ItemRepository.getItems(page, limit);
+  async search(page = 1, limit = 4, description = "") {
+    const item = new ItemRepository();
+    const { items, totalItems } = await item.search(page, limit, description);
     const totalPages = Math.ceil(totalItems / limit);
 
     return {
@@ -15,86 +17,71 @@ export default class ItemService {
     };
   }
 
-  static async getItemByField(field, value) {
-    if (!field || !value) throw new Error('Parâmetros de filtragem vazios');
-
-    const items = await ItemRepository.getItemsFiltering(field, value);
+  async getItems(id) {
+    if (!id) throw new Error('O id não pode estar vazio!');
+    const item = new ItemRepository();
+    const items = await item.getItems(id);
     if (items.length === 0) throw new Error('Nenhum item encontrado');
 
     return ItemDTO.parseObject(items);
   }
 
-  static async searchItemsByDescription(page, limit, description) {
-    const { items, totalItems } = await ItemRepository.getItemsByDescription(page, limit, description);
-    const totalPages = Math.ceil(totalItems / limit);
-
-    return {
-      items: ItemDTO.parseObject(items),
-      quantityItems: totalItems,
-      totalPages,
-      currentPage: page
-    };
-  }
-
-  static async getDeletedItems() {
-    const items = await ItemRepository.getDeletedItems();
+  async getDeletedItems() {
+    const item = new ItemRepository();
+    const items = await item.getDeletedItems();
     return ItemDTO.parseObject(items);
   }
 
-  static async getReport() {
+  async getReport() {
     try {
-      const data = await ItemRepository.getReportData();
+      const item = new ItemRepository();
+      const data = await item.report();
       data.tenMostExpensiveItems = data.tenMostExpensiveItems.map(item => ({
         ...item.toJSON(), // Garante que `descricao` e outros campos sejam preservados
         valor_unitario: parseFloat(item.valor_unitario).toFixed(2)
       }));
-
-
       data.valueStock = data.valueStock ? parseFloat(data.valueStock).toFixed(2) : "0.00";
-
       return data;
     } catch (error) {
       throw new Error(error);
     }
   }
 
-
-  static async insertItem(data) {
-    return await ItemRepository.insertItem(data);
+  async insert(data) {
+    const item = new ItemRepository();
+    return await item.insert(data);
   }
 
-  static async updateItem(id, data) {
-    const updated = await ItemRepository.updateItem(id, data);
+  async update(id, data) {
+    const item = new ItemRepository();
+    const updated = await item.update(id, data);
     if (!updated) throw new Error("Item não encontrado para atualização");
 
     return updated;
   }
 
-  static async softDeleteItem(id) {
-    return await ItemRepository.deleteItemMomentarily(id);
+  async softDeleteItem(id) {
+    const currentMoment = moment().tz('America/Sao_Paulo').format('YYYY-MM-DD HH:mm:ss');
+    const item = new ItemRepository();
+    return item.softDelete(id, currentMoment);
   }
 
-  static async restoreAllItems() {
-    return ItemRepository.restoreAllItems();
+  async delete(id) {
+    const item = new ItemRepository();
+    return item.delete(id);
   }
 
-  static async restoreItem(id) {
-    return await ItemRepository.restoreItem(id);
+  async removeItemSoftly(id) {
+    const item = new ItemRepository();
+    return item.removeItemSoftly(id);
   }
 
-  static async deleteItemPermanently(id) {
-    return await ItemRepository.deletePermanentItem(id);
-  }
-
-  static async deleteAllItemsPermanently() {
-    return await ItemRepository.deletePermanentAllItems();
-  }
-
-  static async deleteItemAfter30Days() {
+  async clearItemsByDate() {
     const dataLimit = new Date();
     dataLimit.setDate(dataLimit.getDate() - 30);
+    const item = new ItemRepository();
     try {
-      const result = await ItemRepository.deleteItemAfter30Days(dataLimit);
+      const result = await item.clearItemsByDate(dataLimit);
       if (result > 0) {
         logger.info(`${result} itens antigos foram deletados da lixeira.`);
       } else {

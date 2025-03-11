@@ -1,62 +1,111 @@
-import { Op } from "sequelize";
+import { Op, where } from "sequelize";
 import ItemModel from "../models/item.js";
 import NcmModel from "../models/ncm.js";
 import CstIcmsModel from "../models/csticms.js";
 import CfopModel from "../models/cfop.js";
-import moment from 'moment';
 
-const itemNotDeleted = { excluido: 0 };
-const itemDeleted = { excluido: 1 };
-
+/**
+ * @class ItemRepository
+ * @description Classe responsável por interagir com o modelo de Item no banco de dados.
+ */
 class ItemRepository {
+  /**
+   * @private
+   * @type {object}
+   * @description Condição para filtrar itens não excluídos.
+   */
+  itemNotDeleted = { excluido: 0 };
 
   /**
-   * @description Recupera uma lista paginada de itens ativos no banco de dados.
-   * @param {number} page - Número da página para a paginação.
-   * @param {number} limit - Número máximo de itens a serem retornados por página.
-   * @returns {Promise<{items: Array, totalItems: number}>} - Retorna um objeto contendo uma lista de itens e o total de itens disponíveis no banco.
+   * @private
+   * @type {object}
+   * @description Condição para filtrar itens excluídos.
    */
-  static async getItems(page, limit) {
+  itemDeleted = { excluido: 1 };
+
+  /**
+   * @private
+   * @type {string[]}
+   * @description Lista de atributos do modelo Item que serão retornados nas consultas.
+   */
+  itemsAttrubutes = [
+    "id",
+    "valor_unitario",
+    "descricao",
+    "taxa_icms_entrada",
+    "taxa_icms_saida",
+    "comissao",
+    "ean",
+    "excluido",
+    "criado_em",
+    "excluido_em",
+  ];
+
+  /**
+   * @private
+   * @type {object[]}
+   * @description Lista de modelos relacionados a serem incluídos nas consultas de itens.
+   */
+  itemsIncludes = [
+    {
+      model: NcmModel,
+      as: "ncm",
+      attributes: ["codncm"],
+    },
+    {
+      model: CstIcmsModel,
+      as: "csticms",
+      attributes: ["codcst"],
+    },
+    {
+      model: CfopModel,
+      as: "cfopinfo",
+      attributes: ["codcfop"],
+    },
+  ];
+
+  /**
+   * @async
+   * @function countItems
+   * @description Conta o número de itens que correspondem a uma determinada condição.
+   * @param {object} [condition] - Condição para filtrar os itens.
+   * @returns {Promise<number>} - O número de itens que correspondem à condição.
+   */
+  async countItems(condition) {
+    const whereCondition = condition ? { where: condition } : {};
+    return await ItemModel.count(whereCondition);
+  }
+
+  /**
+   * @async
+   * @function search
+   * @description Busca itens paginados e filtrados por descrição.
+   * @param {number} page - Número da página.
+   * @param {number} limit - Número de itens por página.
+   * @param {string} [description=""] - Descrição para filtrar os itens.
+   * @returns {Promise<{items: ItemModel[], totalItems: number}>} - Um objeto contendo a lista de itens e o total de itens.
+   */
+  async search(page, limit, description) {
     const offset = (page - 1) * limit;
 
+    const whereCondition = description
+      ? {
+        descricao: {
+          [Op.like]: `%${description}%`,
+        },
+        ...this.itemNotDeleted,
+      }
+      : this.itemNotDeleted;
+
     const items = await ItemModel.findAll({
-      where: itemNotDeleted,
+      where: whereCondition,
       limit,
       offset,
-      attributes: [
-        "id",
-        "valor_unitario",
-        "descricao",
-        "taxa_icms_entrada",
-        "taxa_icms_saida",
-        "comissao",
-        "ean",
-        "excluido",
-        "criado_em",
-        "excluido_em",
-      ],
-      include: [
-        {
-          model: NcmModel,
-          as: "ncm",
-          attributes: ["codncm"],
-        },
-        {
-          model: CstIcmsModel,
-          as: "csticms",
-          attributes: ["codcst"],
-        },
-        {
-          model: CfopModel,
-          as: "cfopinfo",
-          attributes: ["codcfop"],
-        },
-      ],
+      attributes: this.itemsAttrubutes,
+      include: this.itemsIncludes,
     });
 
-    const totalItems = await ItemModel.count({
-      where: itemNotDeleted,
-    });
+    const totalItems = await this.countItems(this.itemNotDeleted);
 
     return {
       items,
@@ -65,256 +114,149 @@ class ItemRepository {
   }
 
   /**
-   * @description Recupera itens filtrados com base em um campo específico e seu valor.
-   * @param {string} field - Nome do campo da tabela para aplicar o filtro.
-   * @param {any} value - Valor a ser comparado no campo fornecido.
-   * @returns {Promise<Array>} - Retorna uma lista de itens que correspondem ao filtro aplicado.
+   * @async
+   * @function getItems
+   * @description Busca itens por ID.
+   * @param {number} id - ID do item.
+   * @returns {Promise<ItemModel[]>} - Uma lista de itens que correspondem ao ID.
    */
-  static async getItemsFiltering(field, value) {
-    const filters = { [field]: { [Op.eq]: value }, excluido: 0 };
-
+  async getItems(id) {
     return await ItemModel.findAll({
-      where: filters,
-      attributes: [
-        "id",
-        "valor_unitario",
-        "descricao",
-        "taxa_icms_entrada",
-        "taxa_icms_saida",
-        "comissao",
-        "ean",
-        "excluido",
-        "criado_em",
-        "excluido_em",
-      ],
-      include: [
-        {
-          model: NcmModel,
-          as: "ncm",
-          attributes: ["codncm"],
-        },
-        {
-          model: CstIcmsModel,
-          as: "csticms",
-          attributes: ["codcst"],
-        },
-        {
-          model: CfopModel,
-          as: "cfopinfo",
-          attributes: ["codcfop"],
-        },
-      ],
+      where: { id, ...this.itemNotDeleted },
+      attributes: this.itemsAttrubutes,
+      include: this.itemsIncludes,
     });
   }
 
   /**
-   * @description Recupera itens baseados em uma busca de descrição, com suporte a paginação.
-   * @param {number} page - Número da página para a paginação.
-   * @param {number} limit - Número máximo de itens a serem retornados por página.
-   * @param {string} description - Texto a ser buscado na descrição dos itens.
-   * @returns {Promise<Array>} - Retorna uma lista de itens cujas descrições correspondem ao valor de pesquisa.
+   * @async
+   * @function getDeletedItems
+   * @description Busca todos os itens excluídos.
+   * @returns {Promise<ItemModel[]>} - Uma lista de itens excluídos.
    */
-  static async getItemsByDescription(page, limit, description) {
-    const offset = (page - 1) * limit;
-
-    const items = await ItemModel.findAll({
-      where: {
-        descricao: {
-          [Op.like]: `%${description}%`
-        },
-        excluido: 0
-      },
-      limit,
-      offset,
-      attributes: [
-        "id",
-        "valor_unitario",
-        "descricao",
-        "taxa_icms_entrada",
-        "taxa_icms_saida",
-        "comissao",
-        "ean",
-        "excluido",
-        "criado_em",
-        "excluido_em",
-      ],
-      include: [
-        {
-          model: NcmModel,
-          as: "ncm",
-          attributes: ["codncm"],
-        },
-        {
-          model: CstIcmsModel,
-          as: "csticms",
-          attributes: ["codcst"],
-        },
-        {
-          model: CfopModel,
-          as: "cfopinfo",
-          attributes: ["codcfop"],
-        },
-      ],
+  async getDeletedItems() {
+    return await ItemModel.findAll({
+      where: this.itemDeleted,
+      attributes: this.itemsAttrubutes,
+      include: this.itemsIncludes,
     });
-    const totalItems = await ItemModel.count({
-      where: {
-        descricao: {
-          [Op.like]: `%${description}%`
-        },
-        excluido: 0
-      }
-    });
-
-    return { items, totalItems }
   }
 
   /**
-   * @description Recupera itens que foram adicionados a lixeira
-   * @returns {Promise<Array>}
+   * @async
+   * @function report
+   * @description Gera um relatório com informações sobre os itens.
+   * @returns {Promise<{tenMostExpensiveItems: ItemModel[], totalItems: number, valueStock: number, totalItemsAvailable: number, totalItemsDeleteds: number}>} - Um objeto contendo informações do relatório.
    */
-  static async getDeletedItems() {
-    return await ItemModel.findAll({
-      where: itemDeleted,
-      attributes: [
-        "id",
-        "valor_unitario",
-        "descricao",
-        "taxa_icms_entrada",
-        "taxa_icms_saida",
-        "comissao",
-        "ean",
-        "excluido",
-        "criado_em",
-        "excluido_em",
-      ],
-      include: [
-        {
-          model: NcmModel,
-          as: "ncm",
-          attributes: ["codncm"],
-        },
-        {
-          model: CstIcmsModel,
-          as: "csticms",
-          attributes: ["codcst"],
-        },
-        {
-          model: CfopModel,
-          as: "cfopinfo",
-          attributes: ["codcfop"],
-        },
-      ],
-    })
-  }
-
-  static async getReportData() {
-    console.log('🚀 Entrou na função getReportData');
-
+  async report() {
     const tenMostExpensiveItems = await ItemModel.findAll({
       attributes: ["id", "valor_unitario", "descricao"],
-      where: itemNotDeleted,
-      order: [['valor_unitario', 'DESC']],
-      limit: 10
+      where: this.itemNotDeleted,
+      order: [["valor_unitario", "DESC"]],
+      limit: 10,
     });
-    const totalItems = await ItemModel.count();
-    const totalItemsAvailable = await ItemModel.count({ where: itemNotDeleted });
-    const totalItemsDeleteds = await ItemModel.count({ where: itemDeleted });
-    const valueStock = await ItemModel.sum('valor_unitario', {
+    const valueStock = await ItemModel.sum("valor_unitario", {
       where: {
-        excluido: false // ou excluido: 0
-      }
+        excluido: false,
+      },
     });
+
+    const totalItems = await this.countItems();
+    const totalItemsAvailable = await this.countItems(this.itemNotDeleted);
+    const totalItemsDeleteds = await this.countItems(this.itemDeleted);
+
     return {
       tenMostExpensiveItems,
       totalItems,
       valueStock,
       totalItemsAvailable,
-      totalItemsDeleteds
+      totalItemsDeleteds,
     };
   }
 
   /**
-   * @description Adiciona um novo item ao banco de dados
-   * @param {object} data - Um objeto com os dados do novo item
-   * @returns {Promise<Array>}
+   * @async
+   * @function insert
+   * @description Insere um novo item no banco de dados.
+   * @param {object} data - Dados do item a ser inserido.
+   * @returns {Promise<ItemModel>} - O item inserido.
    */
-  static async insertItem(data) {
+  async insert(data) {
     return await ItemModel.create(data);
   }
 
   /**
-   * @description Atualiza um item no banco de dados
-   * @param {number} id - Id do item a ser atualizado
-   * @param {object} data - Um objeto com os dados atualizados do item
-   * @returns {Promise<Array>}
+   * @async
+   * @function update
+   * @description Atualiza um item no banco de dados.
+   * @param {number} id - ID do item a ser atualizado.
+   * @param {object} data - Dados do item a serem atualizados.
+   * @returns {Promise<number[]>} - O número de linhas afetadas pela atualização.
    */
-  static async updateItem(id, data) {
-    return await ItemModel.update(data, { where: { id, excluido: 0 } });
+  async update(id, data) {
+    return await ItemModel.update(data, { where: { id, ...this.itemNotDeleted } });
   }
 
   /**
-   * @description Deleta momentâneamente um item (move para lixeira)
-   * @param {number} id - Id do item a ser movido para lixeira
-   * @returns {Promise<Array>}
+   * @async
+   * @function softDelete
+   * @description Move um item para a lixeira.
+   * @param {number} id - ID do item a ser movido para a lixeira.
+   * @param {string} datetime - Data e hora da exclusão.
+   * @returns {Promise<number[]>} - O número de linhas afetadas pela atualização.
    */
-  static async deleteItemMomentarily(id) {
+  async softDelete(id, datetime) {
     return await ItemModel.update(
-      { excluido: 1, excluido_em: moment().tz('America/Sao_Paulo').format('YYYY-MM-DD HH:mm:ss') },
+      { ...this.itemDeleted, excluido_em: datetime },
       { where: { id } }
     );
   }
 
   /**
-   * @description Deleta permanentemente um item
-   * @param {number} id - Id do item a ser movido para lixeira
-   * @returns {Promise<Array>}
+   * @async
+   * @function softDeleteItem
+   * @description Restaura um item da lixeira ou restaura todos os itens da lixeira.
+   * @param {number} [id=null] - ID do item a ser restaurado. Se null, todos os itens serão restaurados.
+   * @returns {Promise<number[]>} - O número de linhas afetadas pela atualização.
    */
-  static async deletePermanentItem(id) {
-    return await ItemModel.destroy({ where: { id } });
+  async removeItemSoftly(id = null) {
+    const whereCondition = id ? { where: { id } } : { where: this.itemDeleted };
+    return await ItemModel.update(
+      { ...this.itemNotDeleted, excluido_em: null },
+      whereCondition
+    );
   }
 
   /**
-   * @description Deleta permanentemente um item
-   * @param {number} id - Id do item a ser movido para lixeira
-   * @returns {Promise<Array>}
+   * @async
+   * @function delete
+   * @description Remove permanentemente um item ou todos os itens da lixeira.
+   * @param {number} [id=null] - ID do item a ser removido. Se null, todos os itens da lixeira serão removidos.
+   * @returns {Promise<number>} - O número de linhas afetadas pela exclusão.
    */
-  static async deletePermanentAllItems() {
-    return await ItemModel.destroy({ where: itemDeleted });
+  async delete(id = null) {
+    return await ItemModel.destroy({
+      where: id ? { id } : this.itemDeleted,
+    });
   }
 
   /**
-   * @description Tira um item da lixeira
-   * @param {number} id - Id do item a ser removido para lixeira
-   * @returns {Promise<Array>}
-   */
-  static async restoreItem(id) {
-    return await ItemModel.update({ excluido: 0, excluido_em: null }, { where: { id } });
-  }
-
-  /**
-   * @description Remove todos os items da lixeira
-   * @returns {Promise<Array>}
-   */
-  static async restoreAllItems() {
-    return await ItemModel.update({ excluido: 0, excluido_em: null }, { where: itemDeleted });
-  }
-
-  /**
-   * @description Remove itens que já estão a mais de 30 dias excluídos
-   * @param {Date} dataLimit - Data limite (30 dias)
-   * @returns {number} - Retorna a quantidade de linhas excluídas
-   */
-  static async deleteItemAfter30Days(dataLimit) {
+    * @async
+    * @function clearItemsByDate
+    * @description Remove permanentemente os itens da lixeira que foram excluídos antes de uma determinada data.
+    * @param {string} dataLimit - Data limite para exclusão dos itens.
+    * @returns {Promise<number>} - O número de linhas afetadas pela exclusão.
+    */
+  async clearItemsByDate(dataLimit) {
     return await ItemModel.destroy({
       where: {
-        excluido: 1,
+        ...this.itemDeleted,
         excluido_em: {
           [Op.lte]: dataLimit,
-        }
-      }
-    })
+        },
+      },
+    });
   }
 }
-
 
 export default ItemRepository;

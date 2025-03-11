@@ -25,80 +25,70 @@ export const handleRequest = async (res, next, serviceMethod, ...params) => {
   }
 };
 
-export const getAll = async (req, res, next) => {
-  const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 10;
-  await handleRequest(res, next, ItemService.getAllItems, page, limit);
+export const getItems = async (req, res, next) => {
+  const { page, limit, description } = validateRequest(searchSchema, req.query);
+  const item = new ItemService();
+  await handleRequest(res, next, item.search, page, limit, description);
 };
 
-export const getFillter = async (req, res, next) => {
+export const getItemById = async (req, res, next) => {
   try {
-    const { field, value } = validateRequest(shemaFillter, req.query);
-    await handleRequest(res, next, ItemService.getItemByField, field, value);
-  } catch (error) {
-    return res.status(400).json({ error: error.message });
-  }
-};
-
-export const getSearchDescription = async (req, res, next) => {
-  try {
-    const { page, limit, description } = validateRequest(searchSchema, req.query);
-    await handleRequest(res, next, ItemService.searchItemsByDescription, page, limit, description);
+    const { id } = validateRequest(idShema, req.params);
+    const item = new ItemService();
+    await handleRequest(res, next, item.getItems, id);
   } catch (error) {
     return res.status(400).json({ error: error.message });
   }
 };
 
 export const getDeleted = async (req, res, next) => {
-  await handleRequest(res, next, ItemService.getDeletedItems);
+  const item = new ItemService();
+  await handleRequest(res, next, item.getDeletedItems);
 };
 
-export const insert = async (req, res, next) => {
+export const insertItems = async (req, res, next) => {
   try {
+    const item = new ItemService();
     const data = validateRequest(itemSchema, req.body);
-    await handleRequest(res, next, ItemService.insertItem, data);
+    await handleRequest(res, next, item.insert, data);
   } catch (error) {
     return res.status(400).json({ error: error.message });
   }
 };
 
-export const update = async (req, res, next) => {
+export const updateItem = async (req, res, next) => {
   try {
+    const item = new ItemService();
     const { id } = validateRequest(idShema, req.params);
     const data = validateRequest(itemSchema, req.body);
-    await handleRequest(res, next, ItemService.updateItem, id, data);
+    await handleRequest(res, next, item.update, id, data);
   } catch (error) {
     return res.status(400).json({ error: error.message });
   }
 };
 
-export const deleted = async (req, res, next) => {
+export const softDeleteItem = async (req, res, next) => {
   try {
+    const item = new ItemService();
     const { id } = validateRequest(idShema, req.params);
-    await handleRequest(res, next, ItemService.softDeleteItem, id);
+    await handleRequest(res, next, item.softDeleteItem, id);
   } catch (error) {
     return res.status(400).json({ error: error.message });
   }
 };
 
-export const deletedPermanentAll = async (req, res, next) => {
-  await handleRequest(res, next, ItemService.deleteAllItemsPermanently);
-};
-
-export const deletedPermanentItem = async (req, res, next) => {
+export const deleteItem = async (req, res, next) => {
   try {
-    const { id } = validateRequest(idShema, req.params);
-    await handleRequest(res, next, ItemService.deleteItemPermanently, id);
+    const item = new ItemService();
+    const { id } = validateRequest(idShema, req.query);
+    await handleRequest(res, next, item.delete, id);
   } catch (error) {
     return res.status(400).json({ error: error.message });
   }
 };
 
-export const restoreAllItems = async (req, res, next) => {
-  await handleRequest(res, next, ItemService.restoreAllItems);
-};
-
-export const restoreItem = async (req, res, next) => {
-  const { id } = validateRequest(idShema, req.params);
-  handleRequest(res, next, ItemService.restoreItem, id);
+export const removeItemSoftly = async (req, res, next) => {
+  const item = new ItemService();
+  const { id } = validateRequest(idShema, req.query);
+  handleRequest(res, next, item.removeItemSoftly, id);
 };

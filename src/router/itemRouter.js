@@ -1,32 +1,19 @@
 import express from "express";
-import { 
-  deleted, 
-  deletedPermanentAll, 
-  deletedPermanentItem, 
-  restoreAllItems, 
-  restoreItem,
-  getAll,
-  getFillter,
-  getSearchDescription,
-  insert, 
-  update, 
-  getDeleted
-} from "../controllers/itemController.js";
+import { deleteItem, getDeleted, getItemById, getItems, insertItems, removeItemSoftly, softDeleteItem, updateItem } from "../controllers/itemController.js";
 
 const router = express.Router();
 
-// Principio da responsabilidade única
-router.get('/items', getAll); 
-router.get('/items/filter', getFillter);
-router.get('/items/search', getSearchDescription);
-router.get('/items/deleted', getDeleted);
-router.post('/items', insert);
-router.patch('/items/restore', restoreAllItems); 
-router.patch('/items/:id/restore', restoreItem);
-router.put('/items/:id', update);
-router.delete('/items/permanent', deletedPermanentAll);
-router.delete('/items/:id/permanent', deletedPermanentItem);
-router.delete('/items/:id', deleted);
+// passa o description page e limit na query
+router.get('/items', getItems);
+router.get('/items/deleted', getDeleted); 
+router.get('/items/:id', getItemById);
+router.post('/items', insertItems);
+// passa id na query
+router.patch('/items', removeItemSoftly);
+router.patch('/items/delete/:id', softDeleteItem);
+router.put('/items/:id', updateItem);
+// passa id na query
+router.delete('/items', deleteItem);
 
 export default router;
 
