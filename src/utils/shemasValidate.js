@@ -110,7 +110,7 @@ export const itemSchema = Joi.object({
 });
 
 export const idShema = Joi.object({
-  id: Joi.number().required().positive().messages()
+  id: Joi.number().positive().messages()
 })
 
 export const codNcmShema = Joi.object({
@@ -125,6 +125,5 @@ export const searchSchema = Joi.object({
     .trim() 
     .min(0) 
     .max(100) 
-    .regex(/^[a-zA-Z0-9\sáéíóúàèìòùãõâêîôûáéíóúãõç]*$/) 
-    .required() 
+    .regex(/^[a-zA-Z0-9\sáéíóúàèìòùãõâêîôûáéíóúãõç]*$/)
 });
