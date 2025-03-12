@@ -135,24 +135,24 @@ yarn app
 ## 🌐 Rotas da API
 
 ### 📌 **GET** - Buscar todos os registros
-- **`GET /api/gic/items?page=1&limit=2`** → Retorna todos os itens cadastrados paginados + custo total.
+- **`GET /api/gic/items?page=1&limit=4`** → Retorna todos os itens cadastrados paginados + custo total.
 - **`GET /api/gic/csts`** → Retorna todas as CSTs cadastradas.
 - **`GET /api/gic/ncms`** → Retorna todos os NCMs cadastrados.
 - **`GET /api/gic/cfops`** → Retorna todos os CFOPs cadastrados.
 - **`GET /api/gic/report`** → Retorna um relatório em PDF do sistema.
 
-### 🔎 **GET** - Buscar itens filtrados
-Busca itens por um campo específico:
+### 🔎 **GET** - Buscar itens pelo id
+Busca itens pelo seu id:
 
 ```sh
-GET /api/gic/items/filter?field={field_name}&value={field_value}
+GET /api/gic/items/5
 ```
 
 ### 🔎 **GET** - Buscar itens por pesquisa de descrição
 Busca itens pela descrição (ou parte dela), e retorna com paginação:
 
 ```sh
-GET /api/gic/items/search?description={description_text}&page={value_page}&limit={value_limit}
+GET /api/gic/items/?description=Biscoito&page=1&limit=10
 ```
 
 ### 🔎 **GET** - Buscar itens da lixeira
@@ -183,18 +183,25 @@ POST /api/gic/items
 }
 ```
 
-### 🔎 **PATCH** - Restaurar um Item da Lixeira
-Restaura um item específico da lixeira:
-
-```sh
-PATCH /api/gic/items/:id/restore
-```
-
 ### 🔎 **PATCH** - Restaurar Todos os Itens da Lixeira
 Restaura todos os itens da lixeira:
 
 ```sh
-PATCH /api/gic/items/restore
+PATCH /api/gic/items
+```
+
+### 🔎 **PATCH** - Restaurar um Item da Lixeira
+Restaura um item específico da lixeira:
+
+```sh
+PATCH /api/gic/items?id=5
+```
+
+### 🔎 **PATCH** - Adiciona um item a lixeira
+Adiciona um item específico da lixeira:
+
+```sh
+PATCH /api/gic/items/delete/5
 ```
 
 ### ✏️ **PUT** - Atualizar item
@@ -217,20 +224,14 @@ PUT /api/gic/items/:id
     "excluido": 0
 }
 ```
-
-### 🗑️ **DELETE** - Remover um item para a lixeira
-```sh
-DELETE /api/gic/items/:id
-```
-
 ### 🗑️ **DELETE** - Excluir permanentemente os itens da Lixeira
 ```sh
-DELETE /api/gic/items/permanent
+DELETE /api/gic/items
 ```
 
 ### 🗑️ **DELETE** - Excluir permanentemente um item da Lixeira
 ```sh
-DELETE /api/gic/items/:id/permanent/
+DELETE /api/gic/items?id=1
 ```
 
 ---
