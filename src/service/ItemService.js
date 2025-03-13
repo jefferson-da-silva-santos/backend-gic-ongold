@@ -4,9 +4,17 @@ import logger from "../utils/logger.js";
 import moment from "moment";
 
 export default class ItemService {
-  async search(page = 1, limit = 4, description = "") {
+  async search(page = 1, limit = 4, field = "", value = "") {
     const item = new ItemRepository();
-    const { items, totalItems } = await item.search(page, limit, description);
+
+    if (field === "excluido" && value === 1) {
+      const items = await item.getDeletedItems();
+      return ItemDTO.parseObject(items);
+    }
+
+    console.log(`🚀 Entrou na busca de itens ${field} ${value}! 🚀`);
+    const { items, totalItems } = await item.search(page, limit, field, value);
+
     const totalPages = Math.ceil(totalItems / limit);
 
     return {
@@ -23,12 +31,6 @@ export default class ItemService {
     const items = await item.getItems(id);
     if (items.length === 0) throw new Error('Nenhum item encontrado');
 
-    return ItemDTO.parseObject(items);
-  }
-
-  async getDeletedItems() {
-    const item = new ItemRepository();
-    const items = await item.getDeletedItems();
     return ItemDTO.parseObject(items);
   }
 

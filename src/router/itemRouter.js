@@ -1,10 +1,9 @@
 import express from "express";
-import { deleteItem, getDeleted, getItemById, getItems, insertItems, removeItemSoftly, softDeleteItem, updateItem } from "../controllers/itemController.js";
+import { deleteItem, getItemById, getItems, insertItems, removeItemSoftly, softDeleteItem, updateItem } from "../controllers/itemController.js";
 
 const router = express.Router();
 
-router.get('/items', getItems);
-router.get('/items/deleted', getDeleted); 
+router.get('/items', getItems); 
 router.get('/items/:id', getItemById);
 router.post('/items', insertItems);
 router.patch('/items', removeItemSoftly);

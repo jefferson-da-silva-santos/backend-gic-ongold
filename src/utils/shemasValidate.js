@@ -1,22 +1,5 @@
 import Joi from "joi";
 
-export const shemaFillter = Joi.object({
-  field: Joi.string().required().valid(
-    'id',
-    'valor_unitario',
-    'descricao',
-    'taxa_icms_entrada',
-    'taxa_icms_saida',
-    'comissao',
-    'ncm',
-    'cst',
-    'cfop',
-    'ean',
-    'criado_em'
-  ),
-  value: Joi.required()
-});
-
 export const shemaFillterCst = Joi.object({
   field: Joi.string().required().valid(
     'codcst'
@@ -99,7 +82,7 @@ export const itemSchema = Joi.object({
       "string.pattern.base": "O 'ean' deve conter apenas números.",
       "any.required": "O campo 'ean' é obrigatório."
     }),
-    
+
   excluido: Joi.alternatives().try(
     Joi.number().valid(0, 1),
     Joi.boolean()
@@ -121,9 +104,56 @@ export const codNcmShema = Joi.object({
 export const searchSchema = Joi.object({
   page: Joi.number().positive(),
   limit: Joi.number().positive(),
-  description: Joi.string()
-    .trim() 
-    .min(0) 
-    .max(100) 
-    .regex(/^[a-zA-Z0-9\sáéíóúàèìòùãõâêîôûáéíóúãõç]*$/)
+  field: Joi.string().valid(
+    'valor_unitario',
+    'descricao',
+    'taxa_icms_entrada',
+    'taxa_icms_saida',
+    'comissao',
+    'ncm_id',
+    'cst_id',
+    'cfop_id',
+    'ean',
+    'excluido',
+    'criado_em',
+    'excluido_em'
+  ),
+  value: Joi.alternatives().conditional('field', {
+    is: Joi.valid(
+      'id',
+      'cfop_id'
+    ),
+    then: Joi.number().integer().allow(null, ''),
+    otherwise: Joi.alternatives().conditional('field', {
+      is: Joi.valid(
+        'valor_unitario',
+        'taxa_icms_entrada',
+        'taxa_icms_saida',
+        'comissao'
+      ),
+      then: Joi.number().allow(null, ''),
+      otherwise: Joi.alternatives().conditional('field', {
+        is: Joi.valid(
+          'ncm_id',
+          'cst_id',
+          'ean'
+        ),
+        then: Joi.string().allow(null, ''),
+        otherwise: Joi.alternatives().conditional('field', {
+          is: Joi.valid(
+            'excluido'
+          ),
+          then: Joi.number().allow(null, ''),
+          otherwise: Joi.alternatives().conditional('field', {
+            is: Joi.valid(
+              'criado_em',
+              'excluido_em'
+            ),
+            then: Joi.date().allow(null, ''),
+            otherwise: Joi.string().trim().min(0).max(255).allow(null, '')
+          })
+        })
+      })
+    })
+  })
 });

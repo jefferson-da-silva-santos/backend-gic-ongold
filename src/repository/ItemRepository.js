@@ -85,18 +85,18 @@ class ItemRepository {
    * @param {string} [description=""] - Descrição para filtrar os itens.
    * @returns {Promise<{items: ItemModel[], totalItems: number}>} - Um objeto contendo a lista de itens e o total de itens.
    */
-  async search(page, limit, description) {
+  async search(page, limit, field, value) {
     const offset = (page - 1) * limit;
-
-    const whereCondition = description
+  
+    const whereCondition = field
       ? {
-        descricao: {
-          [Op.like]: `%${description}%`,
-        },
-        ...this.itemNotDeleted,
-      }
+          [field]: { 
+            [Op.like]: `%${value}%`,
+          },
+          ...this.itemNotDeleted,
+        }
       : this.itemNotDeleted;
-
+  
     const items = await ItemModel.findAll({
       where: whereCondition,
       limit,
@@ -104,9 +104,9 @@ class ItemRepository {
       attributes: this.itemsAttrubutes,
       include: this.itemsIncludes,
     });
-
+  
     const totalItems = await this.countItems(this.itemNotDeleted);
-
+  
     return {
       items,
       totalItems,

@@ -135,7 +135,7 @@ yarn app
 ## 🌐 Rotas da API
 
 ### 📌 **GET** - Buscar todos os registros
-- **`GET /api/gic/items?page=1&limit=4`** → Retorna todos os itens cadastrados paginados + custo total.
+- **`GET /api/gic/items?page=1&limit=10`** → Retorna todos os itens cadastrados paginados + custo total.
 - **`GET /api/gic/csts`** → Retorna todas as CSTs cadastradas.
 - **`GET /api/gic/ncms`** → Retorna todos os NCMs cadastrados.
 - **`GET /api/gic/cfops`** → Retorna todos os CFOPs cadastrados.
@@ -145,14 +145,20 @@ yarn app
 Busca itens pelo seu id:
 
 ```sh
-GET /api/gic/items/5
+GET /api/gic/items/26
 ```
 
-### 🔎 **GET** - Buscar itens por pesquisa de descrição
-Busca itens pela descrição (ou parte dela), e retorna com paginação:
+### 🔎 **GET** - Buscar itens por pesquisa 
+Busca itens por pesquisa pelo atributo (valor_unitario, descricao, taxa_icms_entrada, taxa_icms_saida, comissao, ncm_id, cst_id, cfop_id, eaa), e retorna com paginação:
 
 ```sh
-GET /api/gic/items/?description=Biscoito&page=1&limit=10
+GET /api/gic/items?page=1&limit=10&field=descricao&value=Biscoito (Pela descrição)
+```
+```sh
+GET /api/gic/items?page=1&limit=10&field=ean&value=7891000123456 (Pelo EAN)
+```
+```sh
+GET /api/gic/items?page=1&limit=10&field=comissao&value=10.00 (Pela Comissão)
 ```
 
 ### 🔎 **GET** - Buscar itens da lixeira

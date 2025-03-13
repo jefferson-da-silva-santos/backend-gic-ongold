@@ -1,5 +1,5 @@
 import ItemService from "../service/ItemService.js";
-import { shemaFillter, itemSchema, idShema, searchSchema } from "../utils/shemasValidate.js";
+import { itemSchema, idShema, searchSchema } from "../utils/shemasValidate.js";
 import logger from "../utils/logger.js";
 
 // Função auxiliar para lidar com erros de validação
@@ -26,9 +26,9 @@ export const handleRequest = async (res, next, serviceMethod, ...params) => {
 };
 
 export const getItems = async (req, res, next) => {
-  const { page, limit, description } = validateRequest(searchSchema, req.query);
+  const { page, limit, field, value } = validateRequest(searchSchema, req.query);
   const item = new ItemService();
-  await handleRequest(res, next, item.search, page, limit, description);
+  await handleRequest(res, next, item.search, page, limit, field, value);
 };
 
 export const getItemById = async (req, res, next) => {
@@ -41,10 +41,10 @@ export const getItemById = async (req, res, next) => {
   }
 };
 
-export const getDeleted = async (req, res, next) => {
-  const item = new ItemService();
-  await handleRequest(res, next, item.getDeletedItems);
-};
+// export const getDeleted = async (req, res, next) => {
+//   const item = new ItemService();
+//   await handleRequest(res, next, item.getDeletedItems);
+// };
 
 export const insertItems = async (req, res, next) => {
   try {
