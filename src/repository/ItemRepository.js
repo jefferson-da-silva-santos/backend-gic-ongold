@@ -149,7 +149,6 @@ class ItemRepository {
    * @returns {Promise<{tenMostExpensiveItems: ItemModel[], totalItems: number, valueStock: number, totalItemsAvailable: number, totalItemsDeleteds: number}>} - Um objeto contendo informações do relatório.
    */
   async report() {
-    console.log('Entrou no repository');
     const tenMostExpensiveItems = await ItemModel.findAll({
       attributes: ["id", "valor_unitario", "descricao"],
       where: this.itemNotDeleted,

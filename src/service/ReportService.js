@@ -3,7 +3,6 @@ import { getHtmlReport } from "../utils/htmlReport.js";
 
 class ReportService {
     async generatePdf(data) {
-        console.log('Teste 9090');
       try {
         const html = getHtmlReport(data);
         const browser = await puppeteer.launch();
