@@ -36,12 +36,15 @@ export default class ItemService {
 
   async getReport() {
     try {
+      console.log('Entrou no servicee');
       const item = new ItemRepository();
+      console.log('Euuuu');
       const data = await item.report();
       data.tenMostExpensiveItems = data.tenMostExpensiveItems.map(item => ({
         ...item.toJSON(), // Garante que `descricao` e outros campos sejam preservados
         valor_unitario: parseFloat(item.valor_unitario).toFixed(2)
       }));
+      console.log('Eyuy 2');
       data.valueStock = data.valueStock ? parseFloat(data.valueStock).toFixed(2) : "0.00";
       return data;
     } catch (error) {
