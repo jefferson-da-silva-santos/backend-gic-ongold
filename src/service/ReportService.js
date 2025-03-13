@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 import { getHtmlReport } from "../utils/htmlReport.js";
 
 class ReportService {
-    static async generatePdf(data) {
+    async generatePdf(data) {
         const html = getHtmlReport(data);
         const browser = await puppeteer.launch();
         const page = await browser.newPage();

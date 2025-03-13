@@ -3,10 +3,12 @@ import ReportService from "../service/ReportService.js";
 
 export const getReport = async (req, res, next) => {
   try {
-    const result = await ItemService.getReport();
+    const item = new ItemService();
+    const result = item.getReport();
     if (!result) throw new Error("Nenhum dado encontrado.");
     
-    const pdfBuffer = await ReportService.generatePdf(result);
+    const report = new ReportService();
+    const pdfBuffer = await report.generatePdf(result);
 
     res.setHeader("Content-Disposition", 'attachment; filename="relatorio.pdf"');
     res.setHeader("Content-Type", "application/pdf");
