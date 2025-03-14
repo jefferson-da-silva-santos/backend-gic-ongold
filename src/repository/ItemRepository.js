@@ -223,10 +223,30 @@ class ItemRepository {
    * @param {number} id - ID do item a ser atualizado.
    * @param {object} data - Dados do item a serem atualizados.
    * @returns {Promise<number[]>} - O número de linhas afetadas pela atualização.
+   * 
+   * 
+   * {
+  valor_unitario: novoValorUnitario,
+  descricao: novaDescricao,
+  taxa_icms_entrada: novaTaxaIcmsEntrada,
+  taxa_icms_saida: novaTaxaIcmsSaida,
+  comissao: novaComissao,
+  ean: novoEan
+  
+}
    */
   async update(id, data) {
     try {
-      return await ItemModel.update(data, { where: { id, ...this.itemNotDeleted } });
+      const updatableFields = {
+        valor_unitario: data.valor_unitario,
+        descricao: data.descricao,
+        taxa_icms_entrada: data.taxa_icms_entrada,
+        taxa_icms_saida: data.taxa_icms_saida,
+        comissao: data.comissao,
+        ean: data.ean
+      };
+
+      return await ItemModel.update(updatableFields, { where: { id, ...this.itemNotDeleted } });
     } catch (error) {
       logger.error(`Erro no repositório ao atualizar item: ${error.message}`);
       throw new Error(`Erro no repositório ao atualizar item: ${error.message}`);

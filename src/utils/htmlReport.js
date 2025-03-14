@@ -54,8 +54,10 @@ export const getHtmlReport = (data) => {
         }
 
         span {
-          color: #003aa7;
+          color: #305496;
           font-weight: 600;
+          font-size: 1.2rem;
+          font-family: monospace;
         }
 
         ul {
@@ -74,9 +76,9 @@ export const getHtmlReport = (data) => {
     <table>
       <thead>
         <tr>
-          <th>Posição</th>
+          <th>ID do Item</th>
           <th>Nome do Item</th>
-          <th>Preço</th>
+          <th>Preço Unitário</th>
         </tr>
       </thead>
       <tbody>
@@ -91,10 +93,10 @@ export const getHtmlReport = (data) => {
 
     <h2> Relatório Geral de Estoque</h2>
     <ul>
-      <li>Quantidade total de itens cadastrados (incluindo os excluídos): <span>${data.totalItems}</span></li>
-      <li>Valor total estimado do estoque ou catálogo de produtos: <span>${convertCurrency(data.valueStock)}</span></li>
-      <li>Quantidade de itens ativos disponíveis: <span>${data.totalItemsAvailable}</span></li>
-      <li>Quantidade de itens movidos para a lixeira e aguardando exclusão definitiva ou a restauração: <span>${data.totalItemsDeleteds}</span></li>
+      <li>Quantidade total de itens cadastrados (incluindo os excluídos): <span>${data.totalItems} itens</span></li>
+      <li>Valor total estimado do estoque: <span>${convertCurrency(data.valueStock)}</span></li>
+      <li>Quantidade de itens ativos disponíveis: <span>${data.totalItemsAvailable} itens</span></li>
+      <li>Quantidade de itens movidos para a lixeira e aguardando exclusão definitiva ou a restauração: <span>${data.totalItemsDeleteds} itens</span></li>
     </ul>
 </body>
 </html>`;

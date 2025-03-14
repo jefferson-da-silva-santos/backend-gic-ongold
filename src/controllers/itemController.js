@@ -58,7 +58,15 @@ export const updateItem = async (req, res, next) => {
     const item = new ItemService();
     const { id } = validateRequest(idShema, req.params);
     const data = validateRequest(itemSchema, req.body);
-    await handleRequest(res, next, item.update, id, data);
+    const updated = await item.update(id, data);
+
+    if (updated && updated[0] > 0) {
+      res.status(200).json({ message: "Item atualizado com sucesso", result: updated });
+    } else if (updated && updated[0] === 0) {
+      res.status(404).json({ message: "Item não encontrado ou não alterado", result: updated });
+    } else {
+      res.status(200).json({ message: "Item atualizado com sucesso", result: updated });
+    }
   } catch (error) {
     return res.status(400).json({ error: error.message });
   }
@@ -85,7 +93,7 @@ export const deleteItem = async (req, res, next) => {
 };
 
 export const removeItemSoftly = async (req, res, next) => {
-  const item = new ItemService();
+  const item = new ItemServiceC();
   const { id } = validateRequest(idShema, req.query);
   handleRequest(res, next, item.removeItemSoftly, id);
 };
