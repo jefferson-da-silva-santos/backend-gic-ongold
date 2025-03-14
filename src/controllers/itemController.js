@@ -1,5 +1,5 @@
 import ItemService from "../service/ItemService.js";
-import { itemSchema, idShema, searchSchema } from "../utils/shemasValidate.js";
+import { itemSchema, idShema, searchSchema, updateShema } from "../utils/shemasValidate.js";
 import logger from "../utils/logger.js";
 
 // Função auxiliar para lidar com erros de validação
@@ -57,7 +57,7 @@ export const updateItem = async (req, res, next) => {
   try {
     const item = new ItemService();
     const { id } = validateRequest(idShema, req.params);
-    const data = validateRequest(itemSchema, req.body);
+    const data = validateRequest(updateShema, req.body);
     const updated = await item.update(id, data);
 
     if (updated && updated[0] > 0) {
@@ -93,7 +93,7 @@ export const deleteItem = async (req, res, next) => {
 };
 
 export const removeItemSoftly = async (req, res, next) => {
-  const item = new ItemServiceC();
+  const item = new ItemService();
   const { id } = validateRequest(idShema, req.query);
   handleRequest(res, next, item.removeItemSoftly, id);
 };
