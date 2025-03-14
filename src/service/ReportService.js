@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import { getHtmlReport } from "../utils/htmlReport.js";
+import logger from "../utils/logger.js";
 
 class ReportService {
     async generatePdf(data) {
@@ -13,7 +14,8 @@ class ReportService {
 
         return pdfBuffer;
       } catch (error) {
-        console.log(error);
+        logger.error(`Erro no serviço ao gerar PDF: ${error.message}`);
+        throw new Error(`Erro no serviço ao gerar PDF: ${error.message}`);
       }
     }
 }

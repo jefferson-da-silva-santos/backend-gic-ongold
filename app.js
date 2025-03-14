@@ -12,7 +12,7 @@ import routerCsts from './src/router/cstRouter.js';
 import routerReport from './src/router/reportRouter.js';
 import ItemService from './src/service/ItemService.js';
 
-const port = 3000;
+const PORT = 3000;
 const app = express();
 const pathDefault = '/api/gic';
 
@@ -34,7 +34,7 @@ app.use(pathDefault, routerReport);
 
 app.use(errorHandler);
 
-app.listen(port, () => {
-  logger.info(`API rodando com sucesso na porta ${port}`)
-  console.log(`✅ API rodando com sucesso na porta ${port}! 🚀`);
+app.listen(PORT, () => {
+  logger.info(`API rodando com sucesso na porta ${PORT}`)
+  console.log(`✅ API rodando com sucesso na porta ${PORT}! 🚀`);
 });

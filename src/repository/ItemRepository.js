@@ -3,6 +3,7 @@ import ItemModel from "../models/item.js";
 import NcmModel from "../models/ncm.js";
 import CstIcmsModel from "../models/csticms.js";
 import CfopModel from "../models/cfop.js";
+import logger from "../utils/logger.js";
 
 /**
  * @class ItemRepository
@@ -72,8 +73,13 @@ class ItemRepository {
    * @returns {Promise<number>} - O número de itens que correspondem à condição.
    */
   async countItems(condition) {
-    const whereCondition = condition ? { where: condition } : {};
-    return await ItemModel.count(whereCondition);
+    try {
+      const whereCondition = condition ? { where: condition } : {};
+      return await ItemModel.count(whereCondition);
+    } catch (error) {
+      logger.error(`Erro no repositório ao contar itens: ${error.message}`);
+      throw new Error(`Erro no repositório ao contar itens: ${error.message}`);
+    }
   }
 
   /**
@@ -86,31 +92,36 @@ class ItemRepository {
    * @returns {Promise<{items: ItemModel[], totalItems: number}>} - Um objeto contendo a lista de itens e o total de itens.
    */
   async search(page, limit, field, value) {
-    const offset = (page - 1) * limit;
-  
-    const whereCondition = field
-      ? {
-          [field]: { 
+    try {
+      const offset = (page - 1) * limit;
+
+      const whereCondition = field
+        ? {
+          [field]: {
             [Op.like]: `%${value}%`,
           },
           ...this.itemNotDeleted,
         }
-      : this.itemNotDeleted;
-  
-    const items = await ItemModel.findAll({
-      where: whereCondition,
-      limit,
-      offset,
-      attributes: this.itemsAttrubutes,
-      include: this.itemsIncludes,
-    });
-  
-    const totalItems = await this.countItems(whereCondition);
-  
-    return {
-      items,
-      totalItems,
-    };
+        : this.itemNotDeleted;
+
+      const items = await ItemModel.findAll({
+        where: whereCondition,
+        limit,
+        offset,
+        attributes: this.itemsAttrubutes,
+        include: this.itemsIncludes,
+      });
+
+      const totalItems = await this.countItems(whereCondition);
+
+      return {
+        items,
+        totalItems,
+      };
+    } catch (error) {
+      logger.error(`Erro no repositório ao buscar itens: ${error.message}`);
+      throw new Error(`Erro no repositório ao buscar itens: ${error.message}`);
+    }
   }
 
   /**
@@ -121,11 +132,16 @@ class ItemRepository {
    * @returns {Promise<ItemModel[]>} - Uma lista de itens que correspondem ao ID.
    */
   async getItems(id) {
-    return await ItemModel.findAll({
-      where: { id, ...this.itemNotDeleted },
-      attributes: this.itemsAttrubutes,
-      include: this.itemsIncludes,
-    });
+    try {
+      return await ItemModel.findAll({
+        where: { id, ...this.itemNotDeleted },
+        attributes: this.itemsAttrubutes,
+        include: this.itemsIncludes,
+      });
+    } catch (error) {
+      logger.error(`Erro no repositório ao buscar itens: ${error.message}`);
+      throw new Error(`Erro no repositório ao buscar itens: ${error.message}`);
+    }
   }
 
   /**
@@ -135,11 +151,16 @@ class ItemRepository {
    * @returns {Promise<ItemModel[]>} - Uma lista de itens excluídos.
    */
   async getDeletedItems() {
-    return await ItemModel.findAll({
-      where: this.itemDeleted,
-      attributes: this.itemsAttrubutes,
-      include: this.itemsIncludes,
-    });
+    try {
+      return await ItemModel.findAll({
+        where: this.itemDeleted,
+        attributes: this.itemsAttrubutes,
+        include: this.itemsIncludes,
+      });
+    } catch (error) {
+      logger.error(`Erro no repositório ao buscar itens excluídos: ${error.message}`);
+      throw new Error(`Erro no repositório ao buscar itens excluídos: ${error.message}`);
+    }
   }
 
   /**
@@ -149,29 +170,34 @@ class ItemRepository {
    * @returns {Promise<{tenMostExpensiveItems: ItemModel[], totalItems: number, valueStock: number, totalItemsAvailable: number, totalItemsDeleteds: number}>} - Um objeto contendo informações do relatório.
    */
   async report() {
-    const tenMostExpensiveItems = await ItemModel.findAll({
-      attributes: ["id", "valor_unitario", "descricao"],
-      where: this.itemNotDeleted,
-      order: [["valor_unitario", "DESC"]],
-      limit: 10,
-    });
-    const valueStock = await ItemModel.sum("valor_unitario", {
-      where: {
-        excluido: false,
-      },
-    });
+    try {
+      const tenMostExpensiveItems = await ItemModel.findAll({
+        attributes: ["id", "valor_unitario", "descricao"],
+        where: this.itemNotDeleted,
+        order: [["valor_unitario", "DESC"]],
+        limit: 10,
+      });
+      const valueStock = await ItemModel.sum("valor_unitario", {
+        where: {
+          excluido: false,
+        },
+      });
 
-    const totalItems = await this.countItems();
-    const totalItemsAvailable = await this.countItems(this.itemNotDeleted);
-    const totalItemsDeleteds = await this.countItems(this.itemDeleted);
+      const totalItems = await this.countItems();
+      const totalItemsAvailable = await this.countItems(this.itemNotDeleted);
+      const totalItemsDeleteds = await this.countItems(this.itemDeleted);
 
-    return {
-      tenMostExpensiveItems,
-      totalItems,
-      valueStock,
-      totalItemsAvailable,
-      totalItemsDeleteds,
-    };
+      return {
+        tenMostExpensiveItems,
+        totalItems,
+        valueStock,
+        totalItemsAvailable,
+        totalItemsDeleteds,
+      };
+    } catch (error) {
+      logger.error(`Erro no repositório ao gerar relatório: ${error.message}`);
+      throw new Error(`Erro no repositório ao gerar relatório: ${error.message}`);
+    }
   }
 
   /**
@@ -182,7 +208,12 @@ class ItemRepository {
    * @returns {Promise<ItemModel>} - O item inserido.
    */
   async insert(data) {
-    return await ItemModel.create(data);
+    try {
+      return await ItemModel.create(data);
+    } catch (error) {
+      logger.error(`Erro no repositório ao inserir item: ${error.message}`);
+      throw new Error(`Erro no repositório ao inserir item: ${error.message}`);
+    }
   }
 
   /**
@@ -194,7 +225,12 @@ class ItemRepository {
    * @returns {Promise<number[]>} - O número de linhas afetadas pela atualização.
    */
   async update(id, data) {
-    return await ItemModel.update(data, { where: { id, ...this.itemNotDeleted } });
+    try {
+      return await ItemModel.update(data, { where: { id, ...this.itemNotDeleted } });
+    } catch (error) {
+      logger.error(`Erro no repositório ao atualizar item: ${error.message}`);
+      throw new Error(`Erro no repositório ao atualizar item: ${error.message}`);
+    }
   }
 
   /**
@@ -206,10 +242,15 @@ class ItemRepository {
    * @returns {Promise<number[]>} - O número de linhas afetadas pela atualização.
    */
   async softDelete(id, datetime) {
-    return await ItemModel.update(
-      { ...this.itemDeleted, excluido_em: datetime },
-      { where: { id } }
-    );
+    try {
+      return await ItemModel.update(
+        { ...this.itemDeleted, excluido_em: datetime },
+        { where: { id } }
+      );
+    } catch (error) {
+      logger.error(`Erro no repositório ao mover item para a lixeira: ${error.message}`);
+      throw new Error(`Erro no repositório ao mover item para a lixeira: ${error.message}`);
+    }
   }
 
   /**
@@ -220,11 +261,16 @@ class ItemRepository {
    * @returns {Promise<number[]>} - O número de linhas afetadas pela atualização.
    */
   async removeItemSoftly(id = null) {
-    const whereCondition = id ? { where: { id } } : { where: this.itemDeleted };
-    return await ItemModel.update(
-      { ...this.itemNotDeleted, excluido_em: null },
-      whereCondition
-    );
+    try {
+      const whereCondition = id ? { where: { id } } : { where: this.itemDeleted };
+      return await ItemModel.update(
+        { ...this.itemNotDeleted, excluido_em: null },
+        whereCondition
+      );
+    } catch (error) {
+      logger.error(`Erro no repositório ao restaurar item: ${error.message}`);
+      throw new Error(`Erro no repositório ao restaurar item: ${error.message}`);
+    }
   }
 
   /**
@@ -235,9 +281,14 @@ class ItemRepository {
    * @returns {Promise<number>} - O número de linhas afetadas pela exclusão.
    */
   async delete(id = null) {
-    return await ItemModel.destroy({
-      where: id ? { id } : this.itemDeleted,
-    });
+    try {
+      return await ItemModel.destroy({
+        where: id ? { id } : this.itemDeleted,
+      });
+    } catch (error) {
+      logger.error(`Erro no repositório ao remover item: ${error.message}`);
+      throw new Error(`Erro no repositório ao remover item: ${error.message}`);
+    }
   }
 
   /**
@@ -248,14 +299,19 @@ class ItemRepository {
     * @returns {Promise<number>} - O número de linhas afetadas pela exclusão.
     */
   async clearItemsByDate(dataLimit) {
-    return await ItemModel.destroy({
-      where: {
-        ...this.itemDeleted,
-        excluido_em: {
-          [Op.lte]: dataLimit,
+    try {
+      return await ItemModel.destroy({
+        where: {
+          ...this.itemDeleted,
+          excluido_em: {
+            [Op.lte]: dataLimit,
+          },
         },
-      },
-    });
+      });
+    } catch (error) {
+      logger.error(`Erro no repositório ao tentar limpar os itens da lixeira ${error.message}`);
+      throw new Error(`Erro no repositório ao tentar limpar os itens da lixeira ${error.message}`, error);
+    }
   }
 }
 

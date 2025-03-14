@@ -2,9 +2,10 @@ import NcmRepository from "../repository/NcmRepository.js";
 import logger from "../utils/logger.js";
 
 export default class NcmService {
-  static async getAllNcms() {
+  async getAllNcms() {
     try {
-      const ncms = await NcmRepository.getAllNcms();
+      const ncm = new NcmRepository();
+      const ncms = await ncm.getAllNcms();
       if (ncms.length === 0) {
         throw new Error("Nenhum NCM encontrado", 404);
       }
@@ -21,9 +22,10 @@ export default class NcmService {
     }
   }
 
-  static async getAllNcmsFilterCod(cod) {
+  async getAllNcmsFilterCod(cod) {
     try {
-      const ncms = await NcmRepository.getAllNcmsFilterCod(cod);
+      const ncm = new NcmRepository();
+      const ncms = await ncm.getAllNcmsFilterCod(cod);
       if (ncms.length === 0) {
         throw new Error(`Nenhum NCM encontrado para '${cod}'`, 404);
       }

@@ -6,6 +6,7 @@ import logger from "../utils/logger.js";
 export const validateRequest = (schema, data) => {
   const { error, value } = schema.validate(data);
   if (error) {
+    logger.error('Erro na validação da requisição: ',error.details[0].message);
     throw new Error(error.details[0].message);
   }
   return value;
@@ -20,7 +21,7 @@ export const handleRequest = async (res, next, serviceMethod, ...params) => {
     }
     return res.status(200).json(result);
   } catch (error) {
-    logger.error(error.message, { error: error.message, stack: error.stack });
+    logger.error(`Erro no controlador: ${ error.message}`, { error: error.message, stack: error.stack });
     next();
   }
 };
@@ -41,10 +42,6 @@ export const getItemById = async (req, res, next) => {
   }
 };
 
-// export const getDeleted = async (req, res, next) => {
-//   const item = new ItemService();
-//   await handleRequest(res, next, item.getDeletedItems);
-// };
 
 export const insertItems = async (req, res, next) => {
   try {

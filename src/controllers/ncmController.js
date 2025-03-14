@@ -4,10 +4,12 @@ import { handleRequest, validateRequest } from "./itemController.js";
 
 // Controlador que retorna todos os NCMs do banco
 export const getAll = async (req, res, next) => {
-  handleRequest(res, next, NcmService.getAllNcms);
+  const ncm = new NcmService();
+  handleRequest(res, next, ncm.getAllNcms);
 };
 
 export const getAllFilter = async (req, res, next) => {
   validateRequest(codNcmShema, req.params);
-  handleRequest(res, next, NcmService.getAllNcmsFilterCod, req.params.cod);
+  const ncm = new NcmService();
+  handleRequest(res, next, ncm.getAllNcmsFilterCod, req.params.cod);
 };
