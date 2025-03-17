@@ -28,6 +28,7 @@ export const handleRequest = async (res, next, serviceMethod, ...params) => {
 
 export const getItems = async (req, res, next) => {
   const { page, limit, field, value } = validateRequest(searchSchema, req.query);
+  console.log(`🔴 Valores que chegaram: ${field}:${value}`);
   const item = new ItemService();
   await handleRequest(res, next, item.search, page, limit, field, value);
 };

@@ -10,61 +10,39 @@ import logger from "../utils/logger.js";
  * @description Classe responsável por interagir com o modelo de Item no banco de dados.
  */
 class ItemRepository {
-  /**
-   * @private
-   * @type {object}
-   * @description Condição para filtrar itens não excluídos.
-   */
-  itemNotDeleted = { excluido: 0 };
-
-  /**
-   * @private
-   * @type {object}
-   * @description Condição para filtrar itens excluídos.
-   */
-  itemDeleted = { excluido: 1 };
-
-  /**
-   * @private
-   * @type {string[]}
-   * @description Lista de atributos do modelo Item que serão retornados nas consultas.
-   */
-  itemsAttrubutes = [
-    "id",
-    "valor_unitario",
-    "descricao",
-    "taxa_icms_entrada",
-    "taxa_icms_saida",
-    "comissao",
-    "ean",
-    "excluido",
-    "criado_em",
-    "excluido_em",
-  ];
-
-  /**
-   * @private
-   * @type {object[]}
-   * @description Lista de modelos relacionados a serem incluídos nas consultas de itens.
-   */
-  itemsIncludes = [
-    {
-      model: NcmModel,
-      as: "ncm",
-      attributes: ["codncm"],
-    },
-    {
-      model: CstIcmsModel,
-      as: "csticms",
-      attributes: ["codcst"],
-    },
-    {
-      model: CfopModel,
-      as: "cfopinfo",
-      attributes: ["codcfop"],
-    },
-  ];
-
+  constructor() {
+    this.itemNotDeleted = { excluido: 0 };
+    this.itemDeleted = { excluido: 1 };
+    this.itemsAttrubutes = [
+      "id",
+      "valor_unitario",
+      "descricao",
+      "taxa_icms_entrada",
+      "taxa_icms_saida",
+      "comissao",
+      "ean",
+      "excluido",
+      "criado_em",
+      "excluido_em",
+    ];
+    this.itemsIncludes = [
+      {
+        model: NcmModel,
+        as: "ncm",
+        attributes: ["codncm"],
+      },
+      {
+        model: CstIcmsModel,
+        as: "csticms",
+        attributes: ["codcst"],
+      },
+      {
+        model: CfopModel,
+        as: "cfopinfo",
+        attributes: ["codcfop"],
+      },
+    ];
+  }
   /**
    * @async
    * @function countItems
@@ -95,14 +73,26 @@ class ItemRepository {
     try {
       const offset = (page - 1) * limit;
 
-      const whereCondition = field
-        ? {
-          [field]: {
-            [Op.like]: `%${value}%`,
-          },
-          ...this.itemNotDeleted,
+      let whereCondition = {};
+
+        if (field === 'ean') {
+            whereCondition = {
+                [field]: {
+                    [Op.like]: `%${value}%`,
+                }
+            };
+        } else if (field) {
+            whereCondition = {
+                [field]: {
+                    [Op.like]: `%${value}%`,
+                },
+                ...this.itemNotDeleted,
+            };
+        } else {
+            whereCondition = this.itemNotDeleted;
         }
-        : this.itemNotDeleted;
+        
+
 
       const items = await ItemModel.findAll({
         where: whereCondition,
@@ -111,6 +101,8 @@ class ItemRepository {
         attributes: this.itemsAttrubutes,
         include: this.itemsIncludes,
       });
+
+      console.log(`🔴 Valores encontrados: ${items}`);
 
       const totalItems = await this.countItems(whereCondition);
 
