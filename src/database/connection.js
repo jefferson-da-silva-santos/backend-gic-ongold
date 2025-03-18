@@ -11,7 +11,7 @@ const sequelize = new Sequelize(
     host: process.env.DB_HOST,
     dialect: process.env.DB_DIALECT,
     port: process.env.DB_PORT,
-    logging: true // Não permite que os logs sejam exibidos no console
+    logging: false // Não permite que os logs sejam exibidos no console
   }
 );
 
@@ -19,7 +19,7 @@ sequelize
   .authenticate()
   .then(() => {
     logger.info('Conectado ao banco de dados com sucesso!');
-    console.log("Conectado ao banco de dados com sucesso!")
+    console.log("✅ Conectado ao banco de dados com sucesso!")
   })
   .catch((error) => {
     logger.error("Erro ao conectar ao banco:", error);
