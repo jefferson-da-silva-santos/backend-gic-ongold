@@ -2,7 +2,6 @@ import NcmService from "../service/NcmService.js";
 import { codNcmShema } from "../utils/shemasValidate.js";
 import { handleRequest, validateRequest } from "./itemController.js";
 
-// Controlador que retorna todos os NCMs do banco
 export const getAll = async (req, res, next) => {
   const ncm = new NcmService();
   handleRequest(res, next, ncm.getAllNcms);

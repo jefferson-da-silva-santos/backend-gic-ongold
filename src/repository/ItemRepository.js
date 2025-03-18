@@ -102,8 +102,6 @@ class ItemRepository {
         include: this.itemsIncludes,
       });
 
-      console.log(`🔴 Valores encontrados: ${items}`);
-
       const totalItems = await this.countItems(whereCondition);
 
       return {

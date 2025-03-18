@@ -26,19 +26,19 @@ const Item = sequelize.define(
 
 Item.belongsTo(Ncm, {
   foreignKey: "ncm_id",
-  targetKey: "idncm", // Deve referenciar a PRIMARY KEY de tb_ncm
+  targetKey: "idncm", 
   as: "ncm"
 });
 
 Item.belongsTo(CstIcms, {
   foreignKey: "cst_id",
-  targetKey: "idcst", // Deve referenciar a PRIMARY KEY de tb_csticms
+  targetKey: "idcst", 
   as: "csticms"
 });
 
 Item.belongsTo(Cfop, {
   foreignKey: "cfop_id",
-  targetKey: "idcfop", // Deve referenciar a PRIMARY KEY de tb_cfop
+  targetKey: "idcfop", 
   as: "cfopinfo"
 });
 

@@ -2,7 +2,6 @@ import ItemService from "../service/ItemService.js";
 import { itemSchema, idShema, searchSchema, updateShema } from "../utils/shemasValidate.js";
 import logger from "../utils/logger.js";
 
-// Função auxiliar para lidar com erros de validação
 export const validateRequest = (schema, data) => {
   const { error, value } = schema.validate(data);
   if (error) {
@@ -12,7 +11,6 @@ export const validateRequest = (schema, data) => {
   return value;
 };
 
-// Função auxiliar para lidar com requisições assíncronas no Controller
 export const handleRequest = async (res, next, serviceMethod, ...params) => {
   try {
     const result = await serviceMethod(...params);
@@ -28,7 +26,6 @@ export const handleRequest = async (res, next, serviceMethod, ...params) => {
 
 export const getItems = async (req, res, next) => {
   const { page, limit, field, value } = validateRequest(searchSchema, req.query);
-  console.log(`🔴 Valores que chegaram: ${field}:${value}`);
   const item = new ItemService();
   await handleRequest(res, next, item.search, page, limit, field, value);
 };
