@@ -70,7 +70,7 @@ export const getHtmlReport = (data) => {
     </style>
 </head>
 <body>
-    <h1>Reletório Geral do Gestor de Itens Comerciais</h1>
+    <h1>Relatório Geral do Gestor de Itens Comerciais</h1>
      <p>Aqui estão os dez itens mais caros registrados no sistema. Esses itens possuem alto valor devido às suas características exclusivas, demanda no mercado. Confira:</p>
 
     <table>
